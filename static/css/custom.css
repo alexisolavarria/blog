@@ -1,10 +1,16 @@
 body {
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
+  background-color: #fff;
 }
 
 a {
   color: #3F729B;
+}
+
+a:hover {
+  color: #5aa4df;
+  text-decoration: none;
 }
 
 code {
@@ -12,7 +18,7 @@ code {
 }
 
 .bg-light {
-  background-color: #ececec!important;
+  background-color: #ececec !important;
 }
 
 .shadow {
@@ -37,4 +43,34 @@ code {
 
 .mobile_padding {
   padding-bottom: 1em;
+}
+
+.hero {
+  background-size: cover;
+  z-index: 10;
+  position: relative;
+}
+
+.design-1 {
+    background-color: rgba(23, 162, 184, 0.21);
+    -moz-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
+    -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
+    padding-top: 8em;
+    padding-bottom: 10em;
+}
+
+.design-2 {
+    background-color: rgba(23, 162, 184, 0.21);
+    -moz-clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+    padding-top: 8em;
+    padding-bottom: 10em;
+}
+
+.design-3 {
+    background-color: rgba(23, 162, 184, 0.21);
+    padding-top: 8em;
+    padding-bottom: 10em;
 }

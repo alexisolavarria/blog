@@ -1,16 +1,18 @@
 <html>
   {% include header.html %}
   <body>
-      {% include navbar.html %}
-      <div class= "container" style="min-height:80vh;">
-          <div class="content">
-              <img class="img-fluid" style="" src="/{{page.picture}}">
-          </div>
-      </div>
-      <div class="text-center">
-        <a href="/photos.html">
-          <button class="btn-outline-primary">Full Archive</button>
-        </a>
+    {% include hero_image.html %}
+    <div class="design-1">
+        <div class= "container" style="min-height:80vh;">
+            <div class="content">
+                <img class="img-fluid" style="" src="/{{page.picture}}">
+            </div>
+        </div>
+        <div class="text-center">
+          <a href="/photos.html">
+            <button class="btn-outline-primary">Full Archive</button>
+          </a>
+        </div>
       </div>
   </body>
 </html>
