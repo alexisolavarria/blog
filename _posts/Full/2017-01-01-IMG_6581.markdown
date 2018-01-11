@@ -1,0 +1,5 @@
+---
+layout: default_full
+categories: Full
+picture: img/photos/full_size/IMG_6581.jpg
+---

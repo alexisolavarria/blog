@@ -1,0 +1,19 @@
+---
+layout: default_blog
+title:  "New Year"
+date:   2018-01-01 12:00:00 -0500
+categories: Writing
+tags: Thoughts
+---
+
+Another year, another chance to make declarations about the goals that one hopes
+to accomplish in the next 365 days. Writing down goals, especially in a semi
+public place such as the internet, is one of the major steps to take in ensuring
+that those goals actually succeed. Well, this is mine, in no particular order.
+
+* Post here on this blog a major post at least once a week.
+* Release a new project or big update for a project every month.
+* Post a picture that I'm proud of every week.
+
+By the end of this month I should be able to see if all of these goals actually
+come to fruition, and will make any adjustments as needed.

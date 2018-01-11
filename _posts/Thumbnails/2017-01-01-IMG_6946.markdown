@@ -1,0 +1,7 @@
+---
+layout: default
+categories: Thumbnails
+large_url: /photos/2017/01/01/IMG_6946.html
+full_url: /full/2017/01/01/IMG_6946.html
+picture: img/photos/thumbnails/IMG_6946.jpg
+---

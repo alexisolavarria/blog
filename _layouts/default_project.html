@@ -1,0 +1,24 @@
+<html>
+  {% include header.html %}
+  <body>
+      {% include navbar.html %}
+      <div class= "container" style="min-height:50vh;">
+        <div class="content">
+          <div class="card shadow" style="margin-bottom:3%;">
+            <h1 class="text-center card-title">
+              <a href="{{ page.url }}"> {{ page.title }} </a>
+            </h1>
+            <div class="card-body">
+              <img class="img-fluid shadow" src="{{ page.picture }}">
+              <p class="lead card-text">{{ page.excerpt }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="/projects.html">
+            <button class="btn-outline-primary">Full Archive</button>
+          </a>
+        </div>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<div class="page-content">
+  <div class="page-header">
+    <h1 class="text-center"> My Latest Photos </h1>
+    <h4 class="text-center">Photography from recent adventures and trips</h4>
+  </div>
+  <div class="row">
+    {% for post in site.categories.Thumbnails limit:12 %}
+      <div class="col-md-6 col-xl-4" style="margin-bottom:3%;">
+        <a href="{{ post.full_url }}">
+          <img class="img-fluid" style="" src="{{ post.picture }}">
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

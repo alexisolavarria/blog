@@ -1,0 +1,40 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: #3F729B;
+}
+
+code {
+  color:#bd4147 !important;
+}
+
+.bg-light {
+  background-color: #ececec!important;
+}
+
+.shadow {
+  -moz-box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+  -webkit-box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+.card-title {
+  margin-bottom: 0rem;
+  padding: 1.25rem 1.25rem;
+  background-color: #ececec;
+}
+
+.page-header {
+  margin-bottom:2em;
+}
+
+.content {
+  padding-top: 3em;
+}
+
+.mobile_padding {
+  padding-bottom: 1em;
+}

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#clear old ones. Regenerate every time
+rm -rf _posts/Photos/*
+
+FILES=img/photos/full_size/*.jpg
+
+for i in $FILES
+    do
+        temp=${i##*/}
+        temp_2=${temp%.jpg}
+        echo "---
+layout: default_large
+categories: Full
+picture: $i
+---" > _posts/photos/2017-01-01-$temp_2.markdown
+    done

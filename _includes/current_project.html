@@ -1,0 +1,18 @@
+<div class="page-content">
+  <div class="page-header">
+    <h1 class="text-center">Current Project</h1>
+  </div>
+  {% for post in site.categories.Projects limit:1 %}
+    <div class="">
+      <div class="card shadow" style="margin-bottom:3%;">
+        <h1 class="text-center card-title">
+          <a href="{{ post.url }}"> {{ post.title }} </a>
+        </h1>
+        <div class="card-body">
+          <img class="img-fluid shadow" src="{{ post.picture }}">
+          <p class="lead card-text">{{ post.excerpt }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

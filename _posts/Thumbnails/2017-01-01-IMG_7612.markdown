@@ -1,0 +1,7 @@
+---
+layout: default
+categories: Thumbnails
+large_url: /photos/2017/01/01/IMG_7612.html
+full_url: /full/2017/01/01/IMG_7612.html
+picture: img/photos/thumbnails/IMG_7612.jpg
+---

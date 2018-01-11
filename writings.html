@@ -1,0 +1,53 @@
+---
+layout: default
+title: Systematic Thoughts
+---
+<div class="container">
+  <div class="col d-lg-none">
+    <div class="row">
+      <span class="col-12 mobile_padding">Categories:</span>
+      <div class="col-12 mobile_padding">
+        <button class="btn btn-primary tag_button All" id="All">
+          All
+          <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
+        </button>
+      </div>
+      {% for tag in site.tags %}
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        <div class="col-12 mobile_padding">
+          <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
+            {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
+          </button>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="d-none d-lg-block">
+    <span>Categories: </span>
+    <button class="btn btn-primary tag_button All" id="All">
+      All
+      <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
+    </button>
+    {% for tag in site.tags %}
+      {% assign t = tag | first %}
+      {% assign posts = tag | last %}
+      <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
+        {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
+      </button>
+    {% endfor %}
+  </div>
+  <hr />
+  {% for post in site.categories.Writing %}
+    <div class="col-lg-12 All_tag {{post.tags}}_tag post">
+      <div class="card shadow" style="margin-bottom:3%;">
+        <a href="{{post.url}}">
+          <h1 class="text-center card-title">{{ post.title }}</h1>
+        </a>
+        <div class="card-body">
+          <p class="lead card-text">{{ post.content }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
