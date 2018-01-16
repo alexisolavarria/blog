@@ -52,7 +52,7 @@ code {
 }
 
 .design-1 {
-    background-color: rgba(23, 162, 184, 0.21);
+    background-color: #1574cd;
     -moz-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
     -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
     clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
