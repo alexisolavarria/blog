@@ -52,25 +52,29 @@ code {
 }
 
 .design-1 {
-    background-color: #1574cd;
-    -moz-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
-    -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
-    clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
-    padding-top: 8em;
-    padding-bottom: 10em;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -moz-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
+  -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
+  padding-top: 8em;
+  padding-bottom: 10em;
 }
 
 .design-2 {
-    background-color: rgba(23, 162, 184, 0.21);
-    -moz-clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
-    padding-top: 8em;
-    padding-bottom: 10em;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -moz-clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+  padding-top: 8em;
+  padding-bottom: 10em;
 }
 
 .design-3 {
-    background-color: rgba(23, 162, 184, 0.21);
-    padding-top: 8em;
-    padding-bottom: 10em;
+  background-color: rgba(23, 162, 184, 0.21);
+  padding-top: 8em;
+  padding-bottom: 10em;
 }
