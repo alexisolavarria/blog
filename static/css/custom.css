@@ -17,20 +17,23 @@ code {
   color:#bd4147 !important;
 }
 
+.hero {
+  position: fixed;
+}
+
+.highlight {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
 .bg-light {
   background-color: #ececec !important;
 }
 
 .shadow {
-  -moz-box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
-  -webkit-box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
-  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
-}
-
-.card-title {
-  margin-bottom: 0rem;
-  padding: 1.25rem 1.25rem;
-  background-color: #ececec;
+  -moz-box-shadow: 1px 3px 5px 3px lightgrey;
+  -webkit-box-shadow: 1px 3px 5px 3px lightgrey;
+  box-shadow: 1px 3px 5px 3px lightgrey;
 }
 
 .page-header {
@@ -45,21 +48,13 @@ code {
   padding-bottom: 1em;
 }
 
-.hero {
-  background-size: cover;
-  z-index: 10;
-  position: relative;
-}
-
 .design-1 {
   background: #005AA7;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -moz-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
-  -webkit-clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
-  clip-path: polygon(0 0%, 100% 2%, 100% 98%, 0% 100%);
-  padding-top: 8em;
-  padding-bottom: 10em;
+  -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+	clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+	padding: 65px 10px;
 }
 
 .design-2 {
@@ -74,7 +69,7 @@ code {
 }
 
 .design-3 {
-  background-color: rgba(23, 162, 184, 0.21);
-  padding-top: 8em;
-  padding-bottom: 10em;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

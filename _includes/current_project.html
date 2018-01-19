@@ -1,21 +1,18 @@
-<div class="page-content">
-  <div class="">
-    <div class="page-header">
-      <h1 class="text-center">Current Project</h1>
-    </div>
-    {% for post in site.categories.Projects limit:1 %}
-      <div class="container">
-        <div class="col-md-10 mx-auto">
-          <div class="card shadow " style="margin-bottom:3%;">
-            <a href="{{ post.url }}">
-              <h1 class="text-center card-title"> {{ post.title }} </h1>
-            </a>
-            <div class="card-body">
-              <img class="img-fluid shadow" src="{{ post.picture }}">
-              <p class="lead card-text">{{ post.excerpt }}</p>
-            </div>
-          </div>
-      </div>
+<div class="row content">
+  {% for post in site.categories.Projects limit:1 %}
+    <div class="col-12">
+      <div class="card shadow">
+        <div class="card-header">Current Project</div>
+        <div class="card-body">
+          <img class="card-img-top" src="{{ post.picture }}">
+          <a href="{{post.url}}"><h3 class="text-center card-title">{{ post.title }}</h3></a>
+          <hr />
+          <p class="lead card-text">{{ post.excerpt }}</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-outline-primary" href="{{ post.url }}"> View </a>
+          <a class="btn btn-outline-primary" href="/projects.html"> All Projects </a>
+        </div>
       </div>
     </div>
   {% endfor %}

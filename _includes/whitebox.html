@@ -1,24 +1,18 @@
-<div class="page-content">
-  <div class="design-2">
-    <div class="page-content">
-      <div class="page-header">
-        <h1 class="text-center"> My Latest Photos </h1>
-        <h4 class="text-center">Photography from recent adventures and trips</h4>
-      </div>
-      <div class="container">
-        <div class="card shadow">
-          <div class="card-body">
-            <div class="row">
-              {% for post in site.categories.Thumbnails limit:12 %}
-                <div class="col-md-6 col-xl-4 mobile_padding">
-                  <a href="{{ post.full_url }}">
-                    <img class="img-fluid img-thumbnail" style="" src="{{ post.picture }}">
-                  </a>
-                </div>
-              {% endfor %}
-            </div>
+<div class="row content mobile_padding">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-header">Latest Photos</div>
+      <div class="card-body">
+        {% for post in site.categories.Thumbnails limit:3 %}
+          <div class="col-12 mobile_padding">
+            <a href="{{ post.full_url }}">
+              <img class="img-fluid img-thumbnail" style="" src="{{ post.picture }}">
+            </a>
           </div>
-        </div>
+        {% endfor %}
+      </div>
+      <div class="card-footer">
+        <a class="btn btn-outline-primary" href="/photos.html"> View  All</a>
       </div>
     </div>
   </div>
