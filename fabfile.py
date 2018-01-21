@@ -5,19 +5,18 @@ env.hosts = ['']
 def add():
     local("git add .")
 
-def build():
-    local("bundle exec jekyll build .")
-
 def commit():
     local("git commit -a")
 
 def upload():
     local("git push origin master")
 
+def upload_rd():
+    local("git push readonly master")
+
 def git():
-    # Commit all the code to github
+    # Commit all the code to gitlab
     add()
-    build()
     commit()
     upload()
 
@@ -33,14 +32,7 @@ def prep():
     # Get all the content ready
     convert_images()
     create_photo_posts()
-    build()
-
-def sync():
-    local("rsync -avz --progress _site/* root@blog:/var/www/html")
-    local("rsync -avz --progress _site/* root@blog2:/var/www/html")
-    local("rsync -avz --progress _site/* root@blog3:/var/www/html")
 
 def deploy():
     prep()
     git()
-    sync()
