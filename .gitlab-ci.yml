@@ -1,5 +1,6 @@
 deploy:
-  only: master
+  only: 
+    - master
   before_script:
     - yum install -y ruby ruby-devel rubygems
     - gem install jekyll
