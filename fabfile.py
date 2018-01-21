@@ -38,6 +38,7 @@ def prep():
 def sync():
     local("rsync -avz --progress _site/* root@blog:/var/www/html")
     local("rsync -avz --progress _site/* root@blog2:/var/www/html")
+    local("rsync -avz --progress _site/* root@blog3:/var/www/html")
 
 def deploy():
     prep()
