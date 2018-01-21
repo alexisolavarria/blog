@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-01-21T16:51:33-05:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html">Mushroom Redesign</title><link href="htpps://www.doug-skinner.com/writing/2018/01/19/Mushroom-Redesign.html" rel="alternate" type="text/html" title="Mushroom Redesign" /><published>2018-01-19T11:01:00-05:00</published><updated>2018-01-19T11:01:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/19/Mushroom-Redesign</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/19/Mushroom-Redesign.html">&lt;p&gt;While browsing reddit the other day I came upon a &lt;a href=&quot;https://www.reddit.com/r/learnpython/comments/7q8qka/i_made_a_rough_draft_of_a_flask_app_that_accepts/&quot;&gt;link&lt;/a&gt; to a newer Github repo that someone was working on. That repo was &lt;a href=&quot;https://github.com/brettvanderwerff/Mushroom-Map-Maker&quot;&gt;Mushroom Map Maker&lt;/a&gt; and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.&lt;/p&gt;
+
+&lt;p&gt;The original landing page looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_starting_image.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So it was obvious that the creater, &lt;a href=&quot;https://github.com/brettvanderwerff&quot;&gt;brettvanderwerff&lt;/a&gt;, was using bootstrap 3 based on the basic jumbotron and navbar. Now, bootstrap 3 is the older version and using bootstrap 4 would be easier, but it shouldn’t be too hard. Before I begin, I should point at that the changes to the actual repo were all done inline to not include another file in the repository, but will be represented below as if there were an actual custom css file.&lt;/p&gt;
+
+&lt;p&gt;The first change that I made was to indicate the actual page the user was using on the navbar, as to begin with it only ever had the active class on the “Home” link. This was as simple as adding a page variable to the flask routing that returned the name of the page, and did an if statement for each link to add the class if necessary. No other visual changes yet.&lt;/p&gt;
+
+&lt;p&gt;The next thing that I did was to actually remove the standard active class, and implement my own version at first just changing the color of the link text. I also opted to make the background color of the navbar white instead of the default grey-ish. Our custom css file would look like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And the landing page now looked like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_new_navbar.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, do deal with the actual content of the index page. The content was already within a container, which was good. First I pulled the instructions “Select “Search for a Mushroom” on the navigation bar to begin.” onto the main jumbotron. Then, to stop the page from seeming like it was shouting at you, I lowered the title “The Mushroom Map” to be an h2 instead of an h1. I also used the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;small&amp;gt;&lt;/code&gt; tag for the version number within that h2 to apply some built in boot-strappy styling. Separating the heading of that content from the body with an &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;hr /&amp;gt;&lt;/code&gt; also gives some breathing room.&lt;/p&gt;
+
+&lt;p&gt;Finally, taking after the cards that became popular with Google’s Material Design guidelines, I opted to fashion the jumbotron holding the content as a card with a white background with a slight shadow. Our css file now contains:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And the landing page now appears like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_card_index.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then to soften up the appearance of the links I opted to change the color to a softer shade of blue. Changing the color of the links to be less in your face may seem like a small change, but I’ve repeatedly found that by doings so it makes the page appear more friendly and welcoming.&lt;/p&gt;
+
+&lt;p&gt;Our custom file is now:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+a {
+  color: #17a2b8;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And the landing page now appears like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_link_color.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now switching gears to the actual functionality of the site, the original search page looked like the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_original_search.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the navbar changes that were made before that carried over, and by moving the content into a jumbotron just like before the content now mostly matches the homepage. It’s just a matter of cleaning it up. By making those changes, which doesn’t require a change to the css file, the page looks like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_card_search.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While that form is functional, it would appear better to use the form-groups that bootstrap provides to shape the label and the input. The code to do that is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;lt;div class=&quot;form-group&quot;&amp;gt;
+  &amp;lt;label for=&quot;example&quot;&amp;gt;Example&amp;lt;/label&amp;gt;
+  &amp;lt;input class=&quot;form-control&quot; name=&quot;example&quot; type=&quot;text&quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And now the page looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_form_groups.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, to take advantage of larger screens I moved the examples over to a second column. Once the screen got below the bootstrap’s defined medium screen size it then converts to being stacked like how it was. It now appears like so on larger screens:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_two_column.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The original search page did alert the user if they had errors entering when submitting the form, however to make the look of the match the original, I modified them to both be alerts with the danger class. The danger class is a built in Bootstrap element that can be added to most text tags that makes the font color red, and in the case of the alerts also makes the background a lighter shade of red to really emphasize the text. A screenshot of the new change is below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_alerts.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, The example list was modified to be a dictionary list. Like changing the sizes of the card titles, this was done to make the page seem less in your face, while still providing the information. See below for the difference:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_d_list.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And the last major change was to make the search look better by just adding some padding for mobile. While a minor change, the extra space makes the applications interface flow better.&lt;/p&gt;
+
+&lt;p&gt;Our custom file is now:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+a {
+  color: #17a2b8;
+}
+
+mobile_padding {
+  padding-bottom: 1em;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And that padding class is applied to the column containing the search form. The final product looks like below, shown in desktop and phone sized screens.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_final_desk.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_final_phone.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading the whole way through, I hoped it helped anyone that made it this far. As always, feel free to send me an email to the address below with any questions or comments.&lt;/p&gt;</content><author><name></name></author><category term="Design" /><summary type="html">While browsing reddit the other day I came upon a link to a newer Github repo that someone was working on. That repo was Mushroom Map Maker and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.</summary></entry><entry><title type="html">Replacing Characters Within Smarty Templating</title><link href="htpps://www.doug-skinner.com/writing/2018/01/18/Replacing-Characters-Smarty.html" rel="alternate" type="text/html" title="Replacing Characters Within Smarty Templating" /><published>2018-01-18T11:00:00-05:00</published><updated>2018-01-18T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/18/Replacing-Characters-Smarty</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/18/Replacing-Characters-Smarty.html">&lt;p&gt;Another quick one, while at work today needed to strip a few characters out of a
+string, namely [ and ] as they were causing issues with some other string
+manipulation further down the line. All I had to do was turn this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;{variable}&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Into this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;{variable|replace:&quot;[&quot;:&quot;&quot;|replace:&quot;]&quot;:&quot;&quot;}&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Easy enough, right?&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Another quick one, while at work today needed to strip a few characters out of a string, namely [ and ] as they were causing issues with some other string manipulation further down the line. All I had to do was turn this:</summary></entry><entry><title type="html">Some Thoughts About Net Neutrality</title><link href="htpps://www.doug-skinner.com/writing/2018/01/17/Net-Neutrality-Thoughts.html" rel="alternate" type="text/html" title="Some Thoughts About Net Neutrality" /><published>2018-01-17T12:00:00-05:00</published><updated>2018-01-17T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/17/Net-Neutrality-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/17/Net-Neutrality-Thoughts.html">&lt;p&gt;Recently I was asked to answer the below questions as part of the Information
+Ethics class that I am taking, and I thought they would stand as a good
+representation of my views on Net Neutrality. Enjoy.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Are you in favor of network neutrality going forward? Why or why not?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I am entirely in favor of net neutrality. To believe anything else would be to go against the very essence of what makes the internet so great. The internet, since it was first invented by Tim Berners Lee, has long been a free for all where anyone can make the next big thing out of their garage. For most of the gian companies that we knwo today, i.e. Apple, Microsoft, Netflix, Facebook, and others, are only as big as they are because they were able to thrive as young companies on the internet.&lt;/p&gt;
+
+&lt;p&gt;If the protection that these large companies used, that of every end point on the internet being treated equal, ever goes away it will almost certainly guarantee that competition among little companies will all but evaporate as the already established behemoths can simply pay to wipe them out.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is the threat of ISPs, private business firms, charging whatever they want to charge and that the market will bear?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By charging whatever they feel like charging to certain businesses the ISPs are trying to make their service what it isn’t. The goal of an INTERNET service provider is to provide service, i.e. access, to the internet. It is most certainly NOT to choose what goes over the internet. The role of the ISP is to act as a dumb pipe, the same way that a sewer does not care whether it carries water, excrement, or food shavings. Allowing an ISP to charge more for certain services would be the exact same as allowing sewage companies to charge more to carry water from your toilet than water from your sink.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What do the FCC and industry critics mean by “discriminatory behavior” towards selected Internet services? Does the FCC want to prevent ISPs from managing their networks?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Discriminatory behavior on behalf of the ISPs would be to charge based on the type of traffic that goes over their network. Since a packet of video is no more damaging to a computer network than a packet of plain text, there is no reason that an ISP should be able to charge more for one than the other. The ISP is perfectly allowed to manage their networks, only so far as they are allowed to continue being a dumb pipe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Does the FCC support metered pricing and/or Internet bandwidth caps?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, as long as the pricing reflects the usage and is non-discriminatory.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Major cities of the world have adopted “congestion pricing” in which cars pay a toll to enter the core of the city during daylight hours. Congestion pricing is also used to regulate demand by businesses for electricity. During the day when electricity is in high demand, many businesses pay a “demand” fee in addition to the regular charge for electricity. Why is the Internet any different?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, the internet is different simply because the demand of the internet can be met much more simply than the demands of electricity. While the electricity of the United States has been regulated so everyone gets the same availability. The same is not true for ISPs. There are still multiple places within this country that have less than a 10mbps line as the fastest internet that they can get. Before the ISPs worry about charging their existings customers more and ruining thousands of internet based businesses, they should focus on actually providing the service they are supposed too to their customers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If your business model depended for its success on millions of people being able to stream videos on demand (like YouTube) would you be in favor of net neutrality or against it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In favor of it. If my business model is dependant on as many people accessing it as possible, as most internet companies are, any extra charge per customer could be devestating.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Recently I was asked to answer the below questions as part of the Information Ethics class that I am taking, and I thought they would stand as a good representation of my views on Net Neutrality. Enjoy.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="htpps://www.doug-skinner.com/jekyll/update/2018/01/10/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-01-10T23:14:41-05:00</published><updated>2018-01-10T23:14:41-05:00</updated><id>htpps://www.doug-skinner.com/jekyll/update/2018/01/10/welcome-to-jekyll</id><content type="html" xml:base="htpps://www.doug-skinner.com/jekyll/update/2018/01/10/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">VPN, A Necessity?</title><link href="htpps://www.doug-skinner.com/writing/2018/01/05/VPN-Necessity.html" rel="alternate" type="text/html" title="VPN, A Necessity?" /><published>2018-01-05T12:00:00-05:00</published><updated>2018-01-05T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/05/VPN-Necessity</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/05/VPN-Necessity.html">&lt;p&gt;Is using a VPN a necessecity for all internet users in this day and age? While
+it may be a bit extreme, I do believe that any internet user that isn’t using a
+VPN for their daily internet usage to protect their privacy and anonymity. There
+are many reasons that an internet user should care about their privacy,
+especially with the recent proposed change by the United States FCC.&lt;/p&gt;
+
+&lt;p&gt;While Internet Service Providers(ISPs) within the United States will soon be
+able to charge users more depending on what softwares you actually use within
+your billing period, none of that matters if you can’t be tracked. When using a
+VPN, the only traffic that your ISP will be able to see and intercept will be to
+the domain that hosts your VPN of choice. So while getting to Netflix may cost
+you $0.02 a Mb, made up purely for this example but not out of the realms of
+possibiity, if standard internet traffic only costs you $0.01 a Mb going through
+the VPN which will appear as standard traffic lowers the costs that you will be
+facing by half.&lt;/p&gt;
+
+&lt;p&gt;Another big use of VPNs is to provide the same functionality of hiding your
+traffic from others that may be looking to snoop it on the same network. This is
+especially a problem on public WiFi that you may find in hotels, coffee shops,
+and increasingly other public areas, as anyone that is on the same network as
+you has the ability to see all traffic on this network. Another common issue
+that standard internet users may encounter is fake public networks, such as a
+mailicious individual that broadcasts an accesible network with the name “Free
+Starbucks WiFi” from a computer that they own. Many internet users may connect
+to the WiFi without a second thought, but through using a VPN to browse the
+internet the malicious individual will not be able to easily see the traffic
+that is being generated nor its intended destination.&lt;/p&gt;
+
+&lt;p&gt;While these aren’t the only reasons that someone should use a VPN, they are
+among the most popular. I do encourage everyone that comes across this post to
+seriously evaluate for themselves whether they need a VPN. As to what company to
+use for your VPN, that is a matter that I will not step into, instead advising
+each person to evaluate the various options on their own.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Is using a VPN a necessecity for all internet users in this day and age? While it may be a bit extreme, I do believe that any internet user that isn’t using a VPN for their daily internet usage to protect their privacy and anonymity. There are many reasons that an internet user should care about their privacy, especially with the recent proposed change by the United States FCC.</summary></entry><entry><title type="html">Fixing Mysql Replication</title><link href="htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication.html" rel="alternate" type="text/html" title="Fixing Mysql Replication" /><published>2018-01-02T11:00:00-05:00</published><updated>2018-01-02T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication.html">&lt;p&gt;Quick one. If you have a master and slave MySQL setup, if the slaves are
+reporting replication failures BUT have a status that is simply waiting for the
+next command, simply restarting MySQl should fix the issue. Sometimes a simple
+restart is the answer.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Quick one. If you have a master and slave MySQL setup, if the slaves are reporting replication failures BUT have a status that is simply waiting for the next command, simply restarting MySQl should fix the issue. Sometimes a simple restart is the answer.</summary></entry><entry><title type="html">New Year</title><link href="htpps://www.doug-skinner.com/writing/2018/01/01/New-Year.html" rel="alternate" type="text/html" title="New Year" /><published>2018-01-01T12:00:00-05:00</published><updated>2018-01-01T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/01/New-Year</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/01/New-Year.html">&lt;p&gt;Another year, another chance to make declarations about the goals that one hopes
+to accomplish in the next 365 days. Writing down goals, especially in a semi
+public place such as the internet, is one of the major steps to take in ensuring
+that those goals actually succeed. Well, this is mine, in no particular order.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Post here on this blog a major post at least once a week.&lt;/li&gt;
+  &lt;li&gt;Release a new project or big update for a project every month.&lt;/li&gt;
+  &lt;li&gt;Post a picture that I’m proud of every week.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the end of this month I should be able to see if all of these goals actually
+come to fruition, and will make any adjustments as needed.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Another year, another chance to make declarations about the goals that one hopes to accomplish in the next 365 days. Writing down goals, especially in a semi public place such as the internet, is one of the major steps to take in ensuring that those goals actually succeed. Well, this is mine, in no particular order.</summary></entry><entry><title type="html">Building a Shell, Part 8</title><link href="htpps://www.doug-skinner.com/writing/2017/12/09/Building-A-Shell-pt-8.html" rel="alternate" type="text/html" title="Building a Shell, Part 8" /><published>2017-12-09T13:00:00-05:00</published><updated>2017-12-09T13:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2017/12/09/Building-A-Shell-pt-8</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2017/12/09/Building-A-Shell-pt-8.html">&lt;p&gt;Today while testing I had noticed a slight issue with the code. While everything
+worked great in the directory where we started the simpleshell, the complicated
+functions failed as soon as we stepped outside of the directory using our chwd
+command. A simple fix to that just involves looking at the current directory
+when we start up, and pre-pending it to the command name. Adding that to our
+shell we get:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(void) {
+    char *base_dir = malloc(sizeof(char) * 512);
+    getcwd(base_dir, MAX_STR);
+
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf(&quot;[Command prompt]$ &quot;);
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, &quot; \n&quot;);
+
+        if (strcmp(token, &quot;quit&quot;) == 0) {
+            _continue = -1;
+        } else if (strcmp(token, &quot;wd&quot;) == 0) {
+			wd();
+		} else if (strcmp(token, &quot;chwd&quot;) == 0) {
+			char *new_path;
+            new_path = strtok(NULL, &quot; \n&quot;);
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, &quot;echo&quot;) == 0) {
+                    execl(&quot;/bin/echo&quot;, &quot;echo&quot;, &quot;Hello World!&quot;, NULL);
+                    return 1;
+                } else if (strcmp(buff, &quot;create&quot;) == 0) {
+                      char *command_path;
+                      allocateStr(&amp;amp;command_path);
+                      strcat(command_path, base_dir);
+                      strcat(command_path, &quot;/create&quot;);
+
+                      char *flag = strtok(NULL, &quot; &quot;);
+                      char *op1 = strtok(NULL, &quot; &quot;);
+                      char *op2  = strtok(NULL, &quot; &quot;);
+                      execl(&quot;./create&quot;, &quot;create&quot;, flag, op1, op2, NULL);
+                      return -1;
+                } else if (strcmp(buff, &quot;list&quot;) == 0) {
+                    char *command_path;
+                    allocateStr(&amp;amp;command_path);
+                    strcat(command_path, base_dir);
+                    strcat(command_path, &quot;/list&quot;);
+
+                    char *flag = strtok(NULL, &quot; &quot;);
+                    char *op1 = strtok(NULL, &quot; &quot;);
+                    execl(command_path, &quot;list&quot;, flag, op1, NULL);
+                    return -1;
+                } else if (strcmp(buff, &quot;fileconverter&quot;) == 0) {
+                    char *command_path;
+                    allocateStr(&amp;amp;command_path);
+                    strcat(command_path, base_dir);
+                    strcat(command_path, &quot;/fileconverter&quot;);
+
+                    char *flag = strtok(NULL, &quot; &quot;);
+                    char *op1 = strtok(NULL, &quot; &quot;);
+                    char *op2  = strtok(NULL, &quot; &quot;);
+                    execl(command_path, &quot;fileconverter&quot;, flag, op1, op2, NULL);
+                    return -1;
+                } else {
+                    printf(&quot;The command you entered does not exist.\n&quot;);
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;amp;&amp;amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &amp;gt;= 0);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Today while testing I had noticed a slight issue with the code. While everything worked great in the directory where we started the simpleshell, the complicated functions failed as soon as we stepped outside of the directory using our chwd command. A simple fix to that just involves looking at the current directory when we start up, and pre-pending it to the command name. Adding that to our shell we get:</summary></entry><entry><title type="html">Building a Shell, Part 7</title><link href="htpps://www.doug-skinner.com/writing/2017/12/08/Building-A-Shell-pt-7.html" rel="alternate" type="text/html" title="Building a Shell, Part 7" /><published>2017-12-08T13:00:00-05:00</published><updated>2017-12-08T13:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2017/12/08/Building-A-Shell-pt-7</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2017/12/08/Building-A-Shell-pt-7.html">&lt;p&gt;Today we’re going to be adding the third and final (for now) of our more complex functions to our
+shell, fileconverter. This command was specific to my class “Make a shell” assignment, but the
+functionality can definitely be improved upon for other use cases as well. The file takes in a
+regular text file and converts it to a binary file, or vice versa, and looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &quot;error.h&quot;
+#include &quot;helper.h&quot;
+#include &quot;input.h&quot;
+#include &amp;lt;fcntl.h&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+#include &amp;lt;sys/stat.h&amp;gt;
+#include &amp;lt;sys/types.h&amp;gt;
+#include &amp;lt;unistd.h&amp;gt;
+
+int main(int argc, char *argv[]) {
+    if (argc != 3 &amp;amp;&amp;amp; argc != 4) {
+        fprintf(stderr, &quot;The fileconverter must be called as fileconverter flag infile [outfile]\n&quot;);
+        return -1;
+    }
+
+    // Make sure the string is null terminated
+    //argv[3][strlen(argv[3])-1] = 0;
+
+    char *flag = argv[1];
+    char *infile = argv[2];
+    char *outfile = argv[3];
+
+    if (strcmp(flag, &quot;-t&quot;) == 0) {
+        FILE *fp_in = fopen(infile, &quot;r&quot;);
+        FILE *fp_out = fopen(outfile, &quot;wb&quot;);
+
+        char *line;
+        line = getLine(fp_in);
+
+        while (strlen(line) &amp;gt; 0) {
+
+            char *firstname = malloc(sizeof(char) * 256);
+            char *lastname = malloc(sizeof(char) * 256);
+            int id = 0;
+            float GPA = 0.0;
+
+            sscanf(line, &quot;%s %s %d %f&quot;, firstname, lastname, &amp;amp;id, &amp;amp;GPA);
+
+            int first_len = strlen(firstname);
+            int last_len = strlen(lastname);
+
+            fwrite(&amp;amp;first_len, sizeof(int), 1, fp_out);
+            fwrite(firstname, sizeof(char), first_len, fp_out);
+            fwrite(&amp;amp;last_len, sizeof(int), 1, fp_out);
+            fwrite(lastname, sizeof(char), last_len, fp_out);
+            fwrite(&amp;amp;id, sizeof(int), 1, fp_out);
+            fwrite(&amp;amp;GPA, sizeof(float), 1, fp_out);
+
+            line = getLine(fp_in);
+        }
+
+        fclose(fp_in);
+        fclose(fp_out);
+
+    } else if (strcmp(flag, &quot;-b&quot;) == 0) {
+        FILE *fp_in = fopen(infile, &quot;rb&quot;);
+        FILE *fp_out = fopen(outfile, &quot;w&quot;);
+
+        while (1) {
+            char *firstname = malloc(sizeof(char) * 256);
+            char *lastname = malloc(sizeof(char) * 256);
+            int id = 0;
+            float GPA = 0.0;
+            int first_len = 0;
+            int last_len = 0;
+
+            fread(&amp;amp;first_len, sizeof(int), 1, fp_in);
+            fread(firstname, sizeof(char), first_len, fp_in);
+            fread(&amp;amp;last_len, sizeof(int), 1, fp_in);
+            fread(lastname, sizeof(char), last_len, fp_in);
+            fread(&amp;amp;id, sizeof(int), 1, fp_in);
+            fread(&amp;amp;GPA, sizeof(float), 1, fp_in);
+
+            if (feof(fp_in) != 0) {
+                break;
+            }
+
+            fprintf(fp_out, &quot;%s %s %d %f\n&quot;, firstname, lastname, id, GPA);
+        }
+
+        fclose(fp_in);
+        fclose(fp_out);
+    }  else {
+        fprintf(stderr, &quot;that is not an allowed flag.&quot;);
+        return -1;
+    }
+
+    return 0;
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Adding this functionality is relatively simple following the example function
+that we gave yesterday, and just consists of adding another string comparison to
+see if if matches the &lt;code class=&quot;highlighter-rouge&quot;&gt;fileconverter&lt;/code&gt; function. Then we just get the required
+arguments, and pass it using &lt;code class=&quot;highlighter-rouge&quot;&gt;execl&lt;/code&gt; again.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf(&quot;[Command prompt]$ &quot;);
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, &quot; \n&quot;);
+
+        if (strcmp(token, &quot;quit&quot;) == 0) {
+            _continue = -1;
+        } else if (strcmp(token, &quot;wd&quot;) == 0) {
+			wd();
+		} else if (strcmp(token, &quot;chwd&quot;) == 0) {
+			char *new_path;
+            new_path = strtok(NULL, &quot; \n&quot;);
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, &quot;echo&quot;) == 0) {
+                    execl(&quot;/bin/echo&quot;, &quot;echo&quot;, &quot;Hello World!&quot;, NULL);
+                    return 1;
+                } else if (strcmp(buff, &quot;create&quot;) == 0) {
+                      char *flag = strtok(NULL, &quot; &quot;);
+                      char *op1 = strtok(NULL, &quot; &quot;);
+                      char *op2  = strtok(NULL, &quot; &quot;);
+                      execl(&quot;./create&quot;, &quot;create&quot;, flag, op1, op2, NULL);
+                      return -1;
+                } else if (strcmp(buff, &quot;list&quot;) == 0) {
+                    char *flag = strtok(NULL, &quot; &quot;);
+                    char *op1 = strtok(NULL, &quot; &quot;);
+                    execl(&quot;./list&quot;, &quot;list&quot;, flag, op1, NULL);
+                    return -1;
+                } else if (strcmp(buff, &quot;fileconverter&quot;) == 0) {
+                    char *flag = strtok(NULL, &quot; &quot;);
+                    char *op1 = strtok(NULL, &quot; &quot;);
+                    char *op2  = strtok(NULL, &quot; &quot;);
+                    execl(&quot;./fileconverter&quot;, &quot;fileconverter&quot;, flag, op1, op2, NULL);
+                    return -1;
+                } else {
+                    printf(&quot;The command you entered does not exist.\n&quot;);
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;amp;&amp;amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &amp;gt;= 0);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Today we’re going to be adding the third and final (for now) of our more complex functions to our shell, fileconverter. This command was specific to my class “Make a shell” assignment, but the functionality can definitely be improved upon for other use cases as well. The file takes in a regular text file and converts it to a binary file, or vice versa, and looks like this:</summary></entry><entry><title type="html">Building a Shell, Part 6</title><link href="htpps://www.doug-skinner.com/writing/2017/12/07/Building-A-Shell-pt-6.html" rel="alternate" type="text/html" title="Building a Shell, Part 6" /><published>2017-12-07T13:00:00-05:00</published><updated>2017-12-07T13:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2017/12/07/Building-A-Shell-pt-6</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2017/12/07/Building-A-Shell-pt-6.html">&lt;p&gt;Today we’re going to be adding the second of our more complex functions to our
+shell, list. This command will be a simplistic version of the ls command. The code mostly relies upon using a few system calls that
+makes this functionality easy to implement, and looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;dirent.h&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+#include &amp;lt;sys/types.h&amp;gt;
+#include &amp;lt;sys/stat.h&amp;gt;
+#include &amp;lt;unistd.h&amp;gt;
+
+int main(int argc, char *argv[]) {
+    char *flag;
+    char *pathname;
+
+    if (argc == 1) {
+        flag = NULL;
+        pathname = &quot;.&quot;;
+    } else if (argc == 2) {
+
+        char *token = argv[1];
+        if (strcmp(token, &quot;-i&quot;) == 0  || strcmp(token, &quot;-h&quot;) == 0) {
+            flag = argv[1];
+            pathname = &quot;.&quot;;
+        } else if (strcmp(token, &quot;-i\n&quot;) == 0 || strcmp(token, &quot;-h\n&quot;) == 0) {
+            argv[1][strlen(argv[1])-1] = 0;
+            flag = argv[1];
+            pathname = &quot;.&quot;;
+        } else {
+            argv[1][strlen(argv[1])] = 0;
+            flag = NULL;
+            pathname = argv[1];
+        }
+    } else if (argc == 3) {
+        flag = argv[1];
+        argv[2][strlen(argv[2])-1] = 0;
+        pathname = argv[2];
+    } else {
+        fprintf(stderr, &quot;Too many command line args specified. Run list --help for more&quot;);
+        return -1;
+    }
+
+    if (flag == NULL) {
+        //list current dir
+        DIR *d;
+        struct dirent *dir;
+        d = opendir(pathname);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                if (dir-&amp;gt;d_name[0] != '.') {
+                    printf(&quot;Filename: %s \n&quot;, dir-&amp;gt;d_name);
+                }
+            }
+            closedir(d);
+        }
+        return(0);
+    } else if (strcmp(flag, &quot;-i&quot;) == 0) {
+        DIR *d;
+        struct dirent *dir;
+        struct stat buf;
+        int stats;
+        d = opendir(pathname);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                stat(dir-&amp;gt;d_name, &amp;amp;buf);
+                stats = buf.st_mode  &amp;amp; (S_IRWXU | S_IRWXG | S_IRWXO);
+                printf(&quot;Filename: %s Size: %d(bytes) iNode#: %llu Permissions: %o\n&quot;, dir-&amp;gt;d_name,dir-&amp;gt;d_reclen,dir-&amp;gt;d_ino,stats);
+            }
+            closedir(d);
+        }
+        return(0);
+    } else if (strcmp(flag, &quot;-h&quot;) == 0) {
+        DIR *d;
+        struct dirent *dir;
+        d = opendir(pathname);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                if (dir-&amp;gt;d_name[0] == '.') {
+                    printf(&quot; %s \n&quot;, dir-&amp;gt;d_name);
+                }
+            }
+            closedir(d);
+        }
+        return 0;
+    } else if (strcmp(&quot;--help&quot;, argv[1]) == 0) {
+        puts(&quot;The options to call this command are as follows:&quot;);
+        puts(&quot;\tlist \t list all non-hidden files in current working directory&quot;);
+        puts(&quot;\tlist -i\t list additional info for files in current working directory&quot;);
+        puts(&quot;\tlist -h\t list hidden files in current working directory&quot;);
+        puts(&quot;\tlist pathname\t list all non-hidden files in specified directory&quot;);
+        puts(&quot;\tlist -i pathname\t list additional info for files in specified directory&quot;);
+        puts(&quot;\tlist -h pathname\t list hidden files in specified directory&quot;);
+    }
+    else {
+        fprintf(stderr, &quot;The flags entered were not valid. Type --help for help\n&quot;);
+        return -1;
+    }
+
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Adding this functionality is relatively simple following the example function
+that we gave yesterday, and just consists of adding another string comparison to
+see if if matches the &lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt; function. Then we just get the required
+arguments, and pass it using &lt;code class=&quot;highlighter-rouge&quot;&gt;execl&lt;/code&gt; again.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf(&quot;[Command prompt]$ &quot;);
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, &quot; \n&quot;);
+
+        if (strcmp(token, &quot;quit&quot;) == 0) {
+            _continue = -1;
+        } else if (strcmp(token, &quot;wd&quot;) == 0) {
+			wd();
+		} else if (strcmp(token, &quot;chwd&quot;) == 0) {
+			char *new_path;
+            new_path = strtok(NULL, &quot; \n&quot;);
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, &quot;echo&quot;) == 0) {
+                    execl(&quot;/bin/echo&quot;, &quot;echo&quot;, &quot;Hello World!&quot;, NULL);
+                    return 1;
+                } else if (strcmp(buff, &quot;create&quot;) == 0) {
+                      char *flag = strtok(NULL, &quot; &quot;);
+                      char *op1 = strtok(NULL, &quot; &quot;);
+                      char *op2  = strtok(NULL, &quot; &quot;);
+                      execl(&quot;./create&quot;, &quot;create&quot;, flag, op1, op2, NULL);
+                      return -1;
+                } else if (strcmp(buff, &quot;list&quot;) == 0) {
+                    char *flag = strtok(NULL, &quot; &quot;);
+                    char *op1 = strtok(NULL, &quot; &quot;);
+                    execl(&quot;./list&quot;, &quot;list&quot;, flag, op1, NULL);
+                    return -1;
+                } else {
+                    printf(&quot;The command you entered does not exist.\n&quot;);
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;amp;&amp;amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &amp;gt;= 0);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Today we’re going to be adding the second of our more complex functions to our shell, list. This command will be a simplistic version of the ls command. The code mostly relies upon using a few system calls that makes this functionality easy to implement, and looks like this:</summary></entry></feed>

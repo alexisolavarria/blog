@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sips -Z 1080 img/photos/thumbnails/*.jpg
