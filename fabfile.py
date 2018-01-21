@@ -28,10 +28,14 @@ def create_photo_posts():
     local("scripts/create_large_posts")
     local("scripts/create_full_posts")
 
+def build():
+    local("bundle exec jekyll build .")
+
 def prep():
     # Get all the content ready
     convert_images()
     create_photo_posts()
+    build()
 
 def deploy():
     prep()
