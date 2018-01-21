@@ -2,6 +2,6 @@ deploy:
   only: 
     - master
   script:
-    - rsync -avz _site/* root@10.0.0.20:/var/www/html/.
-    - rsync -avz _site/* root@10.0.0.26:/var/www/html/.
-    - rsync -avz _site/* root@10.0.0.27:/var/www/html/.
+    - rsync -avz ./_site/* root@10.0.0.20:/var/www/html/.
+    - rsync -avz ./_site/* root@10.0.0.26:/var/www/html/.
+    - rsync -avz ./_site/* root@10.0.0.27:/var/www/html/.
