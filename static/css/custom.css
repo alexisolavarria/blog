@@ -48,6 +48,10 @@ code {
   padding-bottom: 1em;
 }
 
+.card-img-top {
+  margin-bottom: 1em;
+}
+
 #Clouds {
   position: absolute;
   top: 0;
