@@ -7,7 +7,7 @@ tags: Thoughts
 ---
 
 __Warning__: This post is very long. Read at your own risk.  
-Also as part of my class dsicussed previously, I had to write a term paper on
+Also as part of my class discussed previously, I had to write a term paper on
 any topic that my little heart desired, as long as it related to the class. The
 topic was copyright law in the online realm, and what follows is the paper. Enjoy.
 

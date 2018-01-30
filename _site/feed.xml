@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-23T14:09:38-05:00</updated><id>http://localhost:4000/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
-</subtitle><entry><title type="html">Downloading Isn’t Stealing</title><link href="http://localhost:4000/writing/2018/01/22/More-NN-Thoughts.html" rel="alternate" type="text/html" title="Downloading Isn't Stealing" /><published>2018-01-22T12:00:00-05:00</published><updated>2018-01-22T12:00:00-05:00</updated><id>http://localhost:4000/writing/2018/01/22/More-NN-Thoughts</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/22/More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
-Also as part of my class dsicussed previously, I had to write a term paper on
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-01-30T01:20:01-05:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html">Flask Template</title><link href="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html" rel="alternate" type="text/html" title="Flask Template" /><published>2018-01-23T12:00:00-05:00</published><updated>2018-01-23T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/01/23/flask-template</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html">&lt;p&gt;&lt;strong&gt;This is still a work in progress&lt;/strong&gt;. This project aims to be a template for other web developers to base their
+projects off of. The template includes a couple of classes that handle creating
+users, logging in users, and eventually managing users. Each user upon logging
+in is presented with their own control panel for whatever service they are
+logging into.&lt;/p&gt;
+
+&lt;p&gt;As stated above, this project is a work in progress, and I will be posting updates below as they happen, and updating through blog posts.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is still a work in progress. This project aims to be a template for other web developers to base their projects off of. The template includes a couple of classes that handle creating users, logging in users, and eventually managing users. Each user upon logging in is presented with their own control panel for whatever service they are logging into.</summary></entry><entry><title type="html">Downloading Isn’t Stealing</title><link href="htpps://www.doug-skinner.com/writing/2018/01/22/More-NN-Thoughts.html" rel="alternate" type="text/html" title="Downloading Isn't Stealing" /><published>2018-01-22T12:00:00-05:00</published><updated>2018-01-22T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/22/More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/22/More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
+Also as part of my class discussed previously, I had to write a term paper on
 any topic that my little heart desired, as long as it related to the class. The
 topic was copyright law in the online realm, and what follows is the paper. Enjoy.&lt;/p&gt;
 
@@ -85,7 +91,7 @@ topic was copyright law in the online realm, and what follows is the paper. Enjo
   &lt;li&gt;Wu, T. (2003). When Code Isn’t Law. Virginia Law Review, 89(4), 679-751.doi:10.2307/3202374&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 107 - Limitations on exclusive rights: Fair use. (n.d.). Retrieved January 18,   2018, from &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/107&quot;&gt;https://www.law.cornell.edu/uscode/text/17/107&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 506 - Criminal offenses. (n.d.). Retrieved January 18, 2018, from     &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/506&quot;&gt;https://www.law.cornell.edu/uscode/text/17/506&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Warning: This post is very long. Read at your own risk. Also as part of my class dsicussed previously, I had to write a term paper on any topic that my little heart desired, as long as it related to the class. The topic was copyright law in the online realm, and what follows is the paper. Enjoy.</summary></entry><entry><title type="html">Rest Assured</title><link href="http://localhost:4000/projects/2018/01/22/rest-assured.html" rel="alternate" type="text/html" title="Rest Assured" /><published>2018-01-22T12:00:00-05:00</published><updated>2018-01-22T12:00:00-05:00</updated><id>http://localhost:4000/projects/2018/01/22/rest-assured</id><content type="html" xml:base="http://localhost:4000/projects/2018/01/22/rest-assured.html">&lt;p&gt;The website for Rest Assured Home Inspections LLC was redesigned to make it more
+&lt;/ul&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Warning: This post is very long. Read at your own risk. Also as part of my class discussed previously, I had to write a term paper on any topic that my little heart desired, as long as it related to the class. The topic was copyright law in the online realm, and what follows is the paper. Enjoy.</summary></entry><entry><title type="html">Rest Assured</title><link href="htpps://www.doug-skinner.com/projects/2018/01/22/rest-assured.html" rel="alternate" type="text/html" title="Rest Assured" /><published>2018-01-22T12:00:00-05:00</published><updated>2018-01-22T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/01/22/rest-assured</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/01/22/rest-assured.html">&lt;p&gt;The website for Rest Assured Home Inspections LLC was redesigned to make it more
 attractive for users, allowing it’s content to be more easily understood, and
 flow better among various screen sizes. The previous website had the content,
 however it was laid out in lack luster way, and was optimized for desktop while
@@ -104,7 +110,7 @@ hosted on a Centos 7 server being served by the Apache webserver, and is located
 behind an Nginx load-balancer also running on a Centos 7 server. The TLS
 ertificate for the site is provided by Let’s Encrypt, and is also being served
 by the Nginx load-balancer. The repo for the site can be found my personal
-Gitlab, &lt;a href=&quot;http://gitlab.doug-skinner.com/root/restassured&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">The website for Rest Assured Home Inspections LLC was redesigned to make it more attractive for users, allowing it’s content to be more easily understood, and flow better among various screen sizes. The previous website had the content, however it was laid out in lack luster way, and was optimized for desktop while being almost unusable on mobile.</summary></entry><entry><title type="html">Mushroom Redesign</title><link href="http://localhost:4000/writing/2018/01/19/Mushroom-Redesign.html" rel="alternate" type="text/html" title="Mushroom Redesign" /><published>2018-01-19T11:01:00-05:00</published><updated>2018-01-19T11:01:00-05:00</updated><id>http://localhost:4000/writing/2018/01/19/Mushroom-Redesign</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/19/Mushroom-Redesign.html">&lt;p&gt;While browsing reddit the other day I came upon a &lt;a href=&quot;https://www.reddit.com/r/learnpython/comments/7q8qka/i_made_a_rough_draft_of_a_flask_app_that_accepts/&quot;&gt;link&lt;/a&gt; to a newer Github repo that someone was working on. That repo was &lt;a href=&quot;https://github.com/brettvanderwerff/Mushroom-Map-Maker&quot;&gt;Mushroom Map Maker&lt;/a&gt; and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.&lt;/p&gt;
+Gitlab, &lt;a href=&quot;http://gitlab.doug-skinner.com/root/restassured&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">The website for Rest Assured Home Inspections LLC was redesigned to make it more attractive for users, allowing it’s content to be more easily understood, and flow better among various screen sizes. The previous website had the content, however it was laid out in lack luster way, and was optimized for desktop while being almost unusable on mobile.</summary></entry><entry><title type="html">Mushroom Redesign</title><link href="htpps://www.doug-skinner.com/writing/2018/01/19/Mushroom-Redesign.html" rel="alternate" type="text/html" title="Mushroom Redesign" /><published>2018-01-19T11:01:00-05:00</published><updated>2018-01-19T11:01:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/19/Mushroom-Redesign</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/19/Mushroom-Redesign.html">&lt;p&gt;While browsing reddit the other day I came upon a &lt;a href=&quot;https://www.reddit.com/r/learnpython/comments/7q8qka/i_made_a_rough_draft_of_a_flask_app_that_accepts/&quot;&gt;link&lt;/a&gt; to a newer Github repo that someone was working on. That repo was &lt;a href=&quot;https://github.com/brettvanderwerff/Mushroom-Map-Maker&quot;&gt;Mushroom Map Maker&lt;/a&gt; and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.&lt;/p&gt;
 
 &lt;p&gt;The original landing page looked like this:&lt;/p&gt;
 
@@ -251,7 +257,7 @@ mobile_padding {
 
 &lt;p&gt;&lt;img class=&quot;rounded img-fluid shadow&quot; src=&quot;/img/post_images/mushroom_final_phone.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Thanks for reading the whole way through, I hoped it helped anyone that made it this far. As always, feel free to send me an email to the address below with any questions or comments.&lt;/p&gt;</content><author><name></name></author><category term="Design" /><summary type="html">While browsing reddit the other day I came upon a link to a newer Github repo that someone was working on. That repo was Mushroom Map Maker and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.</summary></entry><entry><title type="html">Replacing Characters Within Smarty Templating</title><link href="http://localhost:4000/writing/2018/01/18/Replacing-Characters-Smarty.html" rel="alternate" type="text/html" title="Replacing Characters Within Smarty Templating" /><published>2018-01-18T11:00:00-05:00</published><updated>2018-01-18T11:00:00-05:00</updated><id>http://localhost:4000/writing/2018/01/18/Replacing-Characters-Smarty</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/18/Replacing-Characters-Smarty.html">&lt;p&gt;Another quick one, while at work today needed to strip a few characters out of a
+&lt;p&gt;Thanks for reading the whole way through, I hoped it helped anyone that made it this far. As always, feel free to send me an email to the address below with any questions or comments.&lt;/p&gt;</content><author><name></name></author><category term="Design" /><summary type="html">While browsing reddit the other day I came upon a link to a newer Github repo that someone was working on. That repo was Mushroom Map Maker and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.</summary></entry><entry><title type="html">Replacing Characters Within Smarty Templating</title><link href="htpps://www.doug-skinner.com/writing/2018/01/18/Replacing-Characters-Smarty.html" rel="alternate" type="text/html" title="Replacing Characters Within Smarty Templating" /><published>2018-01-18T11:00:00-05:00</published><updated>2018-01-18T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/18/Replacing-Characters-Smarty</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/18/Replacing-Characters-Smarty.html">&lt;p&gt;Another quick one, while at work today needed to strip a few characters out of a
 string, namely [ and ] as they were causing issues with some other string
 manipulation further down the line. All I had to do was turn this:&lt;/p&gt;
 
@@ -263,7 +269,7 @@ manipulation further down the line. All I had to do was turn this:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;{variable|replace:&quot;[&quot;:&quot;&quot;|replace:&quot;]&quot;:&quot;&quot;}&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Easy enough, right?&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Another quick one, while at work today needed to strip a few characters out of a string, namely [ and ] as they were causing issues with some other string manipulation further down the line. All I had to do was turn this:</summary></entry><entry><title type="html">Some Thoughts About Net Neutrality</title><link href="http://localhost:4000/writing/2018/01/17/Net-Neutrality-Thoughts.html" rel="alternate" type="text/html" title="Some Thoughts About Net Neutrality" /><published>2018-01-17T12:00:00-05:00</published><updated>2018-01-17T12:00:00-05:00</updated><id>http://localhost:4000/writing/2018/01/17/Net-Neutrality-Thoughts</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/17/Net-Neutrality-Thoughts.html">&lt;p&gt;Recently I was asked to answer the below questions as part of the Information
+&lt;p&gt;Easy enough, right?&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Another quick one, while at work today needed to strip a few characters out of a string, namely [ and ] as they were causing issues with some other string manipulation further down the line. All I had to do was turn this:</summary></entry><entry><title type="html">Some Thoughts About Net Neutrality</title><link href="htpps://www.doug-skinner.com/writing/2018/01/17/Net-Neutrality-Thoughts.html" rel="alternate" type="text/html" title="Some Thoughts About Net Neutrality" /><published>2018-01-17T12:00:00-05:00</published><updated>2018-01-17T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/17/Net-Neutrality-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/17/Net-Neutrality-Thoughts.html">&lt;p&gt;Recently I was asked to answer the below questions as part of the Information
 Ethics class that I am taking, and I thought they would stand as a good
 representation of my views on Net Neutrality. Enjoy.&lt;/p&gt;
 
@@ -293,7 +299,7 @@ representation of my views on Net Neutrality. Enjoy.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;If your business model depended for its success on millions of people being able to stream videos on demand (like YouTube) would you be in favor of net neutrality or against it?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;In favor of it. If my business model is dependant on as many people accessing it as possible, as most internet companies are, any extra charge per customer could be devestating.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Recently I was asked to answer the below questions as part of the Information Ethics class that I am taking, and I thought they would stand as a good representation of my views on Net Neutrality. Enjoy.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/01/10/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-01-10T23:14:41-05:00</published><updated>2018-01-10T23:14:41-05:00</updated><id>http://localhost:4000/jekyll/update/2018/01/10/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/01/10/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;p&gt;In favor of it. If my business model is dependant on as many people accessing it as possible, as most internet companies are, any extra charge per customer could be devestating.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Recently I was asked to answer the below questions as part of the Information Ethics class that I am taking, and I thought they would stand as a good representation of my views on Net Neutrality. Enjoy.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="htpps://www.doug-skinner.com/jekyll/update/2018/01/10/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-01-10T23:14:41-05:00</published><updated>2018-01-10T23:14:41-05:00</updated><id>htpps://www.doug-skinner.com/jekyll/update/2018/01/10/welcome-to-jekyll</id><content type="html" xml:base="htpps://www.doug-skinner.com/jekyll/update/2018/01/10/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -305,7 +311,7 @@ representation of my views on Net Neutrality. Enjoy.&lt;/p&gt;
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">VPN, A Necessity?</title><link href="http://localhost:4000/writing/2018/01/05/VPN-Necessity.html" rel="alternate" type="text/html" title="VPN, A Necessity?" /><published>2018-01-05T12:00:00-05:00</published><updated>2018-01-05T12:00:00-05:00</updated><id>http://localhost:4000/writing/2018/01/05/VPN-Necessity</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/05/VPN-Necessity.html">&lt;p&gt;Is using a VPN a necessecity for all internet users in this day and age? While
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">VPN, A Necessity?</title><link href="htpps://www.doug-skinner.com/writing/2018/01/05/VPN-Necessity.html" rel="alternate" type="text/html" title="VPN, A Necessity?" /><published>2018-01-05T12:00:00-05:00</published><updated>2018-01-05T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/05/VPN-Necessity</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/05/VPN-Necessity.html">&lt;p&gt;Is using a VPN a necessecity for all internet users in this day and age? While
 it may be a bit extreme, I do believe that any internet user that isn’t using a
 VPN for their daily internet usage to protect their privacy and anonymity. There
 are many reasons that an internet user should care about their privacy,
@@ -337,10 +343,10 @@ that is being generated nor its intended destination.&lt;/p&gt;
 among the most popular. I do encourage everyone that comes across this post to
 seriously evaluate for themselves whether they need a VPN. As to what company to
 use for your VPN, that is a matter that I will not step into, instead advising
-each person to evaluate the various options on their own.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Is using a VPN a necessecity for all internet users in this day and age? While it may be a bit extreme, I do believe that any internet user that isn’t using a VPN for their daily internet usage to protect their privacy and anonymity. There are many reasons that an internet user should care about their privacy, especially with the recent proposed change by the United States FCC.</summary></entry><entry><title type="html">Fixing Mysql Replication</title><link href="http://localhost:4000/writing/2018/01/02/Fixing-Mysql_Replication.html" rel="alternate" type="text/html" title="Fixing Mysql Replication" /><published>2018-01-02T11:00:00-05:00</published><updated>2018-01-02T11:00:00-05:00</updated><id>http://localhost:4000/writing/2018/01/02/Fixing-Mysql_Replication</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/02/Fixing-Mysql_Replication.html">&lt;p&gt;Quick one. If you have a master and slave MySQL setup, if the slaves are
+each person to evaluate the various options on their own.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Is using a VPN a necessecity for all internet users in this day and age? While it may be a bit extreme, I do believe that any internet user that isn’t using a VPN for their daily internet usage to protect their privacy and anonymity. There are many reasons that an internet user should care about their privacy, especially with the recent proposed change by the United States FCC.</summary></entry><entry><title type="html">Fixing Mysql Replication</title><link href="htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication.html" rel="alternate" type="text/html" title="Fixing Mysql Replication" /><published>2018-01-02T11:00:00-05:00</published><updated>2018-01-02T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication.html">&lt;p&gt;Quick one. If you have a master and slave MySQL setup, if the slaves are
 reporting replication failures BUT have a status that is simply waiting for the
 next command, simply restarting MySQl should fix the issue. Sometimes a simple
-restart is the answer.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Quick one. If you have a master and slave MySQL setup, if the slaves are reporting replication failures BUT have a status that is simply waiting for the next command, simply restarting MySQl should fix the issue. Sometimes a simple restart is the answer.</summary></entry><entry><title type="html">New Year</title><link href="http://localhost:4000/writing/2018/01/01/New-Year.html" rel="alternate" type="text/html" title="New Year" /><published>2018-01-01T12:00:00-05:00</published><updated>2018-01-01T12:00:00-05:00</updated><id>http://localhost:4000/writing/2018/01/01/New-Year</id><content type="html" xml:base="http://localhost:4000/writing/2018/01/01/New-Year.html">&lt;p&gt;Another year, another chance to make declarations about the goals that one hopes
+restart is the answer.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Quick one. If you have a master and slave MySQL setup, if the slaves are reporting replication failures BUT have a status that is simply waiting for the next command, simply restarting MySQl should fix the issue. Sometimes a simple restart is the answer.</summary></entry><entry><title type="html">New Year</title><link href="htpps://www.doug-skinner.com/writing/2018/01/01/New-Year.html" rel="alternate" type="text/html" title="New Year" /><published>2018-01-01T12:00:00-05:00</published><updated>2018-01-01T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/01/New-Year</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/01/New-Year.html">&lt;p&gt;Another year, another chance to make declarations about the goals that one hopes
 to accomplish in the next 365 days. Writing down goals, especially in a semi
 public place such as the internet, is one of the major steps to take in ensuring
 that those goals actually succeed. Well, this is mine, in no particular order.&lt;/p&gt;
@@ -352,90 +358,4 @@ that those goals actually succeed. Well, this is mine, in no particular order.&l
 &lt;/ul&gt;
 
 &lt;p&gt;By the end of this month I should be able to see if all of these goals actually
-come to fruition, and will make any adjustments as needed.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Another year, another chance to make declarations about the goals that one hopes to accomplish in the next 365 days. Writing down goals, especially in a semi public place such as the internet, is one of the major steps to take in ensuring that those goals actually succeed. Well, this is mine, in no particular order.</summary></entry><entry><title type="html">Building a Shell, Part 8</title><link href="http://localhost:4000/writing/2017/12/09/Building-A-Shell-pt-8.html" rel="alternate" type="text/html" title="Building a Shell, Part 8" /><published>2017-12-09T13:00:00-05:00</published><updated>2017-12-09T13:00:00-05:00</updated><id>http://localhost:4000/writing/2017/12/09/Building-A-Shell-pt-8</id><content type="html" xml:base="http://localhost:4000/writing/2017/12/09/Building-A-Shell-pt-8.html">&lt;p&gt;Today while testing I had noticed a slight issue with the code. While everything
-worked great in the directory where we started the simpleshell, the complicated
-functions failed as soon as we stepped outside of the directory using our chwd
-command. A simple fix to that just involves looking at the current directory
-when we start up, and pre-pending it to the command name. Adding that to our
-shell we get:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(void) {
-    char *base_dir = malloc(sizeof(char) * 512);
-    getcwd(base_dir, MAX_STR);
-
-    int _continue = 0;
-    char *buff = malloc(sizeof(char) * 512);
-
-    do {
-        printf(&quot;[Command prompt]$ &quot;);
-        buff = getLine(stdin); // uses the getLine from yesterdays post.
-
-        char *token;
-        token = strtok(buff, &quot; \n&quot;);
-
-        if (strcmp(token, &quot;quit&quot;) == 0) {
-            _continue = -1;
-        } else if (strcmp(token, &quot;wd&quot;) == 0) {
-			wd();
-		} else if (strcmp(token, &quot;chwd&quot;) == 0) {
-			char *new_path;
-            new_path = strtok(NULL, &quot; \n&quot;);
-            chwd(new_path);
-		} else {
-            pid_t child, wait;
-            int child_status;
-
-            child = fork();
-
-            if (child == 0) {
-                if (strcmp(buff, &quot;echo&quot;) == 0) {
-                    execl(&quot;/bin/echo&quot;, &quot;echo&quot;, &quot;Hello World!&quot;, NULL);
-                    return 1;
-                } else if (strcmp(buff, &quot;create&quot;) == 0) {
-                      char *command_path;
-                      allocateStr(&amp;amp;command_path);
-                      strcat(command_path, base_dir);
-                      strcat(command_path, &quot;/create&quot;);
-
-                      char *flag = strtok(NULL, &quot; &quot;);
-                      char *op1 = strtok(NULL, &quot; &quot;);
-                      char *op2  = strtok(NULL, &quot; &quot;);
-                      execl(&quot;./create&quot;, &quot;create&quot;, flag, op1, op2, NULL);
-                      return -1;
-                } else if (strcmp(buff, &quot;list&quot;) == 0) {
-                    char *command_path;
-                    allocateStr(&amp;amp;command_path);
-                    strcat(command_path, base_dir);
-                    strcat(command_path, &quot;/list&quot;);
-
-                    char *flag = strtok(NULL, &quot; &quot;);
-                    char *op1 = strtok(NULL, &quot; &quot;);
-                    execl(command_path, &quot;list&quot;, flag, op1, NULL);
-                    return -1;
-                } else if (strcmp(buff, &quot;fileconverter&quot;) == 0) {
-                    char *command_path;
-                    allocateStr(&amp;amp;command_path);
-                    strcat(command_path, base_dir);
-                    strcat(command_path, &quot;/fileconverter&quot;);
-
-                    char *flag = strtok(NULL, &quot; &quot;);
-                    char *op1 = strtok(NULL, &quot; &quot;);
-                    char *op2  = strtok(NULL, &quot; &quot;);
-                    execl(command_path, &quot;fileconverter&quot;, flag, op1, op2, NULL);
-                    return -1;
-                } else {
-                    printf(&quot;The command you entered does not exist.\n&quot;);
-                    return 1;
-                }
-            } else {
-                do {
-                    wait = waitpid(child, &amp;amp;child_status, WUNTRACED);
-                } while (!WIFEXITED(child_status) &amp;amp;&amp;amp; !WIFSIGNALED(child_status));
-            }
-        }
-        free(buff);
-    } while (_continue &amp;gt;= 0);
-
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Today while testing I had noticed a slight issue with the code. While everything worked great in the directory where we started the simpleshell, the complicated functions failed as soon as we stepped outside of the directory using our chwd command. A simple fix to that just involves looking at the current directory when we start up, and pre-pending it to the command name. Adding that to our shell we get:</summary></entry></feed>
+come to fruition, and will make any adjustments as needed.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Another year, another chance to make declarations about the goals that one hopes to accomplish in the next 365 days. Writing down goals, especially in a semi public place such as the internet, is one of the major steps to take in ensuring that those goals actually succeed. Well, this is mine, in no particular order.</summary></entry></feed>
