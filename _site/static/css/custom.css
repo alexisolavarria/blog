@@ -1,7 +1,13 @@
 body {
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
-  background-color: #fff;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+}
+
+p {
+  max-width: 30em;
+  margin: auto;
 }
 
 a {
