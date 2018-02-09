@@ -2,79 +2,25 @@
 layout: default
 title: Systematic Thoughts
 ---
-<div class="col-11 col-lg-10 mx-auto">
-  <div class="row">
-    <div class="d-lg-none">
-      <div class="row">
-        <span class="col-6 mobile_padding">Categories:</span>
-        <div class="col-6">
-          <div class="col-12 mobile_padding">
-            <button class="btn btn-primary tag_button All" id="All">
-              All
-              <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
-            </button>
-          </div>
-          {% for tag in site.tags %}
-            {% assign t = tag | first %}
-            {% assign posts = tag | last %}
-            <div class="col-12 mobile_padding">
-              <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
-                {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
-              </button>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    <div class="d-none d-lg-block mb-3">
-      <span>Categories: </span>
-      <br>
-      <button class="btn btn-primary tag_button All" id="All">
-        All
-        <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
-      </button>
-      {% for tag in site.tags %}
-        {% assign t = tag | first %}
-        {% assign posts = tag | last %}
-        <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
-          {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
-        </button>
-      {% endfor %}
+<span>Categories: </span>
+<button class="tag_button All" id="All">
+  All
+  <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
+</button>
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+  <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
+    {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
+  </button>
+{% endfor %}
+<hr />
+{% for post in site.categories.Writing %}
+  <div class="All_tag {{post.tags}}_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="{{post.url}}">{{ post.title }}</a></h4>
+      <p>{{ post.content }}</p>
     </div>
     <hr />
-    {% for post in site.categories.Writing %}
-      {% if forloop.first %}
-        <div class="col-12 All_tag {{post.tags}}_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-header">Latest Blog Post</div>
-            <div class="card-body">
-              <a href="{{post.url}}">
-                <h3 class="text-center card-title">{{ post.title }}</h3>
-              </a>
-              <hr />
-              <p class="lead card-text">{{ post.excerpt }}</p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="{{ post.url }}"> Continue </a>
-            </div>
-          </div>
-        </div>
-      {% else %}
-        <div class="col-12 All_tag {{post.tags}}_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="{{post.url}}">
-                <h3 class="text-center card-title">{{ post.title }}</h3>
-              </a>
-              <hr />
-              <p class="lead card-text">{{ post.excerpt }}</p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="{{ post.url }}"> Continue </a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
   </div>
-</div>
+{% endfor %}

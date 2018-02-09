@@ -1,24 +1,11 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <!-- My Font -->
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-  <!-- Your custom styles -->
   <link href="/static/css/custom.css" rel="stylesheet">
-
   <title>Doug Skinner</title>
   <link rel="shortcut icon" href="/img/favicon.ico" />
 
-  <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-  <!-- My custom javascript-->
   <script type="text/javascript" src="/static/js/custom.js"></script>
 
   <script>
@@ -33,443 +20,1187 @@
 </head>
 
   <body>
-    <div class="d-md-none">
-      <div class="">
-  <nav class="navbar fixed-top navbar-light bg-white">
-    <a class="navbar-brand" href="#">Doug Skinner</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  	<div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav ml-auto float-right">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/photos.html">Photos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/projects.html">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/writings.html">Writings</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
+    <nav class="navigation">
+  <h2>
+    <a href="/index.html">Doug Skinner</a>
+  </h2>
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/about.html">About</a>
+    </li>
+    <li>
+      <a href="/photos.html">Photos</a>
+    </li>
+    <li>
+      <a href="/projects.html">Projects</a>
+    </li>
+    <li>
+      <a href="/writings.html">Writings</a>
+    </li>
+  </ul>
+  <hr />
+</nav>
 
-    </div>
-    <div class="container" style="padding-top:5em;">
-      <div class="container">
-        <div class="row">
-          <div class="d-none d-md-block col-md-5 col-lg-3">
-            <div class="hero card shadow">
-  <div class="card-body">
-    <div class="text-center" style="margin-top:3em;">
-      <a href="/about.html">
-        <img class="img-responsive shadow" style="height:200px;width:200px;border-radius:50%;" src="/img/photos/other/me.jpg">
-      </a>
-      <div class="content">
-        <a href="/index.html"><h3>Doug Skinner<br><small><a href="mailto:me@doug-skinner.com">contact</a></small></h3></a>
-        <ul class="list-unstyled">
-          <li><a href="/projects.html"><h5>Programmer</h5></a></li>
-          <hr />
-          <li><a href="/photos.html"><h5>Photography Enthusiast</h5></a></li>
-          <hr />
-          <li><a href="/writings.html"><h5>Wannabe Blogger</h5></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-          </div>    
-          <div class="col-xs-12 col-md-7 col-lg-9">
-            <div class="">
-                <div class="col-11 col-lg-10 mx-auto">
-  <div class="row">
-    <div class="d-lg-none">
-      <div class="row">
-        <span class="col-6 mobile_padding">Categories:</span>
-        <div class="col-6">
-          <div class="col-12 mobile_padding">
-            <button class="btn btn-primary tag_button All" id="All">
-              All
-              <span class="badge badge-pill"> 26 </span>
-            </button>
-          </div>
-          
-            
-            
-            <div class="col-12 mobile_padding">
-              <button class="btn btn-outline-primary tag_button Development" id="Development">
-                Development <span class="badge badge-pill"> 12 </span>
-              </button>
-            </div>
-          
-            
-            
-            <div class="col-12 mobile_padding">
-              <button class="btn btn-outline-primary tag_button Thoughts" id="Thoughts">
-                Thoughts <span class="badge badge-pill"> 6 </span>
-              </button>
-            </div>
-          
-            
-            
-            <div class="col-12 mobile_padding">
-              <button class="btn btn-outline-primary tag_button Reading" id="Reading">
-                Reading <span class="badge badge-pill"> 7 </span>
-              </button>
-            </div>
-          
-            
-            
-            <div class="col-12 mobile_padding">
-              <button class="btn btn-outline-primary tag_button Design" id="Design">
-                Design <span class="badge badge-pill"> 1 </span>
-              </button>
-            </div>
-          
-        </div>
-      </div>
-    </div>
-    <div class="d-none d-lg-block mb-3">
+    <div class="">
       <span>Categories: </span>
-      <br>
-      <button class="btn btn-primary tag_button All" id="All">
-        All
-        <span class="badge badge-pill"> 26 </span>
-      </button>
-      
-        
-        
-        <button class="btn btn-outline-primary tag_button Development" id="Development">
-          Development <span class="badge badge-pill"> 12 </span>
-        </button>
-      
-        
-        
-        <button class="btn btn-outline-primary tag_button Thoughts" id="Thoughts">
-          Thoughts <span class="badge badge-pill"> 6 </span>
-        </button>
-      
-        
-        
-        <button class="btn btn-outline-primary tag_button Reading" id="Reading">
-          Reading <span class="badge badge-pill"> 7 </span>
-        </button>
-      
-        
-        
-        <button class="btn btn-outline-primary tag_button Design" id="Design">
-          Design <span class="badge badge-pill"> 1 </span>
-        </button>
-      
-    </div>
-    <hr />
-    
-      
-        <div class="col-12 All_tag Thoughts_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-header">Latest Blog Post</div>
-            <div class="card-body">
-              <a href="/writing/2018/01/22/More-NN-Thoughts.html">
-                <h3 class="text-center card-title">Downloading Isn't Stealing</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p><strong>Warning</strong>: This post is very long. Read at your own risk.<br />
+<button class="tag_button All" id="All">
+  All
+  <span class="badge badge-pill"> 26 </span>
+</button>
+
+  
+  
+  <button class="btn btn-outline-primary tag_button Development" id="Development">
+    Development <span class="badge badge-pill"> 12 </span>
+  </button>
+
+  
+  
+  <button class="btn btn-outline-primary tag_button Thoughts" id="Thoughts">
+    Thoughts <span class="badge badge-pill"> 6 </span>
+  </button>
+
+  
+  
+  <button class="btn btn-outline-primary tag_button Reading" id="Reading">
+    Reading <span class="badge badge-pill"> 7 </span>
+  </button>
+
+  
+  
+  <button class="btn btn-outline-primary tag_button Design" id="Design">
+    Design <span class="badge badge-pill"> 1 </span>
+  </button>
+
+<hr />
+
+  <div class="All_tag Thoughts_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/22/More-NN-Thoughts.html">Downloading Isn't Stealing</a></h4>
+      <p><p><strong>Warning</strong>: This post is very long. Read at your own risk.<br />
 Also as part of my class discussed previously, I had to write a term paper on
 any topic that my little heart desired, as long as it related to the class. The
 topic was copyright law in the online realm, and what follows is the paper. Enjoy.</p>
 
-</p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/22/More-NN-Thoughts.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Design_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2018/01/19/Mushroom-Redesign.html">
-                <h3 class="text-center card-title">Mushroom Redesign</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>While browsing reddit the other day I came upon a <a href="https://www.reddit.com/r/learnpython/comments/7q8qka/i_made_a_rough_draft_of_a_flask_app_that_accepts/">link</a> to a newer Github repo that someone was working on. That repo was <a href="https://github.com/brettvanderwerff/Mushroom-Map-Maker">Mushroom Map Maker</a> and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.</p>
+<hr />
 
+<p>Currently there is a conversation ongoing within the United States about stealing. This discussion however, isn’t about the theft of physical property. The discussion is instead focused on the common act among internet users of copying and sharing files and whether that should be considered stealing according to United States law. Currently according to the United States Code, Title 17: Sections 501 and 506 (17 U.S. Code § 506), any unauthorized copying is against federal law, and the law prescribes severe civil and criminal penalties for the act. This law, and the punishments defined within are based on treating the digital copying of files, called digital theft, the same as physical theft. Based on the actions of most individuals within society however, the argument can and should be made to not treat the actions as equivalent.</p>
+
+<p>According to Reynolds, intellectual property is the “term used to describe works of the mind—such as art, books, films, formulas, inventions, music, and processes—that are distinct and owned or created by a single person or group.” (Reynolds, G. 2014). This intellectual property is governed through various governments through copyright, patent, and trade secret laws. The two sets of laws that most frequently govern the acts of copying online files are copyright laws and patent laws, protecting art, books, film, and music or inventions respectively. According to Article 1, Section 8, Clause 8 congress shall have the power “to promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Rights to their respective Writings and Discoveries.” (Article 1, Section 8, Clause 8. 2000). Also, according to Reynolds, a copyright is the “exclusive right to distribute, display, perform, or reproduce an original work in copies or to prepare derivative works based on the work.” (Reynolds, G. 2014). Any person found to be in violation of the rights held by a copyright holder is committing copyright infringement. According to current United States law the courts have much ability to pursue or make example cases of copyright infringement, as they have the power to award fines anywhere from $200 to $100,000. Current copyright law guarantees the holder to the rights to their work for a period of several years.</p>
+
+<p>At the bidding of lobbyists from those who stand to gain a lot by extending copyright, the term of copyright has been extended 11 times in the timespan starting in 1960. The people primarily behind the lobbyists are mostly movie studios and other large holders of multiple copyrights to merchandising empires. The reason behind fighting so hard for copyright extensions is that the studios make most of their profit from selling toys, movies, and other tie-ins for their various iconic properties.</p>
+
+<p>The original term of copyright was twenty-eight years, however the Copyright Term Extension Act signed into law in 1998 sets out the time limits outlined as follows (COPYRIGHT TERM EXTENSION):</p>
+
+<ul>
+  <li>For works created after January 1, 1978, copyright protections endure for the life of the author plus 70 years.</li>
+  <li>For works created but not published or registered before January 1, 1978, the term endures the life of the author plus 70 years, but also guarantees that it expires no earlier than December 31, 2004.</li>
+  <li>For works created before 1978 that are still within their original term of copyright the total term is to be extended to 95 years from the original date of copyright.</li>
+</ul>
+
+<p>Once this act was signed into law, it was challenged by Eric Eldred. Eldred wanted to create an online library of sorts, where older books would be available for viewing to those who otherwise wouldn’t have access to them. The Eldred v. Ashcroft case went all the way to the United States Supreme Court, which upheld the act as constitutional in 2003. After the Supreme Court made this decision, many internet activists revolted against it, not unlike what occurred during the attempted passing of PIPA and SOPA in 2012. The activists attempted to get Congress to change the law through appeals directly to its members, and even started a campaign to amend the Constitution (Wu, T. 2003). Other members of the internet activist groups however fought to fix this wrong doing another way. The activists argued that as they had the power to write code to either enforce the law or allow it to be broken easier, that power should be used to directly influence the publics conformance or not with the law. While that is not to say that the activists directly encouraged the breaking of the law, it can be stated that the like great tax lawyers can find loopholes within the tax code, great programmers and activists should likewise look to exploit the copyright protections within any possible legal loopholes (Wu, T. 2003). Thus, semi-organized resistance to copyright law was discussed for the first time regarding the digital realm.</p>
+
+<p>One of the major defenses used by these activists, and unfortunately those who do go on to break the law, is the concept of the Fair Use Doctrine. Renyold’s defines it as “allowing portions of copyrighted materials to be used without permission under certain circumstances.” (Reynolds, G. 2014). The United States Code, according to Title 17 Section 107 states that “the fair use of a copyrighted work, including such use by reproduction in copies or phonorecords or by any other means specified by that section, for purposes such as criticism, comment, news reporting, teaching (including multiple copies for classroom use), scholarship, or research, is not an infringement of copyright.” (17 U.S. Code § 107). The law also outlines the following four considerations to use when determining whether a specific use of a copyrighted work falls within fair use.</p>
+
+<ul>
+  <li>The purpose and character of the use, including whether such use is of a commercial nature or is for nonprofit educational purposes;</li>
+  <li>The nature of the copyrighted work;</li>
+  <li>The amount and substantiality of the portion used in relation to the copyrighted work as a whole;</li>
+  <li>Finally, the effect of the use upon the potential market for or value of the copyrighted work.</li>
+</ul>
+
+<p>The law also concludes by stating that the above guidelines are to be used whether the copyrighted work is published or not.</p>
+
+<p>An application of the Fair Use Doctrine in 2011 was when the HathiTrust Digital Library had a lawsuit filed against them by the Authors Guild, an advocacy group for writers. The reasoning behind the lawsuit was that multiple digital copies of a work or text were created through the simple act of building the library, that HathiTrust Digital Library was violating copyright by reproducing copyrighted works without the explicit permission of each copyright holder. While the courts did eventually side with the library, stating that by transferring the works from a written form to digital form the library was falling under transformative use, an all too common counter point to this ruling is the continued prosecution of those who share music or other forms of media digitally.</p>
+
+<p>In the book “What if We Could Re-Imagine Copyright”, Christophe Geiger argued that copyright protections are key to the continued survival of many forms of creative expression (Geiger, C. 2017). While Geiger does acknowledge that copyrights are mostly beneficial for large corporations, he still argues for the continued use of copyright. The argument can be made that artists will be loath to continue producing content without the knowledge that their work will be free from copying, however in modern times it seems that this is no longer the case. This can be seen in the large number of people creating songs, videos, and other creations and either open-sourcing the contents or uploading them to platforms where the platform owner holds the ownership of the content. This counter-argument can then be extended to considering if people are willing to give up ownership of a work entirely, that there should be no qualms about the sharing of their content to new audiences.</p>
+
+<p>Once someone follows this train of thought, it begs the question of whether copying digital bits to a friend is ethical instead of illegal. Once taken out of the realm of legality into the realm of everyday thought, it seems remarkable that this conversation has even continued in the days of easy access to everything online. While the law unfairly equivocates downloading a copyrighted work with common law stealing, what should be considered the more important question to an individual that is about to commit this act is how a group of their peers, also known as a jury, would see this action. The reason this is important is that while the laws of a country are seemingly set in stone, in most developed countries it is the will of the people, again that group of your peers, that can help shape and change the way the law works. This process of change allows the laws to be continually updated to reflect what society considers to be unethical.</p>
+
+<p>Before the topic can be discussed, a brief description on the difference between illegal (legal) and unethical (ethical) is necessary. Legal means something recognized or made effective by a court of law as distinguished from a court of equity, whereas ethics is defined as the moral principles of an individual. Defined in plain English, for an action to be illegal it must be against a written law, whereas an action must be considered immoral to a person to be ethically wrong. Now, a definition of moral, sanctioned by one’s conscience, will be helpful here. While legality is based on written laws which are notoriously hard to change in the United States no matter how easy that should be, ethicality is based on one’s own belief of what is right and wrong. And, as can be seen on Wiring the Brain (Mitchell, K. 2011, June 13), the morals of one person come from those around the individual.</p>
+
+<p>Once this fact has been accepted, it is not that far of a jump to conclude how a law is originally created. A law is a cemented moral based upon a specific point in time. As anyone who’s ever watched the American political system flounder to change the laws put into place by the previous administration has learned, laws are difficult to change simply because they are easily defended by those who they protect. What does this mean? Well, it means that while morals evolve based on what a group of people currently think, laws are based upon what a group decided to write down at some point in the past. This means that there is going to naturally be some drift between the two of these points. And due to the difficulty of changing the written laws, the gap only increases over time. So, while everyone can agree, at least within the United States, that downloading content that you don’t currently have an agreement to have access to is illegal the real question is to whether this same act is unethical.</p>
+
+<p>This depends entirely upon what society currently thinks, and I think that the argument can be made that society agrees that downloading is not stealing which goes back to the definition of stealing. The definition of stealing is defined as follows: party A has an item, and party B doesn’t; Party B then takes the item from party A; Now party B has it and party A doesn’t. This is a zero-sum problem, where only one party can have the item at once. That’s why common theft is considered both illegal and unethical as it means that one person’s loss is another person’s gain.</p>
+
+<p>Downloading an item, such as an mp3 file, is not zero sum however. If an mp3 is taken, copied it, and given to another party the first party still has their copy of the mp3 and now someone else does too. This means that both parties have the file, resulting in one person’s gain and another person’s neutral. It should be easy to agree that between having a zero-sum vs a positive sum outcome, the positive sum is more desired. And if the outcome is more desired, there is absolutely no reason that it should be made, or continue to be, against the law. And it seems that most of current American society would agree with me.</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/Piracy_Percentages_Wide.png" /></p>
+
+<p>(Mick, J. 2013, January 21)</p>
+
+<p>Another argument for the easing of copyright laws is that most great works of history have been derivative in some manner. A derivative work is an expressive creation that includes major elements of an original copyright protected work, without consisting entirely of the original work. According to law, the work must be considered original and bear the marks of the new artist in order to be truly derivative instead of simply copying. While one of the most famous examples of a derivative work, the LHOOQ, is simply a joke consisting of the Mona Lisa painting originally created by Leonardo da Vinci repainted to include a moustache, there is no reason to believe that is the only form of derivative work. Most media that the American public consumes is derivative in some way. Late night comedy shows almost entirely consist of poking fun at the actions of those around them within society, or mocking popular culture elements of TV Shows. Considering TV shows, two of the most popular shows in America Family Guy and The Simpsons are incredibly derivative, as both shows not only have entire characters that are simply parodies of characters, both real and cartoon, but also have entire episodes that consist of making fun of another show or movie.</p>
+
+<p>Examples such as these aren’t limited to TV shows, as movies and books have done the same thing. After the Lord of the Rings became a popular book, the entire genre of fantasy consisting of made up worlds with original languages and creatures that never existed before exploded into popularity. Harry Potter serves as another book that helped to spark the love of fantasy within another generation of society. Similarly, the book Dune is considered a large part of the popularity of Science Fiction, and the entire Star Wars franchise is entirely based off the success of the first movie, A New Hope, that is considered by many critics to be almost an entire rip off of the story from Dune (Kunzru, H. 2015, July 03). Disney, the new owners of Star Wars, are not unfamiliar with the concept of derivative works themselves, as most of their popular movies are based on simply taking stories from the Fairy Tales Grimm, making them appropriate for children by taking out references to death, murder, and the gruesome bits, and marketing them as if they were originally created by Disney.</p>
+
+<p>Going back to original example of the LHOOQ, most painters are very derivative as they grow upon the designs and ideas of those that came before them. Or, sometimes this takes the shape of going the other direction. An artist may consume so much of one type of media only to ensure that they go the entirely opposite direction to be original. However, originality only for the sake of not being derivative can be even be considered derivation itself as you must consume enough of a topic to make sure that your implementation doesn’t include anything that’s in the original. Finally, probably the most derivative genre of media of all is music, for many of the same reasons as painting. Music goes even further as many of the most popular songs nowadays are nothing more than rehashes of those that came before. An example recently in the news was when one rap artist produced a song, a second rap artist then remixed that song into another using the first as a hook. The original artist then took the song created by the second and used it as a hook for a third song. Creating a song of a song of a song is something that is only possible according to current societal morals as both artists didn’t care that the other took their work as it is commonplace among the music community. There is no reason that the same can’t be said for other communities.</p>
+
+<p>Information is power (Swartz , A. 2008, July). Many in history have said that before, and many will say it in the years to come. However, like all power in society there are those that want to make it so that they remain in power by keeping information, knowledge about everything within society to themselves. A perfect example of this is anyone who wants to read previous scientific and cultural research on a topic. This information is being increasingly held by a handful of private companies, that want to charge enormously large amounts of money to access that information. It is a sad fact that currently the final step in the research of many doctoral students is to turn in their paper, get it peer reviewed, accepted into the community, and then hand over the keys to the kingdom to those already in power. The knowledge gained is then held by the doctoral student, anyone who read it previously, and now anyone that want to pay online databases roughly a $100 per article for access.</p>
+
+<p>The online database companies take these matters very seriously, even pursuing legal actions against those who try to work around the safeguards that they have in place to stop the spread of knowledge. The most famous of these court cases involving JSTOR, notably the most well-known of the article stores, and a young man named Aaron Swartz. While on the campus of the Massachusetts Institute of Technology, Swartz had started downloading articles from JSTOR. While anyone on the campus has full access to JSTOR using their web portal, Aaron had written a script to simulate browsing the website to download multiple articles at once as fast as the computer could. All told, he got multiple hard drives worth of data for an unknown purpose. Swartz had said that he was using the papers he gathered for research purposes, something that is entirely within the rights of a JSTOR user. JSTOR, however, declared that he must be downloading the articles for the nefarious purpose of trying to open his own competing article database.</p>
+
+<p>Using the copyright laws that were stated within the first couple pages of this article and the Computer Fraud and Abuse Act of 1986, JSTOR brought legal action against Swartz, which involved him getting arrested by an FBI team. This eventually lead Swartz to be charged with multiple felonies and the chance of being ordered to pay restitution of over a million dollars. A million dollars, for what? Downloading some articles that anyone in the world that can make it to Boston can access for free? The prosecution ended abruptly when Aaron was found dead after the case was once again continued. While this may seem like an extreme example, this could become increasingly commonplace if the copyright laws aren’t adjusted to be realistic with the society of today that involves the use of so much online data.</p>
+
+<p>Without completely rehashing the arguments made above, it can be said that the main arguments for the changing of copyright laws are the differences between what is written law and what is believed by the common man, the effect that sharing works on knowledge can have, and how copyright serves to gate-keep that knowledge from those that need it the most. Through the surveys outlined above, it has been proven multiple times that the average person in America either sees no problem with internet piracy or is a pirate themselves. Since most seem okay to commit the act, it is highly doubtful that they believe that they should be prosecuted for breaking a law that is so out of touch with their actions and the actions of those around them. It is also clear to see that many works nowadays and in the past, are derivative in nature, whether that is painters and composers taking inspiration from their peers to the newer fascination that rappers and hip-hop artists have with remixing each other’s songs either adding a new rap verse or taking the chorus of one song to use as the refrain to another. Without the ability to do this, many of these artists would not be able to make the kinds of or amount of music that they currently do. Finally, in this day and age especially considering the number of times that this has gone wrong in the past it is frankly ridiculous that there should be keepers of knowledge. While there should always be libraries to store knowledge, the cost of obtaining that knowledge should be either physically getting to the library or navigating to the libraries webpage, not paying sometimes hundreds of dollars per article to access that information. Every time in history this same setup has occurred of those privileged few with access to all the knowledge leaving the plebeians with starvation of the mind, there has been some catastrophic event that causes the loss of all that knowledge.</p>
+
+<p>Judging the content contained within the body of this article, it should be relatively easy to assume where I stand on the issue, however I think it best to explicitly outline where I stand on the issue now that I have provided ample evidence in support. While an extreme view, even among my peers who spend most of their time within the digital realm, I believe that in the age of the internet copyright is a holdover of the past that is best to be forgotten about like the act of turning in papers written on scrolls or only passing knowledge orally. Personally, I am of the mind that the best works of humanity have yet to exist, will exist only through the continued use of technology, and will never exist if the current copyright system is allowed to continue unchanged.</p>
+
+<p>Following the discussions on this topic outlined above, it certainly seems necessary to rethink or totally abolish the use of copyright when it pertains to works that can and should so easily be shared within society today. The laws that were created and expanded upon before the internet was a commonality should not still be what governs the actions using its power. The world itself is a better place following the dissemination of knowledge and copyright laws only serve to go against the grain of time. Following this discussion, it looks like it might be time to update those laws America.</p>
+
+<p class="text-center"><u>Works Cited</u></p>
+
+<ul>
+  <li>About Piracy. (n.d.). Retrieved January 18, 2018, from <a href="https://www.riaa.com/resources-learning/about-piracy/">https://www.riaa.com/resources-learning/about-piracy/</a></li>
+  <li>Article 1, Section 8, Clause 8. (2000). Retrieved January 18, 2018, from <a href="http://press-    pubs.uchicago.edu/founders/tocs/a1_8_8.html">http://press-    pubs.uchicago.edu/founders/tocs/a1_8_8.html</a></li>
+  <li>BITTON, M. (2012). RETHINKING THE ANTI-COUNTERFEITING TRADE AGREEMENT’S CRIMINAL COPYRIGHT ENFORCEMENT MEASURES. The Journal of Criminal Law and Criminology (1973-), 102(1), 67-117. Retrieved from <a href="http://www.jstor.org/stable/23145786">http://www.jstor.org/stable/23145786</a></li>
+  <li>COPYRIGHT TERM EXTENSION. (n.d.). Retrieved January 17, 2018, from     <a href="https://www.copyright.gov/legislation/s505.pdf">https://www.copyright.gov/legislation/s505.pdf</a></li>
+  <li>Geiger, C. (2017). Copyright as an access right: Securing cultural participation through the    protection of creators’ interests. In GIBLIN R. &amp; WEATHERALL K. (Eds.), What if we could reimagine copyright? (pp. 73-110). Acton: ANU Press. Retrieved from <a href="http://www.jstor.org/stable/j.ctt1q1crjg.6">http://www.jstor.org/stable/j.ctt1q1crjg.6</a></li>
+  <li>Kunzru, H. (2015, July 03). Dune, 50 years on: how a science fiction novel changed the     world. Retrieved January 18, 2018, from     <a href="https://www.theguardian.com/books/2015/jul/03/dune-50-years-on-science-fiction-novel-world">https://www.theguardian.com/books/2015/jul/03/dune-50-years-on-science-fiction-novel-world</a></li>
+  <li>Mick, J. (2013, January 21). Nearly Half of Americans Pirate Casually, But Pirates Purchase     More Legal Content. Retrieved January 18, 2018, from <a href="http://www.dailytech.com/NearlyHalfofAmericansPirateCasuallyButPiratesPurchaseMoreLegalContent/article29702.htm">http://www.dailytech.com/NearlyHalfofAmericansPirateCasuallyButPiratesPurchaseMoreLegalContent/article29702.htm</a></li>
+  <li>Mitchell, K. (2011, June 13). Where Do Morals Come From? Retrieved January 18, 2018, from <a href="http://www.wiringthebrain.com/2011/06/where-do-morals-come-from.html">http://www.wiringthebrain.com/2011/06/where-do-morals-come-from.html</a></li>
+  <li>Reynolds, G. (2014). Ethics in Information Technology. Cengage Learning.</li>
+  <li>Swartz , A. (2008, July). Guerilla Open Access Manifesto. Retrieved January 18, 2018, from     <a href="https://archive.org/stream/GuerillaOpenAccessManifesto/Goamjuly2008_djvu.txt">https://archive.org/stream/GuerillaOpenAccessManifesto/Goamjuly2008_djvu.txt</a></li>
+  <li>Wu, T. (2003). When Code Isn’t Law. Virginia Law Review, 89(4), 679-751.doi:10.2307/3202374</li>
+  <li>17 U.S. Code § 107 - Limitations on exclusive rights: Fair use. (n.d.). Retrieved January 18,   2018, from <a href="https://www.law.cornell.edu/uscode/text/17/107">https://www.law.cornell.edu/uscode/text/17/107</a></li>
+  <li>17 U.S. Code § 506 - Criminal offenses. (n.d.). Retrieved January 18, 2018, from     <a href="https://www.law.cornell.edu/uscode/text/17/506">https://www.law.cornell.edu/uscode/text/17/506</a></li>
+</ul>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/19/Mushroom-Redesign.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2018/01/18/Replacing-Characters-Smarty.html">
-                <h3 class="text-center card-title">Replacing Characters Within Smarty Templating</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Another quick one, while at work today needed to strip a few characters out of a
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Design_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/19/Mushroom-Redesign.html">Mushroom Redesign</a></h4>
+      <p><p>While browsing reddit the other day I came upon a <a href="https://www.reddit.com/r/learnpython/comments/7q8qka/i_made_a_rough_draft_of_a_flask_app_that_accepts/">link</a> to a newer Github repo that someone was working on. That repo was <a href="https://github.com/brettvanderwerff/Mushroom-Map-Maker">Mushroom Map Maker</a> and now, mushrooms aren’t normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.</p>
+
+<p>The original landing page looked like this:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_starting_image.png" /></p>
+
+<p>So it was obvious that the creater, <a href="https://github.com/brettvanderwerff">brettvanderwerff</a>, was using bootstrap 3 based on the basic jumbotron and navbar. Now, bootstrap 3 is the older version and using bootstrap 4 would be easier, but it shouldn’t be too hard. Before I begin, I should point at that the changes to the actual repo were all done inline to not include another file in the repository, but will be represented below as if there were an actual custom css file.</p>
+
+<p>The first change that I made was to indicate the actual page the user was using on the navbar, as to begin with it only ever had the active class on the “Home” link. This was as simple as adding a page variable to the flask routing that returned the name of the page, and did an if statement for each link to add the class if necessary. No other visual changes yet.</p>
+
+<p>The next thing that I did was to actually remove the standard active class, and implement my own version at first just changing the color of the link text. I also opted to make the background color of the navbar white instead of the default grey-ish. Our custom css file would look like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+</code></pre></div></div>
+
+<p>And the landing page now looked like so:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_new_navbar.png" /></p>
+
+<p>Next, do deal with the actual content of the index page. The content was already within a container, which was good. First I pulled the instructions “Select “Search for a Mushroom” on the navigation bar to begin.” onto the main jumbotron. Then, to stop the page from seeming like it was shouting at you, I lowered the title “The Mushroom Map” to be an h2 instead of an h1. I also used the <code class="highlighter-rouge">&lt;small&gt;</code> tag for the version number within that h2 to apply some built in boot-strappy styling. Separating the heading of that content from the body with an <code class="highlighter-rouge">&lt;hr /&gt;</code> also gives some breathing room.</p>
+
+<p>Finally, taking after the cards that became popular with Google’s Material Design guidelines, I opted to fashion the jumbotron holding the content as a card with a white background with a slight shadow. Our css file now contains:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+</code></pre></div></div>
+
+<p>And the landing page now appears like so:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_card_index.png" /></p>
+
+<p>Then to soften up the appearance of the links I opted to change the color to a softer shade of blue. Changing the color of the links to be less in your face may seem like a small change, but I’ve repeatedly found that by doings so it makes the page appear more friendly and welcoming.</p>
+
+<p>Our custom file is now:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+a {
+  color: #17a2b8;
+}
+
+</code></pre></div></div>
+
+<p>And the landing page now appears like so:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_link_color.png" /></p>
+
+<p>Now switching gears to the actual functionality of the site, the original search page looked like the following:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_original_search.png" /></p>
+
+<p>With the navbar changes that were made before that carried over, and by moving the content into a jumbotron just like before the content now mostly matches the homepage. It’s just a matter of cleaning it up. By making those changes, which doesn’t require a change to the css file, the page looks like so:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_card_search.png" /></p>
+
+<p>While that form is functional, it would appear better to use the form-groups that bootstrap provides to shape the label and the input. The code to do that is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+&lt;div class="form-group"&gt;
+  &lt;label for="example"&gt;Example&lt;/label&gt;
+  &lt;input class="form-control" name="example" type="text"&gt;
+&lt;/div&gt;
+
+</code></pre></div></div>
+
+<p>And now the page looks like:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_form_groups.png" /></p>
+
+<p>Then, to take advantage of larger screens I moved the examples over to a second column. Once the screen got below the bootstrap’s defined medium screen size it then converts to being stacked like how it was. It now appears like so on larger screens:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_two_column.png" /></p>
+
+<p>The original search page did alert the user if they had errors entering when submitting the form, however to make the look of the match the original, I modified them to both be alerts with the danger class. The danger class is a built in Bootstrap element that can be added to most text tags that makes the font color red, and in the case of the alerts also makes the background a lighter shade of red to really emphasize the text. A screenshot of the new change is below:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_alerts.png" /></p>
+
+<p>Next, The example list was modified to be a dictionary list. Like changing the sizes of the card titles, this was done to make the page seem less in your face, while still providing the information. See below for the difference:</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_d_list.png" /></p>
+
+<p>And the last major change was to make the search look better by just adding some padding for mobile. While a minor change, the extra space makes the applications interface flow better.</p>
+
+<p>Our custom file is now:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+.active-link {
+  color: blue;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 1px 3px 5px 3px rgba(204, 204, 204, 0.3);
+}
+
+a {
+  color: #17a2b8;
+}
+
+mobile_padding {
+  padding-bottom: 1em;
+}
+
+</code></pre></div></div>
+
+<p>And that padding class is applied to the column containing the search form. The final product looks like below, shown in desktop and phone sized screens.</p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_final_desk.png" /></p>
+
+<p><img class="rounded img-fluid shadow" src="/img/post_images/mushroom_final_phone.png" /></p>
+
+<p>Thanks for reading the whole way through, I hoped it helped anyone that made it this far. As always, feel free to send me an email to the address below with any questions or comments.</p>
+</p>
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/18/Replacing-Characters-Smarty.html">Replacing Characters Within Smarty Templating</a></h4>
+      <p><p>Another quick one, while at work today needed to strip a few characters out of a
 string, namely [ and ] as they were causing issues with some other string
 manipulation further down the line. All I had to do was turn this:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;{variable}&gt;
+</code></pre></div></div>
+
+<p>Into this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;{variable|replace:"[":""|replace:"]":""}&gt;
+</code></pre></div></div>
+
+<p>Easy enough, right?</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/18/Replacing-Characters-Smarty.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Thoughts_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2018/01/17/Net-Neutrality-Thoughts.html">
-                <h3 class="text-center card-title">Some Thoughts About Net Neutrality</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Recently I was asked to answer the below questions as part of the Information
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Thoughts_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/17/Net-Neutrality-Thoughts.html">Some Thoughts About Net Neutrality</a></h4>
+      <p><p>Recently I was asked to answer the below questions as part of the Information
 Ethics class that I am taking, and I thought they would stand as a good
 representation of my views on Net Neutrality. Enjoy.</p>
 
+<hr />
+
+<p><strong>Are you in favor of network neutrality going forward? Why or why not?</strong></p>
+
+<p>I am entirely in favor of net neutrality. To believe anything else would be to go against the very essence of what makes the internet so great. The internet, since it was first invented by Tim Berners Lee, has long been a free for all where anyone can make the next big thing out of their garage. For most of the gian companies that we knwo today, i.e. Apple, Microsoft, Netflix, Facebook, and others, are only as big as they are because they were able to thrive as young companies on the internet.</p>
+
+<p>If the protection that these large companies used, that of every end point on the internet being treated equal, ever goes away it will almost certainly guarantee that competition among little companies will all but evaporate as the already established behemoths can simply pay to wipe them out.</p>
+
+<p><strong>What is the threat of ISPs, private business firms, charging whatever they want to charge and that the market will bear?</strong></p>
+
+<p>By charging whatever they feel like charging to certain businesses the ISPs are trying to make their service what it isn’t. The goal of an INTERNET service provider is to provide service, i.e. access, to the internet. It is most certainly NOT to choose what goes over the internet. The role of the ISP is to act as a dumb pipe, the same way that a sewer does not care whether it carries water, excrement, or food shavings. Allowing an ISP to charge more for certain services would be the exact same as allowing sewage companies to charge more to carry water from your toilet than water from your sink.</p>
+
+<p><strong>What do the FCC and industry critics mean by “discriminatory behavior” towards selected Internet services? Does the FCC want to prevent ISPs from managing their networks?</strong></p>
+
+<p>Discriminatory behavior on behalf of the ISPs would be to charge based on the type of traffic that goes over their network. Since a packet of video is no more damaging to a computer network than a packet of plain text, there is no reason that an ISP should be able to charge more for one than the other. The ISP is perfectly allowed to manage their networks, only so far as they are allowed to continue being a dumb pipe.</p>
+
+<p><strong>Does the FCC support metered pricing and/or Internet bandwidth caps?</strong></p>
+
+<p>Yes, as long as the pricing reflects the usage and is non-discriminatory.</p>
+
+<p><strong>Major cities of the world have adopted “congestion pricing” in which cars pay a toll to enter the core of the city during daylight hours. Congestion pricing is also used to regulate demand by businesses for electricity. During the day when electricity is in high demand, many businesses pay a “demand” fee in addition to the regular charge for electricity. Why is the Internet any different?</strong></p>
+
+<p>Well, the internet is different simply because the demand of the internet can be met much more simply than the demands of electricity. While the electricity of the United States has been regulated so everyone gets the same availability. The same is not true for ISPs. There are still multiple places within this country that have less than a 10mbps line as the fastest internet that they can get. Before the ISPs worry about charging their existings customers more and ruining thousands of internet based businesses, they should focus on actually providing the service they are supposed too to their customers.</p>
+
+<p><strong>If your business model depended for its success on millions of people being able to stream videos on demand (like YouTube) would you be in favor of net neutrality or against it?</strong></p>
+
+<p>In favor of it. If my business model is dependant on as many people accessing it as possible, as most internet companies are, any extra charge per customer could be devestating.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/17/Net-Neutrality-Thoughts.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Thoughts_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2018/01/05/VPN-Necessity.html">
-                <h3 class="text-center card-title">VPN, A Necessity?</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Is using a VPN a necessecity for all internet users in this day and age? While
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Thoughts_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/05/VPN-Necessity.html">VPN, A Necessity?</a></h4>
+      <p><p>Is using a VPN a necessecity for all internet users in this day and age? While
 it may be a bit extreme, I do believe that any internet user that isn’t using a
 VPN for their daily internet usage to protect their privacy and anonymity. There
 are many reasons that an internet user should care about their privacy,
 especially with the recent proposed change by the United States FCC.</p>
 
+<p>While Internet Service Providers(ISPs) within the United States will soon be
+able to charge users more depending on what softwares you actually use within
+your billing period, none of that matters if you can’t be tracked. When using a
+VPN, the only traffic that your ISP will be able to see and intercept will be to
+the domain that hosts your VPN of choice. So while getting to Netflix may cost
+you $0.02 a Mb, made up purely for this example but not out of the realms of
+possibiity, if standard internet traffic only costs you $0.01 a Mb going through
+the VPN which will appear as standard traffic lowers the costs that you will be
+facing by half.</p>
+
+<p>Another big use of VPNs is to provide the same functionality of hiding your
+traffic from others that may be looking to snoop it on the same network. This is
+especially a problem on public WiFi that you may find in hotels, coffee shops,
+and increasingly other public areas, as anyone that is on the same network as
+you has the ability to see all traffic on this network. Another common issue
+that standard internet users may encounter is fake public networks, such as a
+mailicious individual that broadcasts an accesible network with the name “Free
+Starbucks WiFi” from a computer that they own. Many internet users may connect
+to the WiFi without a second thought, but through using a VPN to browse the
+internet the malicious individual will not be able to easily see the traffic
+that is being generated nor its intended destination.</p>
+
+<p>While these aren’t the only reasons that someone should use a VPN, they are
+among the most popular. I do encourage everyone that comes across this post to
+seriously evaluate for themselves whether they need a VPN. As to what company to
+use for your VPN, that is a matter that I will not step into, instead advising
+each person to evaluate the various options on their own.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/05/VPN-Necessity.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2018/01/02/Fixing-Mysql_Replication.html">
-                <h3 class="text-center card-title">Fixing Mysql Replication</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Quick one. If you have a master and slave MySQL setup, if the slaves are
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/02/Fixing-Mysql_Replication.html">Fixing Mysql Replication</a></h4>
+      <p><p>Quick one. If you have a master and slave MySQL setup, if the slaves are
 reporting replication failures BUT have a status that is simply waiting for the
 next command, simply restarting MySQl should fix the issue. Sometimes a simple
 restart is the answer.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/02/Fixing-Mysql_Replication.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Thoughts_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2018/01/01/New-Year.html">
-                <h3 class="text-center card-title">New Year</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Another year, another chance to make declarations about the goals that one hopes
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Thoughts_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/01/01/New-Year.html">New Year</a></h4>
+      <p><p>Another year, another chance to make declarations about the goals that one hopes
 to accomplish in the next 365 days. Writing down goals, especially in a semi
 public place such as the internet, is one of the major steps to take in ensuring
 that those goals actually succeed. Well, this is mine, in no particular order.</p>
 
+<ul>
+  <li>Post here on this blog a major post at least once a week.</li>
+  <li>Release a new project or big update for a project every month.</li>
+  <li>Post a picture that I’m proud of every week.</li>
+</ul>
+
+<p>By the end of this month I should be able to see if all of these goals actually
+come to fruition, and will make any adjustments as needed.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2018/01/01/New-Year.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/09/Building-A-Shell-pt-8.html">
-                <h3 class="text-center card-title">Building a Shell, Part 8</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Today while testing I had noticed a slight issue with the code. While everything
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/09/Building-A-Shell-pt-8.html">Building a Shell, Part 8</a></h4>
+      <p><p>Today while testing I had noticed a slight issue with the code. While everything
 worked great in the directory where we started the simpleshell, the complicated
 functions failed as soon as we stepped outside of the directory using our chwd
 command. A simple fix to that just involves looking at the current directory
 when we start up, and pre-pending it to the command name. Adding that to our
 shell we get:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    char *base_dir = malloc(sizeof(char) * 512);
+    getcwd(base_dir, MAX_STR);
+
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else if (strcmp(token, "wd") == 0) {
+			wd();
+		} else if (strcmp(token, "chwd") == 0) {
+			char *new_path;
+            new_path = strtok(NULL, " \n");
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, "echo") == 0) {
+                    execl("/bin/echo", "echo", "Hello World!", NULL);
+                    return 1;
+                } else if (strcmp(buff, "create") == 0) {
+                      char *command_path;
+                      allocateStr(&amp;command_path);
+                      strcat(command_path, base_dir);
+                      strcat(command_path, "/create");
+
+                      char *flag = strtok(NULL, " ");
+                      char *op1 = strtok(NULL, " ");
+                      char *op2  = strtok(NULL, " ");
+                      execl("./create", "create", flag, op1, op2, NULL);
+                      return -1;
+                } else if (strcmp(buff, "list") == 0) {
+                    char *command_path;
+                    allocateStr(&amp;command_path);
+                    strcat(command_path, base_dir);
+                    strcat(command_path, "/list");
+
+                    char *flag = strtok(NULL, " ");
+                    char *op1 = strtok(NULL, " ");
+                    execl(command_path, "list", flag, op1, NULL);
+                    return -1;
+                } else if (strcmp(buff, "fileconverter") == 0) {
+                    char *command_path;
+                    allocateStr(&amp;command_path);
+                    strcat(command_path, base_dir);
+                    strcat(command_path, "/fileconverter");
+
+                    char *flag = strtok(NULL, " ");
+                    char *op1 = strtok(NULL, " ");
+                    char *op2  = strtok(NULL, " ");
+                    execl(command_path, "fileconverter", flag, op1, op2, NULL);
+                    return -1;
+                } else {
+                    printf("The command you entered does not exist.\n");
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/09/Building-A-Shell-pt-8.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/08/Building-A-Shell-pt-7.html">
-                <h3 class="text-center card-title">Building a Shell, Part 7</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Today we’re going to be adding the third and final (for now) of our more complex functions to our
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/08/Building-A-Shell-pt-7.html">Building a Shell, Part 7</a></h4>
+      <p><p>Today we’re going to be adding the third and final (for now) of our more complex functions to our
 shell, fileconverter. This command was specific to my class “Make a shell” assignment, but the
 functionality can definitely be improved upon for other use cases as well. The file takes in a
 regular text file and converts it to a binary file, or vice versa, and looks like this:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include "error.h"
+#include "helper.h"
+#include "input.h"
+#include &lt;fcntl.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(int argc, char *argv[]) {
+    if (argc != 3 &amp;&amp; argc != 4) {
+        fprintf(stderr, "The fileconverter must be called as fileconverter flag infile [outfile]\n");
+        return -1;
+    }
+
+    // Make sure the string is null terminated
+    //argv[3][strlen(argv[3])-1] = 0;
+
+    char *flag = argv[1];
+    char *infile = argv[2];
+    char *outfile = argv[3];
+
+    if (strcmp(flag, "-t") == 0) {
+        FILE *fp_in = fopen(infile, "r");
+        FILE *fp_out = fopen(outfile, "wb");
+
+        char *line;
+        line = getLine(fp_in);
+
+        while (strlen(line) &gt; 0) {
+
+            char *firstname = malloc(sizeof(char) * 256);
+            char *lastname = malloc(sizeof(char) * 256);
+            int id = 0;
+            float GPA = 0.0;
+
+            sscanf(line, "%s %s %d %f", firstname, lastname, &amp;id, &amp;GPA);
+
+            int first_len = strlen(firstname);
+            int last_len = strlen(lastname);
+
+            fwrite(&amp;first_len, sizeof(int), 1, fp_out);
+            fwrite(firstname, sizeof(char), first_len, fp_out);
+            fwrite(&amp;last_len, sizeof(int), 1, fp_out);
+            fwrite(lastname, sizeof(char), last_len, fp_out);
+            fwrite(&amp;id, sizeof(int), 1, fp_out);
+            fwrite(&amp;GPA, sizeof(float), 1, fp_out);
+
+            line = getLine(fp_in);
+        }
+
+        fclose(fp_in);
+        fclose(fp_out);
+
+    } else if (strcmp(flag, "-b") == 0) {
+        FILE *fp_in = fopen(infile, "rb");
+        FILE *fp_out = fopen(outfile, "w");
+
+        while (1) {
+            char *firstname = malloc(sizeof(char) * 256);
+            char *lastname = malloc(sizeof(char) * 256);
+            int id = 0;
+            float GPA = 0.0;
+            int first_len = 0;
+            int last_len = 0;
+
+            fread(&amp;first_len, sizeof(int), 1, fp_in);
+            fread(firstname, sizeof(char), first_len, fp_in);
+            fread(&amp;last_len, sizeof(int), 1, fp_in);
+            fread(lastname, sizeof(char), last_len, fp_in);
+            fread(&amp;id, sizeof(int), 1, fp_in);
+            fread(&amp;GPA, sizeof(float), 1, fp_in);
+
+            if (feof(fp_in) != 0) {
+                break;
+            }
+
+            fprintf(fp_out, "%s %s %d %f\n", firstname, lastname, id, GPA);
+        }
+
+        fclose(fp_in);
+        fclose(fp_out);
+    }  else {
+        fprintf(stderr, "that is not an allowed flag.");
+        return -1;
+    }
+
+    return 0;
+}
+
+
+</code></pre></div></div>
+<p>Adding this functionality is relatively simple following the example function
+that we gave yesterday, and just consists of adding another string comparison to
+see if if matches the <code class="highlighter-rouge">fileconverter</code> function. Then we just get the required
+arguments, and pass it using <code class="highlighter-rouge">execl</code> again.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else if (strcmp(token, "wd") == 0) {
+			wd();
+		} else if (strcmp(token, "chwd") == 0) {
+			char *new_path;
+            new_path = strtok(NULL, " \n");
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, "echo") == 0) {
+                    execl("/bin/echo", "echo", "Hello World!", NULL);
+                    return 1;
+                } else if (strcmp(buff, "create") == 0) {
+                      char *flag = strtok(NULL, " ");
+                      char *op1 = strtok(NULL, " ");
+                      char *op2  = strtok(NULL, " ");
+                      execl("./create", "create", flag, op1, op2, NULL);
+                      return -1;
+                } else if (strcmp(buff, "list") == 0) {
+                    char *flag = strtok(NULL, " ");
+                    char *op1 = strtok(NULL, " ");
+                    execl("./list", "list", flag, op1, NULL);
+                    return -1;
+                } else if (strcmp(buff, "fileconverter") == 0) {
+                    char *flag = strtok(NULL, " ");
+                    char *op1 = strtok(NULL, " ");
+                    char *op2  = strtok(NULL, " ");
+                    execl("./fileconverter", "fileconverter", flag, op1, op2, NULL);
+                    return -1;
+                } else {
+                    printf("The command you entered does not exist.\n");
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/08/Building-A-Shell-pt-7.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/07/Building-A-Shell-pt-6.html">
-                <h3 class="text-center card-title">Building a Shell, Part 6</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Today we’re going to be adding the second of our more complex functions to our
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/07/Building-A-Shell-pt-6.html">Building a Shell, Part 6</a></h4>
+      <p><p>Today we’re going to be adding the second of our more complex functions to our
 shell, list. This command will be a simplistic version of the ls command. The code mostly relies upon using a few system calls that
 makes this functionality easy to implement, and looks like this:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;dirent.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(int argc, char *argv[]) {
+    char *flag;
+    char *pathname;
+
+    if (argc == 1) {
+        flag = NULL;
+        pathname = ".";
+    } else if (argc == 2) {
+
+        char *token = argv[1];
+        if (strcmp(token, "-i") == 0  || strcmp(token, "-h") == 0) {
+            flag = argv[1];
+            pathname = ".";
+        } else if (strcmp(token, "-i\n") == 0 || strcmp(token, "-h\n") == 0) {
+            argv[1][strlen(argv[1])-1] = 0;
+            flag = argv[1];
+            pathname = ".";
+        } else {
+            argv[1][strlen(argv[1])] = 0;
+            flag = NULL;
+            pathname = argv[1];
+        }
+    } else if (argc == 3) {
+        flag = argv[1];
+        argv[2][strlen(argv[2])-1] = 0;
+        pathname = argv[2];
+    } else {
+        fprintf(stderr, "Too many command line args specified. Run list --help for more");
+        return -1;
+    }
+
+    if (flag == NULL) {
+        //list current dir
+        DIR *d;
+        struct dirent *dir;
+        d = opendir(pathname);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                if (dir-&gt;d_name[0] != '.') {
+                    printf("Filename: %s \n", dir-&gt;d_name);
+                }
+            }
+            closedir(d);
+        }
+        return(0);
+    } else if (strcmp(flag, "-i") == 0) {
+        DIR *d;
+        struct dirent *dir;
+        struct stat buf;
+        int stats;
+        d = opendir(pathname);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                stat(dir-&gt;d_name, &amp;buf);
+                stats = buf.st_mode  &amp; (S_IRWXU | S_IRWXG | S_IRWXO);
+                printf("Filename: %s Size: %d(bytes) iNode#: %llu Permissions: %o\n", dir-&gt;d_name,dir-&gt;d_reclen,dir-&gt;d_ino,stats);
+            }
+            closedir(d);
+        }
+        return(0);
+    } else if (strcmp(flag, "-h") == 0) {
+        DIR *d;
+        struct dirent *dir;
+        d = opendir(pathname);
+        if (d) {
+            while ((dir = readdir(d)) != NULL) {
+                if (dir-&gt;d_name[0] == '.') {
+                    printf(" %s \n", dir-&gt;d_name);
+                }
+            }
+            closedir(d);
+        }
+        return 0;
+    } else if (strcmp("--help", argv[1]) == 0) {
+        puts("The options to call this command are as follows:");
+        puts("\tlist \t list all non-hidden files in current working directory");
+        puts("\tlist -i\t list additional info for files in current working directory");
+        puts("\tlist -h\t list hidden files in current working directory");
+        puts("\tlist pathname\t list all non-hidden files in specified directory");
+        puts("\tlist -i pathname\t list additional info for files in specified directory");
+        puts("\tlist -h pathname\t list hidden files in specified directory");
+    }
+    else {
+        fprintf(stderr, "The flags entered were not valid. Type --help for help\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+</code></pre></div></div>
+<p>Adding this functionality is relatively simple following the example function
+that we gave yesterday, and just consists of adding another string comparison to
+see if if matches the <code class="highlighter-rouge">list</code> function. Then we just get the required
+arguments, and pass it using <code class="highlighter-rouge">execl</code> again.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else if (strcmp(token, "wd") == 0) {
+			wd();
+		} else if (strcmp(token, "chwd") == 0) {
+			char *new_path;
+            new_path = strtok(NULL, " \n");
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, "echo") == 0) {
+                    execl("/bin/echo", "echo", "Hello World!", NULL);
+                    return 1;
+                } else if (strcmp(buff, "create") == 0) {
+                      char *flag = strtok(NULL, " ");
+                      char *op1 = strtok(NULL, " ");
+                      char *op2  = strtok(NULL, " ");
+                      execl("./create", "create", flag, op1, op2, NULL);
+                      return -1;
+                } else if (strcmp(buff, "list") == 0) {
+                    char *flag = strtok(NULL, " ");
+                    char *op1 = strtok(NULL, " ");
+                    execl("./list", "list", flag, op1, NULL);
+                    return -1;
+                } else {
+                    printf("The command you entered does not exist.\n");
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/07/Building-A-Shell-pt-6.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/06/Building-A-Shell-pt-5.html">
-                <h3 class="text-center card-title">Building a Shell, Part 5</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Today we’re going to be adding the first of our more complex functions to our
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/06/Building-A-Shell-pt-5.html">Building a Shell, Part 5</a></h4>
+      <p><p>Today we’re going to be adding the first of our more complex functions to our
 shell, create. This command will be used to create files, directories, and both
 hard and soft links. The file permissions will be 0640 for the files and 0750
 for the directories. The code mostly relies upon using a few system calls that
 makes this functionality easy to implement, and looks like this:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include "error.h"
+#include &lt;fcntl.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(int argc, char *argv[]) {
+    if (argc &lt; 2) {
+        fprintf(stderr, "There needs to be at least three command line args. Run create --help for more\n");
+        return -1;
+    }
+
+    if (strcmp("-f", argv[1]) == 0) {
+        // Make sure the string is nul terminated
+        argv[2][strlen(argv[2])-1] = 0;
+        GUARD(creat(argv[2], 0640));
+    }
+    else if (strcmp("-d", argv[1]) == 0) {
+        // Make sure the string is nul terminated
+        argv[2][strlen(argv[2])-1] = 0;
+        GUARD(mkdir(argv[2], 0750));
+    }
+    else if (strcmp("-h", argv[1]) == 0) {
+        if (argc &lt; 3) {
+            fprintf(stderr, "There needs to be at least four command line args to create links");
+        }
+        // Make sure the string is nul terminated
+        argv[2][strlen(argv[2])-1] = 0;
+        argv[3][strlen(argv[3])-1] = 0;
+        GUARD(link(argv[2], argv[3]));
+    }
+    else if (strcmp("-s", argv[1]) == 0) {
+        if (argc &lt; 3) {
+            fprintf(stderr, "There needs to be at least four command line args to create links");
+        }
+        argv[2][strlen(argv[2])-1] = 0;
+        argv[3][strlen(argv[3])-1] = 0;
+        GUARD(symlink(argv[3], argv[3]));
+    }
+    else if (strcmp("--help", argv[1]) == 0) {
+        puts("The options to call this command are as follows:");
+        puts("\tcreate -f filename\t creates a new file");
+        puts("\tcreate -d directory\t creates a new directory");
+        puts("\tcreate -h old_file new_file\t create a hard link");
+        puts("\tcreate -s old_file new_file\t create a soft link");
+    }
+    else {
+        fprintf(stderr, "The flags entered were not valid\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+</code></pre></div></div>
+<p>Adding this functionality is relatively simple following the example function
+that we gave yesterday, and just consists of adding another string comparison to
+see if if matches the <code class="highlighter-rouge">create</code> function. Then we just get the required
+arguments, and pass it using <code class="highlighter-rouge">execl</code> again.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else if (strcmp(token, "wd") == 0) {
+			wd();
+		} else if (strcmp(token, "chwd") == 0) {
+			char *new_path;
+            new_path = strtok(NULL, " \n");
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, "echo") == 0) {
+                    execl("/bin/echo", "echo", "Hello World!", NULL);
+                    return 1;
+                } else if (strcmp(buff, "create") == 0) {
+                      char *flag = strtok(NULL, " ");
+                      char *op1 = strtok(NULL, " ");
+                      char *op2  = strtok(NULL, " ");
+                      execl("./create", "create", flag, op1, op2, NULL);
+                      return -1;
+                } else {
+                    printf("The command you entered does not exist.\n");
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/06/Building-A-Shell-pt-5.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/05/Building-A-Shell-pt-4.html">
-                <h3 class="text-center card-title">Building a Shell, Part 4</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Now, we’re going to focus on how we would add more complex functions to the
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/05/Building-A-Shell-pt-4.html">Building a Shell, Part 4</a></h4>
+      <p><p>Now, we’re going to focus on how we would add more complex functions to the
 shell. While you can simply keep declaring them as singular functions, when the
 built in functionality gets more complex, think listing all files in a
 directory, it becomes easier to break each piece of functionality out into it’s
 own .c file, compile it as part of the build process, and then execute it from
 our shell.</p>
 
+<p>Executing these functions is the perfect use of our child processes, as you
+don’t want to clog up the main process performing complex work. The way that you
+can execute arbitrary commands from within our shell is through the <a href="http://www.geeksforgeeks.org/exec-family-of-functions-in-c/">exec
+family</a> of
+functions. While that link goes into further detail about the various options,
+the one that we’ll be focusing on is the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int execl(const char *path, const char *arg0, ... /*, (char *)0 */);
+
+// An example of this command
+execl("path to command", "command name", "arg1", "arg2", ... , NULL);
+
+// And an actual example
+execl("/bin/echo", "echo", "Hello World!", NULL);
+</code></pre></div></div>
+
+<p>If we actually ran the code above, our shell would launch the echo command in
+the background, pass in the two command line args, in this case the name of the
+program and what we want to be echoe’d, and then it would process. In this case
+the output would be the string Hello World! While this may seem like a trivial
+example, it is in fact very powerful as it allows us to add pretty much any
+functions that we want. We’ll dive into a few of those functions tomorrow, but
+for now I’ll just add the echo command to our shell. I’ll also add an error
+string if the entered command doesn’t exist.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else if (strcmp(token, "wd") == 0) {
+			wd();
+		} else if (strcmp(token, "chwd") == 0) {
+			char *new_path;
+            new_path = strtok(NULL, " \n");
+            chwd(new_path);
+		} else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                if (strcmp(buff, "echo") == 0) {
+                    execl("/bin/echo", "echo", "Hello World!", NULL);
+                    return 1;
+                } else {
+                    printf("The command you entered does not exist.\n");
+                    return 1;
+                }
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/05/Building-A-Shell-pt-4.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/04/Building-A-Shell-pt-3.html">
-                <h3 class="text-center card-title">Building a Shell, Part 3</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Next, we’ll add a few built in functions to the shell. Our shell will support
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/04/Building-A-Shell-pt-3.html">Building a Shell, Part 3</a></h4>
+      <p><p>Next, we’ll add a few built in functions to the shell. Our shell will support
 printing the current directory, changing the current directory, and quitting as
 built in commands. We’ll also be giving the shell the ability to run some
 external commands in the next section of this series. The code for each of these
 commands is simple, and the quit command was already included last time. So, the
 code for printing the current directory:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int wd(void) {
+    char *current_dir;
+    allocateStr(&amp;current_dir);
+    GUARD_PTR(getcwd(current_dir, MAX_STR));
+    puts(current_dir);
+    return 0;
+}
+</code></pre></div></div>
+
+<p>And the code for changing the directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int chwd(char *new_path) {
+    if (new_path == NULL) {
+        printf("The proper usage of %s is %s.\n", "chwd", "chwd pathname");
+    } else {
+        GUARD(chdir(new_path));
+    }
+    return 0;
+}
+</code></pre></div></div>
+
+<p>The functions will then be added to the shell like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else if (strcmp(token, "wd") == 0) {
+            wd();
+        } else if (strcmp(token, "chwd") == 0) {
+            char *new_path;
+            new_path = strtok(NULL, " \n");
+            chwd(new_path);
+        } else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                puts(buff);
+                return 1;
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
+
+<p>These functions give our shell the beginning of usefullness, and will be
+expanded upon tomorrow.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/04/Building-A-Shell-pt-3.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/03/Building-A-Shell-pt-2.html">
-                <h3 class="text-center card-title">Building a Shell, Part 2</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>This is the second section in a series of posts walking through the steps I took
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/03/Building-A-Shell-pt-2.html">Building a Shell, Part 2</a></h4>
+      <p><p>This is the second section in a series of posts walking through the steps I took
 to make a basic shell for a final project for a systems programming class. The
 only thing that we’ll be adding to the
 shell today is probably the most important aspect of the shell, the fact that
@@ -482,238 +1213,332 @@ into in depth detail of processes, and that will occur a different day. For now,
 an example that runs the printing of the input in a child process, and gets the
 input in a parent process would look like so:</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
+    int _continue = 0;
+    char *buff = malloc(sizeof(char) * 512);
+
+    do {
+        printf("[Command prompt]$ ");
+        buff = getLine(stdin); // uses the getLine from yesterdays post.
+
+        char *token;
+        token = strtok(buff, " \n");
+
+        if (strcmp(token, "quit") == 0) {
+            _continue = -1;
+        } else {
+            pid_t child, wait;
+            int child_status;
+
+            child = fork();
+
+            if (child == 0) {
+                puts(buff);
+                return 1;
+            } else {
+                do {
+                    wait = waitpid(child, &amp;child_status, WUNTRACED);
+                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status)); 
+            }
+        }
+        free(buff);
+    } while (_continue &gt;= 0);
+
+    return 0;
+}
+</code></pre></div></div>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/03/Building-A-Shell-pt-2.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/02/Building-A-Shell-pt-1.html">
-                <h3 class="text-center card-title">Building a Shell, Part 1</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>This series of posts will walk through the basics of building a shell, based on
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/02/Building-A-Shell-pt-1.html">Building a Shell, Part 1</a></h4>
+      <p><p>This series of posts will walk through the basics of building a shell, based on
 bash, in the C programming language. This is the final project for a systems
 programming class that I am taking, and I think tracking my progress here will
 be beneficial for me to look back on later.</p>
 
-</p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/02/Building-A-Shell-pt-1.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
+<p>To start out, the first major thing that a shell does is read in input from the
+user, in order to parse it to make commands. So, the first thing that we’re
+going to do is write a function to read in a line from standard input, stopping
+at the first newline encountered. An example of a function that does this could
+be the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>char *getLine(FILE* stream) {
+    char *line;
+    line = malloc(sizeof(char) * 256); // 256 being a decent size for an input string
+    char *buff;
+    buff = malloc(sizeof(char) * 1);
+    int index = 0;
+
+    while (fgets(buff, 2, stream) != NULL) {
+        if (*buff == '\n') {
+            line[index] = *buff;
+            break;
+        } else {
+            line[index] = *buff;
+            index++;
+        }
+    }
+
+    return line;
+}
+</code></pre></div></div>
+
+<p>Then continuing on with the rest of the shell, we need a basic function that
+loops through, getting input and doing something with it. This could be a
+function as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int loop(void) {
     
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/12/02/Weekend-Reading-6.html">
-                <h3 class="text-center card-title">Weekend Reading 7</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part seven, <a href="https://brennan.io/2015/01/16/write-a-shell-in-c/">Tutorial, Write a shell in
+    while (1) {
+        // Prompt the user for input with your shell
+        printf("[my_shell]$ ");
+
+        char *line;
+        line = malloc(sizeof(char) * 256); // 256 being the size we declared in the other function
+
+        line = getLine(stdin);
+
+        puts(line);
+    }
+
+    return 0;
+}
+</code></pre></div></div>
+
+<p>The above function would currently loop forever, simply prompting for input and
+printing that same input back to the user. Tomorrow during the next section of
+this series, we’ll cover the fact that all of the commands in a shell are run in
+a background process, and how to actually do that.</p>
+</p>
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/12/02/Weekend-Reading-6.html">Weekend Reading 7</a></h4>
+      <p><p>Weekend reading part seven, <a href="https://brennan.io/2015/01/16/write-a-shell-in-c/">Tutorial, Write a shell in
 C</a>, was read before
 attempting to complete the task, building a basic shell, for one of my classes.
 I’ll be going through this task in a series of posts over the next couple of
 days, in order to track my progress with it.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/12/02/Weekend-Reading-6.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/11/20/restyle.html">
-                <h3 class="text-center card-title">Restyle</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>I’ve just redone the design of my site to make it more simplistic and way less busy. It’s less designed, but I think that it will help me focus more on the content than messing with the design repeatedly. I may be touching it a little more in the future, but it will stay mostly like this.</p>
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/11/20/restyle.html">Restyle</a></h4>
+      <p><p>I’ve just redone the design of my site to make it more simplistic and way less busy. It’s less designed, but I think that it will help me focus more on the content than messing with the design repeatedly. I may be touching it a little more in the future, but it will stay mostly like this.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/11/20/restyle.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/11/19/Weekend-Reading-6.html">
-                <h3 class="text-center card-title">Weekend Reading 6</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part six, <a href="https://www.smashingmagazine.com/2016/12/mistakes-developers-make-when-learning-design/">Design for Developers</a>
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/11/19/Weekend-Reading-6.html">Weekend Reading 6</a></h4>
+      <p><p>Weekend reading part six, <a href="https://www.smashingmagazine.com/2016/12/mistakes-developers-make-when-learning-design/">Design for Developers</a>
 , is a must read for any developer that feels like their
 design is somewhat lacking, but doesn’t know where to 
 start in order to resolve the issue. It walks you through
 where to go from where you are, and was helpful in my
 design journey.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/11/19/Weekend-Reading-6.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/11/19/Weekend-Reading-5.html">
-                <h3 class="text-center card-title">Weekend Reading 5</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part five, <a href="http://tom.preston-werner.com/2009/05/19/the-git-parable.html">The Git Parable</a>
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/11/19/Weekend-Reading-5.html">Weekend Reading 5</a></h4>
+      <p><p>Weekend reading part five, <a href="http://tom.preston-werner.com/2009/05/19/the-git-parable.html">The Git Parable</a>
 , is a must read for any modern developer, as it allows a much deeper understanding of git by walking through what may have been the thoughts of the creators of Git.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/11/19/Weekend-Reading-5.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/11/05/Weekend-Reading-4.html">
-                <h3 class="text-center card-title">Weekend Reading 4</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part four, <a href="http://www.aaronsw.com/weblog/usefultransparency">When Is Transparency
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/11/05/Weekend-Reading-4.html">Weekend Reading 4</a></h4>
+      <p><p>Weekend reading part four, <a href="http://www.aaronsw.com/weblog/usefultransparency">When Is Transparency
 Useful</a>
 , takes a different turn from the past few readings. It’s an essay by the late
 Aaron Swartz that explores why transparency in the government is a nice goal to
 have, but also explains why it may not do what those who push for it believe
 that it will.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/11/05/Weekend-Reading-4.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/10/29/Weekend-Reading-3.html">
-                <h3 class="text-center card-title">Weekend Reading 3</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part three, <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Things You Should Never
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/10/29/Weekend-Reading-3.html">Weekend Reading 3</a></h4>
+      <p><p>Weekend reading part three, <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Things You Should Never
 Do</a>.
 Something a little different this week, exploring a blog post by Joel Spolsky on
 the worst thing that a software firm can do.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/10/29/Weekend-Reading-3.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/10/22/Weekend-Reading-2.html">
-                <h3 class="text-center card-title">Weekend Reading 2</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part two, <a href="/uploads/writing_larger_programs.pdf">Writing Larger
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/10/22/Weekend-Reading-2.html">Weekend Reading 2</a></h4>
+      <p><p>Weekend reading part two, <a href="/uploads/writing_larger_programs.pdf">Writing Larger
 Programs</a>
 , is the second in a weekly series of postings about
 topics that I enjoyed reading about followed by a short commentary.</p>
 
+<p>This week the focus is on larger programs in C, and how to manage them
+efficiently.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/10/22/Weekend-Reading-2.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Thoughts_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/10/16/Guerilla-Open-Access-Manifesto.html">
-                <h3 class="text-center card-title">Guerilla Open Access Manifesto</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>The following was orginally written by a group of librarians located within
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Thoughts_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/10/16/Guerilla-Open-Access-Manifesto.html">Guerilla Open Access Manifesto</a></h4>
+      <p><p>The following was orginally written by a group of librarians located within
 Italy in 2008. It was published by Aaron Swartz on his blog, and was one of the
 main things that was being held against him in the prosecution over downloading
 JSTOR articles.</p>
 
+<p>The main goal of the manifesto is to provoke those with access to information
+that is with-held from the greater public to take the information and share it
+to those without access. This relates to the previous article about Thomas
+Jefferson, as it once again is a demonstration that information should be free.
+By posting this article, I acknowledge that I am sharing my agreement with the
+contents. And I also acknowledge that that agreement may be held against me by
+future employers and others. So be it. Information wants to be free, and free it
+shall be.</p>
+
+<h4 class="text-center">Guerilla Open Access Manifesto</h4>
+
+<p>Information is power. But like all power, there are those who want to keep it
+for 
+themselves. The world’s entire scientific and cultural heritage, published
+over centuries 
+in books and journals, is increasingly being digitized and locked up by a
+handful of 
+private corporations. Want to read the papers featuring the most famous
+results of the 
+sciences? You’ll need to send enormous amounts to publishers like Reed
+Elsevier.</p>
+
+<p>There are those struggling to change this. The Open Access Movement has
+fought 
+valiantly to ensure that scientists do not sign their copyrights away but
+instead ensure 
+their work is published on the Internet, under terms that allow anyone to
+access it. But 
+even under the best scenarios, their work will only apply to things
+published in the future. 
+Everything up until now will have been lost.</p>
+
+<p>That is too high a price to pay. Forcing academics to pay money to read the
+work of their 
+colleagues? Scanning entire libraries but only allowing the folks at Google
+to read them? 
+Providing scientific articles to those at elite universities in the First
+World, but not to 
+children in the Global South? It’s outrageous and unacceptable.</p>
+
+<p>“I agree,” many say, “but what can we do? The companies hold the copyrights,
+they 
+make enormous amounts of money by charging for access, and it’s perfectly
+legal — 
+there’s nothing we can do to stop them.” But there is something we can,
+something that’s 
+already being done: we can fight back.</p>
+
+<p>Those with access to these resources — students, librarians, scientists —
+you have been 
+given a privilege. You get to feed at this banquet of knowledge while the
+rest of the world 
+is locked out. But you need not — indeed, morally, you cannot — keep this
+privilege for 
+yourselves. You have a duty to share it with the world. And you have:
+trading passwords 
+with colleagues, filling download requests for friends.</p>
+
+<p>Meanwhile, those who have been locked out are not standing idly by. You have
+been 
+sneaking through holes and climbing over fences, liberating the information
+locked up by 
+the publishers and sharing them with your friends.</p>
+
+<p>But all of this action goes on in the dark, hidden underground. It’s called
+stealing or 
+piracy, as if sharing a wealth of knowledge were the moral equivalent of
+plundering a 
+ship and murdering its crew. But sharing isn’t immoral — it’s a moral
+imperative. Only 
+those blinded by greed would refuse to let a friend make a copy.</p>
+
+<p>Large corporations, of course, are blinded by greed. The laws under which
+they operate 
+require it — their shareholders would revolt at anything less. And the
+politicians they 
+have bought off back them, passing laws giving them the exclusive power to
+decide who 
+can make copies.</p>
+
+<p>There is no justice in following unjust laws. It’s time to come into the
+light and, in the 
+grand tradition of civil disobedience, declare our opposition to this
+private theft of public 
+culture.</p>
+
+<p>We need to take information, wherever it is stored, make our copies and
+share them with 
+the world. We need to take stuff that’s out of copyright and add it to the
+archive. We need 
+to buy secret databases and put them on the Web. We need to download
+scientific 
+journals and upload them to file sharing networks. We need to fight for
+Guerilla Open 
+Access.</p>
+
+<p>With enough of us, around the world, we’ll not just send a strong message
+opposing the 
+privatization of knowledge — we’ll make it a thing of the past. Will you
+join us?</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/10/16/Guerilla-Open-Access-Manifesto.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Reading_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/10/15/Weekend-Reading-1.html">
-                <h3 class="text-center card-title">Weekend Reading 1</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Weekend reading part one, <a href="/uploads/recursive_make_considered_harmful.pdf">Recursive Make Considered
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Reading_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/10/15/Weekend-Reading-1.html">Weekend Reading 1</a></h4>
+      <p><p>Weekend reading part one, <a href="/uploads/recursive_make_considered_harmful.pdf">Recursive Make Considered
 Harmful</a>
 , is the first in a weekly series of postings about
 topics that I enjoyed reading about followed by a short commentary.</p>
 
+<p>This week we delve into the topic of efficient makefiles, and why using a
+recursive make build is detrimental to most projects. I’ll be using this for the
+two libraries that I’ll be working on shortly, and might look to implement it in
+some open source libraries I’ve been thinking of implementing.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/10/15/Weekend-Reading-1.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Thoughts_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/10/12/Progressive-Thoughts-Not-So.html">
-                <h3 class="text-center card-title">Progressive Views Not So</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>Thomas Jefferson, the third president of the United States, 
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Thoughts_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/10/12/Progressive-Thoughts-Not-So.html">Progressive Views Not So</a></h4>
+      <p><p>Thomas Jefferson, the third president of the United States, 
 once wrote a
 <a href="http://press-pubs.uchicago.edu/founders/documents/a1_8_8s12.html">letter</a> 
 to his friend Isaac McPherson regarding the state
@@ -721,43 +1546,89 @@ of intellectual freedom within the United States at the time. Jefferson’s view
 would be considered progressive today, yet invoke lots of thought when read with
 the context of when he was alive.</p>
 
+<p>Jefferson’s thoughts, while comprehensive can be summed up as follows:</p>
+
+<ul>
+  <li>By their very nature, ideas cannot be property.</li>
+  <li>The government has no duty to make laws about them.</li>
+  <li>The laws that we do make are far from successful.</li>
+</ul>
+
+<p>Thomas Jefferson was very for the concept of ideas being a fact of nature, and
+just like all other facets of nature ideas want to be free. A simple example of
+this is if person A has an idea. Now, this person can never tell anyone of their
+idea thus keeping it “safe”. However, once they decide to share that idea with
+person B that idea can be their own no more. Why? Well, even if person B agrees,
+through a legal document or otherwise, that they will never use the information
+contained within the idea and that they will never base a new idea off of the
+previous one, it is basically impossible to follow through with that promise.
+Once someone hears about and understands an idea then that idea will be with
+them forever.</p>
+
+<p>That is one of the great parts of sharing ideas, that all future inventions are
+founded on the ideas that came before. A simple example of this is how many
+fewer technologies we would have today if everyone that wanted to program a
+website or mobile phone app had to re-invent the convention of electricity or
+build their own computer factory. You may be laughing, but that is how many
+industries try to treat technology, but more on that another time.</p>
+
+<p>Why should the government not make laws about ideas? Simply because they refuse
+to acknowledge that ideas cannot both be shared and property. Going back to last
+post, the whole concept of property is zero sum, i.e. in order for something to
+be property it must be lost to one owner if it is moved to another. This simply
+is not the case when it comes to ideas, or as the government insists on calling
+them intellectual property. If you tell me how to make a piece of software, such
+as how to make a button look a certain way on a website, then we both have this
+knowledge. You don’t suddenly lose the knowledge of how to do it after I learn
+how to. Thus ideas are not property.</p>
+
+<p>Finally, even if ideas were to be considered property, the laws that the
+government makes are far from successful due to a few factors. The first being
+that the punishments are far from just. Like how there’s a sliding scale in how
+long prison sentences are based on the crimme, there needs to be a sliding scale
+in the way that we punish these “criminals”. If we try to insist that the person
+that physically robs a store at gun point and the person that clicks download on
+a website deserve equal sentences then we are destined to fail especially
+considering the second is essentially a crime without a victim. Secondly, it is
+unfair to equivocate the effects that these laws have on the various types of
+intellectual property. Under the current laws, the punishment is the same
+whether you are copying Amazon’s
+<a href="https://en.wikipedia.org/wiki/1-Click">one-click</a> patent or a simple catchy
+tune from a commercial advertisement. It doesn’t take much thought to
+acknowledge that these two should probably be treated differently.</p>
+
+<p>It’s fascinating to me that thinking along these lines is today associated with
+dumb youngsters who are used to downloading everything online, when this line of
+thinking have been with us for hundreds of years.</p>
 </p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/10/12/Progressive-Thoughts-Not-So.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-      
-        <div class="col-12 All_tag Development_tag post mobile_padding">
-          <div class="card shadow">
-            <div class="card-body">
-              <a href="/writing/2017/09/15/Listing-Users.html">
-                <h3 class="text-center card-title"># of Users Logged In</h3>
-              </a>
-              <hr />
-              <p class="lead card-text"><p>While going through the Unix Systems Programming book, one of the preface
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2017/09/15/Listing-Users.html"># of Users Logged In</a></h4>
+      <p><p>While going through the Unix Systems Programming book, one of the preface
 questions asked to devise a one line command to list the number of users
 currently logged in to my system. Here’s how to do that.</p>
 
-</p>
-            </div>
-            <div class="card-footer">
-              <a class="btn btn-outline-primary" href="/writing/2017/09/15/Listing-Users.html"> Continue </a>
-            </div>
-          </div>
-        </div>
-      
-    
-  </div>
-</div>
+<p>My first instict was to go to the man pages, and then quickly found out that
+the man pages don’t really help if you don’t know the name of the program you’re
+looking at. So I then looked in my /bin/ directory, which contained about 25
+various system utilities.</p>
 
-            </div>
-          </div>
-        </div>
-      </div>
+<p>However nothing in there looked useful. I then checked in the /usr/bin directory,
+which contained something called <code class="highlighter-rouge">users</code>. Now, we might be getting somewhere.
+Looking at the <a href="https://linux.die.net/man/1/users">man page</a> for the command, it
+looks like this is exactly what we want. So we simply need to run a command like
+so: <code class="highlighter-rouge">users | wc -w</code> which counts the number of words that are output by the
+users command, where each word is the name of a logged in user. Problem solved.</p>
+</p>
+    </div>
+    <hr />
+  </div>
+
+
     </div>
   </body>
 </html>

@@ -1,32 +1,13 @@
 <html>
   {% include header.html %}
   <body>
-    <div class="d-md-none">
-      {% include navbar.html %}
+    {% include navbar.html %}
+    <div class="blog_post">
+      <h4><a href="{{page.url}}">{{ page.title }}</a></h4>
+      <img class="shadow" src="{{ page.picture }}">
+      <h4><a href="{{page.public_url}}">{{ page.public_message }}</a></h4>
+      <p>{{ page.content }}</p>
+      <h5><a href="/projects.html"> Archive </a></h5>
     </div>
-    <div class="container" style="padding-top:5em;">
-      <div class="container">
-        <div class="row">
-          <div class="d-none d-md-block col-md-5 col-lg-3">
-            {% include hero_image.html %}
-          </div>
-          <div class="col-xs-12 col-md-7 col-lg-9">
-            <div class="col-11 col-lg-10 mx-auto mobile_padding">
-              <div class="card shadow">
-                <div class="card-body">
-                  <img class="card-img-top" src="{{ page.picture }}">
-                  <a href="{{page.url}}"><h3 class="text-center card-title">{{ page.title }}</h3></a>
-                  <hr />
-                  <p class="lead card-text">{{ page.content}}</p>
-                </div>
-                <div class="card-footer">
-                  <a class="btn btn-outline-primary" href="/projects.html"> Archive </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>    
   </body>
 </html>

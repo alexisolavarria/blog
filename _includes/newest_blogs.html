@@ -1,20 +1,10 @@
-<div class="row">
-  {% for post in site.categories.Writing limit:1 %}
-    <div class="col-11 col-lg-10 mx-auto">
-      <div class="card shadow">
-        <div class="card-header">Latest Blog Post</div>
-        <div class="card-body">
-          <a href="{{post.url}}">
-            <h3 class="text-center card-title">{{ post.title }}</h3>
-          </a>
-          <hr />
-          <p class="lead card-text">{{ post.excerpt }}</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn btn-outline-primary" href="{{ post.url }}"> Continue </a>
-          <a class="btn btn-outline-primary" href="/writings.html"> Archives </a>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+{% for post in site.categories.Writing limit:1 %}
+  <div class="blog_post">
+    <h2>Latest Blog Post</h2>
+    <h4><a href="{{post.url}}">{{ post.title }}</a></h4>
+    <hr />
+    <p>{{ post.content }}</p>
+  </div>
+{% endfor %}
+<h5><a href="/writings.html">Browse the Archives</a></h5>
+<hr />

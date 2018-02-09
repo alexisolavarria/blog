@@ -2,14 +2,8 @@
 layout: default
 title: Photos
 ---
-<div class="row content mobile_padding">
-  <div class="col-11 col-lg-10 mx-auto">
-    {% for post in site.categories.Thumbnails %}
-      <div class="col-12 mobile_padding">
-        <a href="{{ post.full_url }}">
-          <img class="img-fluid img-thumbnail shadow" style="" src="{{ post.picture }}">
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-</div>
+{% for post in site.categories.Thumbnails %}
+  <a href="{{ post.full_url }}">
+    <img class="gallery-hover shadow" src="{{ post.picture }}">
+  </a>
+{% endfor %}

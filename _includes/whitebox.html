@@ -1,19 +1,11 @@
-<div class="row content mobile_padding">
-  <div class="col-11 col-lg-10 mx-auto">
-    <div class="card shadow">
-      <div class="card-header">Latest Photos</div>
-      <div class="card-body">
-        {% for post in site.categories.Thumbnails limit:3 %}
-          <div class="col-12 mobile_padding">
-            <a href="{{ post.full_url }}">
-              <img class="img-fluid img-thumbnail" style="" src="{{ post.picture }}">
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-      <div class="card-footer">
-        <a class="btn btn-outline-primary" href="/photos.html"> View  All</a>
-      </div>
+<div class="blog_post">
+  <h2>Latest Photos</h2>
+  {% for post in site.categories.Thumbnails limit:3 %}
+    <div class="col-12 mobile_padding">
+      <a href="{{ post.full_url }}">
+        <img class="gallery-hover shadow" src="{{ post.picture }}">
+      </a>
     </div>
-  </div>
+  {% endfor %}
+  <h5><a href="/photos.html">Browse all Photos</a></h5>
 </div>
