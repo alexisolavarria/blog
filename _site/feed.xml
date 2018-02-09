@@ -1,5 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-02-08T19:26:32-05:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
-</subtitle><entry><title type="html">Flask Template</title><link href="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html" rel="alternate" type="text/html" title="Flask Template" /><published>2018-01-23T12:00:00-05:00</published><updated>2018-01-23T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/01/23/flask-template</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html">&lt;p&gt;&lt;strong&gt;This is still a work in progress&lt;/strong&gt;. This project aims to be a template for other web developers to base their
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-02-09T15:25:56-05:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html">Prex</title><link href="htpps://www.doug-skinner.com/projects/2018/02/09/Prex.html" rel="alternate" type="text/html" title="Prex" /><published>2018-02-09T12:00:00-05:00</published><updated>2018-02-09T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/02/09/Prex</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/02/09/Prex.html">&lt;p&gt;The &lt;strong&gt;P&lt;/strong&gt;ython &lt;strong&gt;R&lt;/strong&gt;eguler &lt;strong&gt;Ex&lt;/strong&gt;pression handler is a basic script written in
+Python (shocking I know) that reads in a regex string and the file to search.&lt;/p&gt;
+
+&lt;p&gt;Rather than using the built in regex class/parser, Prex then creates a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Deterministic_finite_automaton&quot;&gt;DFA&lt;/a&gt; from the
+input regex string, to allow the regex to be processed. After reading in the
+input file, separated line by line on newline characters (‘\n’), the script then
+feeds in each line to the internal DFA character by character. If the DFA
+reaches the end state, it then returns the starting index, ending index, and all
+characters that match the regex printing that info to stdout.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Python Reguler Expression handler is a basic script written in Python (shocking I know) that reads in a regex string and the file to search.</summary></entry><entry><title type="html">Constructing A DFA From A Regex</title><link href="htpps://www.doug-skinner.com/writing/2018/02/09/DFA-for-Regex.html" rel="alternate" type="text/html" title="Constructing A DFA From A Regex" /><published>2018-02-09T11:00:00-05:00</published><updated>2018-02-09T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/02/09/DFA-for-Regex</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/02/09/DFA-for-Regex.html">&lt;p&gt;While creating &lt;a href=&quot;https://doug-skinner.com/projects/2018/02/09/Prex.html&quot;&gt;Prex&lt;/a&gt;,
+one of the major challenges was trying to figure out the best way to represent a
+walkable path through the regular expression without just resorting to the built in regular
+expression class within Python. After some deliberation, and a failed attempt of
+trying to keep track of my position walking through the string iteself, I
+remembered from my Automata class that a regular expression has to be able to be
+represented within a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Deterministic_finite_automaton&quot;&gt;Deterministic Finite Automaton&lt;/a&gt; or it’s
+not valid, so I decided to construct one of those. In order to do this, I would
+need three classes, one to represent each state of the DFA, one to represent the
+actual DFA, and then one to read in the file and the regex string to be
+processed. Since the actual code for the project can be found both on my personal GitLab
+and Github I won’t be showing the actual code here, just describing the thought
+process.&lt;/p&gt;
+
+&lt;p&gt;Creating the state representation was relatively simple. It has three
+internal variables, one to hold any possible loop variables, one to hold any
+possible transition variables, and then one to represent the next state. The
+reason for that last variable is to represent the possible states as a linked
+list of states, to easily keep track of the beginning and end of the list. In
+order to create the DFA from the regex, a blank state is created initially.
+Then, for each character a new state is created, the transition variable is set
+to the character, and then the previous state’s next state is set to the current
+state.&lt;/p&gt;
+
+&lt;p&gt;The only exception to this is if the character is +, *, [, or ]. If the
+character is a +, which means that the character can appear one or many times,
+then a new state is added with a loop variable that matches the previous states
+transition variable and the transition variable is set to ‘’. Aside, in this DFA
+a transition of ‘’ is treated as a null transition allowing it to be
+transitioned across at any time. If the character is a *, which means that the character can be there zero or
+any number of times, the previous characters transition variable is moved to the
+loop variable, and the transition variable is set to ‘’. This allows it to be
+looped infinitely or skipped entirely.&lt;/p&gt;
+
+&lt;p&gt;The last part of the construction is if the character is a [. If it is, then a
+flag is set indicating that we are currently within brackets. While that flag is
+set, all characters encountered are added to the transition variable of the
+current state. Once we encounter a ], we turn that flag off and continue. And
+thus, the DFA is made and we can start processing the passed in strings.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">While creating Prex, one of the major challenges was trying to figure out the best way to represent a walkable path through the regular expression without just resorting to the built in regular expression class within Python. After some deliberation, and a failed attempt of trying to keep track of my position walking through the string iteself, I remembered from my Automata class that a regular expression has to be able to be represented within a Deterministic Finite Automaton or it’s not valid, so I decided to construct one of those. In order to do this, I would need three classes, one to represent each state of the DFA, one to represent the actual DFA, and then one to read in the file and the regex string to be processed. Since the actual code for the project can be found both on my personal GitLab and Github I won’t be showing the actual code here, just describing the thought process.</summary></entry><entry><title type="html">Flask Template</title><link href="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html" rel="alternate" type="text/html" title="Flask Template" /><published>2018-01-23T12:00:00-05:00</published><updated>2018-01-23T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/01/23/flask-template</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html">&lt;p&gt;&lt;strong&gt;This is still a work in progress&lt;/strong&gt;. This project aims to be a template for other web developers to base their
 projects off of. The template includes a couple of classes that handle creating
 users, logging in users, and eventually managing users. Each user upon logging
 in is presented with their own control panel for whatever service they are
@@ -343,19 +391,4 @@ that is being generated nor its intended destination.&lt;/p&gt;
 among the most popular. I do encourage everyone that comes across this post to
 seriously evaluate for themselves whether they need a VPN. As to what company to
 use for your VPN, that is a matter that I will not step into, instead advising
-each person to evaluate the various options on their own.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Is using a VPN a necessecity for all internet users in this day and age? While it may be a bit extreme, I do believe that any internet user that isn’t using a VPN for their daily internet usage to protect their privacy and anonymity. There are many reasons that an internet user should care about their privacy, especially with the recent proposed change by the United States FCC.</summary></entry><entry><title type="html">Fixing Mysql Replication</title><link href="htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication.html" rel="alternate" type="text/html" title="Fixing Mysql Replication" /><published>2018-01-02T11:00:00-05:00</published><updated>2018-01-02T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/02/Fixing-Mysql_Replication.html">&lt;p&gt;Quick one. If you have a master and slave MySQL setup, if the slaves are
-reporting replication failures BUT have a status that is simply waiting for the
-next command, simply restarting MySQl should fix the issue. Sometimes a simple
-restart is the answer.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Quick one. If you have a master and slave MySQL setup, if the slaves are reporting replication failures BUT have a status that is simply waiting for the next command, simply restarting MySQl should fix the issue. Sometimes a simple restart is the answer.</summary></entry><entry><title type="html">New Year</title><link href="htpps://www.doug-skinner.com/writing/2018/01/01/New-Year.html" rel="alternate" type="text/html" title="New Year" /><published>2018-01-01T12:00:00-05:00</published><updated>2018-01-01T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/01/01/New-Year</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/01/01/New-Year.html">&lt;p&gt;Another year, another chance to make declarations about the goals that one hopes
-to accomplish in the next 365 days. Writing down goals, especially in a semi
-public place such as the internet, is one of the major steps to take in ensuring
-that those goals actually succeed. Well, this is mine, in no particular order.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Post here on this blog a major post at least once a week.&lt;/li&gt;
-  &lt;li&gt;Release a new project or big update for a project every month.&lt;/li&gt;
-  &lt;li&gt;Post a picture that I’m proud of every week.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the end of this month I should be able to see if all of these goals actually
-come to fruition, and will make any adjustments as needed.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Another year, another chance to make declarations about the goals that one hopes to accomplish in the next 365 days. Writing down goals, especially in a semi public place such as the internet, is one of the major steps to take in ensuring that those goals actually succeed. Well, this is mine, in no particular order.</summary></entry></feed>
+each person to evaluate the various options on their own.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Is using a VPN a necessecity for all internet users in this day and age? While it may be a bit extreme, I do believe that any internet user that isn’t using a VPN for their daily internet usage to protect their privacy and anonymity. There are many reasons that an internet user should care about their privacy, especially with the recent proposed change by the United States FCC.</summary></entry></feed>

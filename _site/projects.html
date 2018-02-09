@@ -51,6 +51,27 @@
       
         <div class="blog_post">
           <h2>Current Project</h2>
+          <h4><a href="/projects/2018/02/09/Prex.html">Prex</a></h4>
+          <img class="shadow" src="/img/projects/prex.png">
+          <h4><a href="https://gitlab.doug-skinner.com/root/prex">View repo</a></h4>
+          <p><p>The <strong>P</strong>ython <strong>R</strong>eguler <strong>Ex</strong>pression handler is a basic script written in
+Python (shocking I know) that reads in a regex string and the file to search.</p>
+
+<p>Rather than using the built in regex class/parser, Prex then creates a
+<a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton">DFA</a> from the
+input regex string, to allow the regex to be processed. After reading in the
+input file, separated line by line on newline characters (‘\n’), the script then
+feeds in each line to the internal DFA character by character. If the DFA
+reaches the end state, it then returns the starting index, ending index, and all
+characters that match the regex printing that info to stdout.</p>
+
+</p>
+        </div>
+        <hr />
+      
+    
+      
+        <div class="blog_post">
           <h4><a href="/projects/2018/01/23/flask-template.html">Flask Template</a></h4>
           <img class="shadow" src="/img/projects/flask_template_v0_3.png">
           <h4><a href=""></a></h4>

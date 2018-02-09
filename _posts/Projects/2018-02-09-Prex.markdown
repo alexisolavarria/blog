@@ -1,0 +1,21 @@
+---
+layout: default_project
+title:  "Prex"
+date:   2018-02-09 12:00:00 -0500
+categories: Projects
+picture: /img/projects/prex.png
+public_url: https://gitlab.doug-skinner.com/root/prex
+public_message: View repo
+---
+
+The **P**ython **R**eguler **Ex**pression handler is a basic script written in
+Python (shocking I know) that reads in a regex string and the file to search. 
+
+Rather than using the built in regex class/parser, Prex then creates a
+[DFA](https://en.wikipedia.org/wiki/Deterministic_finite_automaton) from the
+input regex string, to allow the regex to be processed. After reading in the
+input file, separated line by line on newline characters ('\n'), the script then
+feeds in each line to the internal DFA character by character. If the DFA
+reaches the end state, it then returns the starting index, ending index, and all
+characters that match the regex printing that info to stdout.
+
