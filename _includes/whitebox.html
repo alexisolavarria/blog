@@ -3,7 +3,7 @@
   {% for post in site.categories.Thumbnails limit:3 %}
     <div class="col-12 mobile_padding">
       <a href="{{ post.full_url }}">
-        <img class="gallery-hover shadow" src="{{ post.picture }}">
+        <img class="gallery-hover shadow" alt="Recent Screenshot" src="{{ post.picture }}">
       </a>
     </div>
   {% endfor %}
