@@ -50,13 +50,13 @@
       <span>Categories: </span>
 <button class="tag_button All" id="All">
   All
-  <span class="badge badge-pill"> 29 </span>
+  <span class="badge badge-pill"> 30 </span>
 </button>
 
   
   
   <button class="btn btn-outline-primary tag_button Development" id="Development">
-    Development <span class="badge badge-pill"> 14 </span>
+    Development <span class="badge badge-pill"> 15 </span>
   </button>
 
   
@@ -84,6 +84,43 @@
   </button>
 
 <hr />
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/02/18/Basic-Server-Admin-1.html">Basic Server Administration - Day 1</a></h4>
+      <p><p>After yesterdays post about who should be learning server administration, it’s time to actually start learning. The first step is to get yourself a linux machine and install Centos 7 on it, as that is what we will be using throughout this. With most hosting providers this is simply an option that you select when you’re signing up. The other required technologies are a computer running Mac OS, as that is what I use day to day so that’s the easiest for me to test.</p>
+
+<p>The first thing that you will probably do with your server is want to get onto it, normally through ssh. The command for this on your Mac is:</p>
+
+<p><code class="highlighter-rouge">ssh username@ip.ad.dr.ess</code></p>
+
+<p>After you type that, you should receive a prompt on your screen asking you for your password. Now, because you will be doing this frequently, or at least you should be to be properly learning, typing the password every time will quickly become tiresome. So we’re going to use key based authentication. Key based authentication works by generating a public key and a private key that work together. What this means is when you try to log onto a server, your laptop is going to hand your private key to the server, and if it matches with one that the server has in its key list then you can logon without using a password.</p>
+
+<p>To start this process, on terminal on your mac type the following:</p>
+
+<p><code class="highlighter-rouge">ssh-keygen -t RSA</code></p>
+
+<p>which means that we will be generating an ssh key with the RSA encryption scheme. If you choose you can enter a password when prompted, and you should save it within the default location. Then type</p>
+
+<p><code class="highlighter-rouge">cat ~/.ssh/id_rsa.pub | pbcopy</code></p>
+
+<p>which just copies the public portion of the key that was just created to the system clipboard. Then ssh to the server using the ssh command from above, and do the following:</p>
+
+<p><code class="highlighter-rouge">mkdir .ssh</code></p>
+
+<p><code class="highlighter-rouge">vi .ssh/authorized_keys</code></p>
+
+<p>Now we are in a command line text editor named vi, which will seem extremely confusing at first, and we’ll get into it one day but for now just hit the <code class="highlighter-rouge">i</code> key, hit <code class="highlighter-rouge">command+v</code> to paste the public key from your clipboard, hit the <code class="highlighter-rouge">esc</code> key on your keyboard, then type <code class="highlighter-rouge">:wq</code> and you’re out. Now just to quickly breeze through the wizardry that we just went through, we went into <strong>i</strong>nsert to put text into the file, pasted the text into the file, <strong>esc</strong>aped from insert mode, and then <strong>w</strong>rote the file and <strong>q</strong>uit from the file.</p>
+
+<p>Now to try this out type</p>
+
+<p><code class="highlighter-rouge">quit</code></p>
+
+<p>which will have you leave the server. Then if we did everything right, after trying to ssh again, that command from the top, you should be able to log into the server without using your password. Again, this seems like a little thing but trust me it will be very helpful going forward.</p>
+</p>
+    </div>
+    <hr />
+  </div>
 
   <div class="All_tag Development_tag post mobile_padding">
     <div class="blog_post">
