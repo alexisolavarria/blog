@@ -50,13 +50,13 @@
       <span>Categories: </span>
 <button class="tag_button All" id="All">
   All
-  <span class="badge badge-pill"> 31 </span>
+  <span class="badge badge-pill"> 32 </span>
 </button>
 
   
   
   <button class="btn btn-outline-primary tag_button Development" id="Development">
-    Development <span class="badge badge-pill"> 16 </span>
+    Development <span class="badge badge-pill"> 17 </span>
   </button>
 
   
@@ -84,6 +84,25 @@
   </button>
 
 <hr />
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/02/21/Basic-Server_Administration-3.html">Basic Server Administration - Day 3</a></h4>
+      <p><p>Yesterday before we installed screen I briefly mentioned a program on your server called man, and glossed over what the program actually does. So today, we’re going to learn about man and why it should be the first thing you do when using a new command.</p>
+
+<p>A good first step is to run the command on itself. To follow along, that would be:</p>
+
+<p><code class="highlighter-rouge">man man</code></p>
+
+<p>Which will pop open a new screen that gives a description for the man command. The first entry is the name of the command, which includes the command that you type at the terminal and a brief description of what it does. When learning a new command this is very handy, as the description can save you a google on it’s own.</p>
+
+<p>Following the name is a synopsis of the command. This is useful as it show a shorthand of the various options that can be used with the command. After that, there is a roughly paragraph long description of the command that just expands upon the shorter bit above. The last bit of useful information is the options section. This lists each command line flag that the command can take, and gives a description of what the flag does to the command.</p>
+
+<p>As an exercise to learn man and yum, your next task is to use man to find the command line option to search the yum repositories for the rsync command, then attach to your update screen and install the rsync command there. I’ll give the command at the start of the post for tomorrow.</p>
+</p>
+    </div>
+    <hr />
+  </div>
 
   <div class="All_tag Development_tag post mobile_padding">
     <div class="blog_post">
