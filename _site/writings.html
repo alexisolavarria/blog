@@ -50,13 +50,13 @@
       <span>Categories: </span>
 <button class="tag_button All" id="All">
   All
-  <span class="badge badge-pill"> 33 </span>
+  <span class="badge badge-pill"> 35 </span>
 </button>
 
   
   
   <button class="btn btn-outline-primary tag_button Development" id="Development">
-    Development <span class="badge badge-pill"> 18 </span>
+    Development <span class="badge badge-pill"> 20 </span>
   </button>
 
   
@@ -84,6 +84,44 @@
   </button>
 
 <hr />
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/02/23/Basic-Server-Administration-5.html">Basic Server Administration - Day 5</a></h4>
+      <p><p>Now that you have some experience with a text editor, another tool that is crucial for you to understand is systemctl. Systemctl is the command line wrapper around systemd which is how processes and programs are normally made to run, and are started and stopped by the administrator.</p>
+
+<p>The example process that we’ll be using in the demonstration is the firewall manager firewalld. Now, there are a couple main things that you can use systemctl for. To check the status of a running package, you just type:</p>
+
+<p><code class="highlighter-rouge">systemctl status firewalld</code></p>
+
+<p>Which will give you the last few lines of the log file for the service, and a direct message about whether it’s running or not. If you want a service to start, it’s simply:</p>
+
+<p><code class="highlighter-rouge">systemctl start firewalld</code></p>
+
+<p>And similarly stopping a service is:</p>
+
+<p><code class="highlighter-rouge">systemctl stop firewalld</code></p>
+
+<p>The last real command that you need to use is the <code class="highlighter-rouge">enable</code> flag which just makes it so that the process starts when the server reboots. So normally the sequence that you follow when adding a new service is:</p>
+
+<p><code class="highlighter-rouge">systemctl start firewalld &amp;&amp; systemctl enable firewalld &amp;&amp;systemctl status firewalld</code></p>
+
+<p>Which to recap just starts the service, tells it to start on login, and then shows the status to ensure that it is running. Oh, and I almost forgot there is an alias flag <code class="highlighter-rouge">restart</code> that basically stops the service and then starts it. The main reason that you’ll be starting and stopping services in the future is to have them relaunch with new config changes.</p>
+</p>
+    </div>
+    <hr />
+  </div>
+
+  <div class="All_tag Development_tag post mobile_padding">
+    <div class="blog_post">
+      <h4><a href="/writing/2018/02/23/Quick-Tip-Remote-Servers-in-Apache.html">Quick Tip - Remote Database Access in Apache</a></h4>
+      <p><p>While working on my current project I ran into an issue where I was trying to access a database on a remote server within the API that I’m building. While I could access the database from the mysql command line tool, I could not access it within my web application. Finally after lots of searching it appears that the issue was actually a security setting within selinux. To turn this bit of security off just type the below and you’ll be on your way.</p>
+
+<p><code class="highlighter-rouge">setsebool httpd_can_network_connect_db on &amp;&amp; setsebool -P httpd_can_network_connect_db on</code></p>
+</p>
+    </div>
+    <hr />
+  </div>
 
   <div class="All_tag Development_tag post mobile_padding">
     <div class="blog_post">
