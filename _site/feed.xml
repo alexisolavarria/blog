@@ -1,5 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-02-21T15:59:11-05:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
-</subtitle><entry><title type="html">Basic Server Administration - Day 3</title><link href="htpps://www.doug-skinner.com/writing/2018/02/21/Basic-Server_Administration-3.html" rel="alternate" type="text/html" title="Basic Server Administration - Day 3" /><published>2018-02-21T11:00:00-05:00</published><updated>2018-02-21T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/02/21/Basic-Server_Administration-3</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/02/21/Basic-Server_Administration-3.html">&lt;p&gt;Yesterday before we installed screen I briefly mentioned a program on your server called man, and glossed over what the program actually does. So today, we’re going to learn about man and why it should be the first thing you do when using a new command.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-02-22T19:51:21-05:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html">Basic Server Administration - Day 4</title><link href="htpps://www.doug-skinner.com/writing/2018/02/22/Basic-Server-Administration-4.html" rel="alternate" type="text/html" title="Basic Server Administration - Day 4" /><published>2018-02-22T11:00:00-05:00</published><updated>2018-02-22T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/02/22/Basic-Server-Administration-4</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/02/22/Basic-Server-Administration-4.html">&lt;p&gt;Vim. That simple word can bring forth any emotion from love to hatred and even confusion for those that have used it before. What is it? Well, according to our man page, vim is Vi IMproved, a programmer’s text editor.  Now, you may be wondering what it means to be a programmer’s text editor, or why we would even need a text editor on our server.&lt;/p&gt;
+
+&lt;p&gt;If you remember back to our first day with the ssh keys, we’ve actually already used vi, which is what vim is built upon, to create a file. Creating and editing files directly on the server saves you, the user, the trouble of having to copy the file to your local machine, edit it, and then upload it back to the server. Instead, we can just simply edit it directly where it lives. This allows you to make changes quicker and continue on with what you need to be doing.&lt;/p&gt;
+
+&lt;p&gt;That’s all good and well, but you may be asking why I would choose vim. The answers pretty simple actually. Vi, the slightly more simplistic version of vim has all of the same keybindings and comes installed on pretty much any linux, unix, or bsd variant made in the last twenty years. This means that if you have to edit a file on a machine that is unable to update or install packages for whatever reason you can still edit files as an editor that you know is going to be there for you to rely on.&lt;/p&gt;
+
+&lt;p&gt;In the coming tutorials I am going to be giving commands for you to use, and all of the file based commands will use vim. Instead of having to explain the commands every single post, it’s easier to have a base list for you to refer to. So, you may be expecting there to be a list of commands in a table below, with each telling you what it does. For this though I am actually going to take the easy route and direct you to a tutorial.&lt;/p&gt;
+
+&lt;p&gt;Not just any tutorial though, but the vim tutor. The vim tutor is a program that ships with every version of vim and walks you through how to use vim by having you actually use vim to edit the tutorial itself. Before throwing you directly into it though, one thing about vim needs to be explained. Vim is a modal editor. That means that there exists multiple states that you can be in when using the editor, and in vim when in different modes the keys of your keyboard will actually do different things depending on what mode you are.&lt;/p&gt;
+
+&lt;p&gt;When you launch vim you start in editing mode. If you try to type directly into the document, other things will happen. While this may seem confusing, this is actually where vim gains most of its power. An example of this power can be seen in two keystrokes. While in edit mode, if the cursor is at the beginning of a word and you type:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dw&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;That will delete the entire word. Now imagine that the word that you wanted to delete was something long like the word administration. You could either hit the delete key for each letter, or simply type two letters and delete the entire word. To switch to input mode, where as you guessed it you can input text, you simply type:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And to exit back to editing mode you simply hit the:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;escape&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;key. If this seems interesting, then follow the instructions below to begin. And if it doesn’t, I still encourage you to give it a try. You never know when it might come in handy to know even just the basics of vim. To install vim run:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo yum install vim -y&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And to launch the tutor just run:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vimtutor&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Vim. That simple word can bring forth any emotion from love to hatred and even confusion for those that have used it before. What is it? Well, according to our man page, vim is Vi IMproved, a programmer’s text editor. Now, you may be wondering what it means to be a programmer’s text editor, or why we would even need a text editor on our server.</summary></entry><entry><title type="html">Basic Server Administration - Day 3</title><link href="htpps://www.doug-skinner.com/writing/2018/02/21/Basic-Server_Administration-3.html" rel="alternate" type="text/html" title="Basic Server Administration - Day 3" /><published>2018-02-21T11:00:00-05:00</published><updated>2018-02-21T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/02/21/Basic-Server_Administration-3</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/02/21/Basic-Server_Administration-3.html">&lt;p&gt;Yesterday before we installed screen I briefly mentioned a program on your server called man, and glossed over what the program actually does. So today, we’re going to learn about man and why it should be the first thing you do when using a new command.&lt;/p&gt;
 
 &lt;p&gt;A good first step is to run the command on itself. To follow along, that would be:&lt;/p&gt;
 
@@ -231,23 +261,4 @@ topic was copyright law in the online realm, and what follows is the paper. Enjo
   &lt;li&gt;Wu, T. (2003). When Code Isn’t Law. Virginia Law Review, 89(4), 679-751.doi:10.2307/3202374&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 107 - Limitations on exclusive rights: Fair use. (n.d.). Retrieved January 18,   2018, from &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/107&quot;&gt;https://www.law.cornell.edu/uscode/text/17/107&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 506 - Criminal offenses. (n.d.). Retrieved January 18, 2018, from     &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/506&quot;&gt;https://www.law.cornell.edu/uscode/text/17/506&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Warning: This post is very long. Read at your own risk. Also as part of my class discussed previously, I had to write a term paper on any topic that my little heart desired, as long as it related to the class. The topic was copyright law in the online realm, and what follows is the paper. Enjoy.</summary></entry><entry><title type="html">Rest Assured</title><link href="htpps://www.doug-skinner.com/projects/2018/01/22/rest-assured.html" rel="alternate" type="text/html" title="Rest Assured" /><published>2018-01-22T12:00:00-05:00</published><updated>2018-01-22T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/01/22/rest-assured</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/01/22/rest-assured.html">&lt;p&gt;The website for Rest Assured Home Inspections LLC was redesigned to make it more
-attractive for users, allowing it’s content to be more easily understood, and
-flow better among various screen sizes. The previous website had the content,
-however it was laid out in lack luster way, and was optimized for desktop while
-being almost unusable on mobile.&lt;/p&gt;
-
-&lt;p&gt;Straying from my usual design patterns, which closely blend standard bootstrap
-elements with the flatter aspects of the material design guidelines by Google, I
-chose to keep the site almost entirely native bootstrap, using a darker theme to
-align with the original site. The site consists of three main pages: a basic
-landing page utilizing rows and columns to layout content, an about page that
-contains a manifesto from the company owner, and a page that contains reviews of
-the company.&lt;/p&gt;
-
-&lt;p&gt;The page was created using the Jekyll static site generating framework, is
-hosted on a Centos 7 server being served by the Apache webserver, and is located
-behind an Nginx load-balancer also running on a Centos 7 server. The TLS
-ertificate for the site is provided by Let’s Encrypt, and is also being served
-by the Nginx load-balancer. The repo for the site can be found my personal
-Gitlab, &lt;a href=&quot;http://gitlab.doug-skinner.com/root/restassured&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">The website for Rest Assured Home Inspections LLC was redesigned to make it more attractive for users, allowing it’s content to be more easily understood, and flow better among various screen sizes. The previous website had the content, however it was laid out in lack luster way, and was optimized for desktop while being almost unusable on mobile.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Warning: This post is very long. Read at your own risk. Also as part of my class discussed previously, I had to write a term paper on any topic that my little heart desired, as long as it related to the class. The topic was copyright law in the online realm, and what follows is the paper. Enjoy.</summary></entry></feed>
