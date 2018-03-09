@@ -33,7 +33,7 @@ title: Systematic Thoughts
             <div class="card shadow">
               <img class="card-img-top" style="max-height:15em;" src="{{post.card_image}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{post.card_image_credit}}">
               <div class="card-body">
-                <h5 class="card-title text-left">{{ post.title }}<br><small>Posted: {{post.date | date: '%B %d, %Y' }}</small></h5>
+                <h5 class="card-title text-left">{{ post.title }}<br><small class="text-info">Posted: {{post.date | date: '%B %d, %Y' }}</small></h5>
                 <div class="card-text container">
                   {{ post.excerpt | remove: '<p>' | remove: '</p>' | truncatewords: 50 }}
                 </div>
