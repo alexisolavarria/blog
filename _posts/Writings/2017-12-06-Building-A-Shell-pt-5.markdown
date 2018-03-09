@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 5"
 date:   2017-12-06 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 Today we're going to be adding the first of our more complex functions to our
 shell, create. This command will be used to create files, directories, and both
@@ -73,7 +76,7 @@ int main(int argc, char *argv[]) {
 Adding this functionality is relatively simple following the example function
 that we gave yesterday, and just consists of adding another string comparison to
 see if if matches the `create` function. Then we just get the required
-arguments, and pass it using `execl` again. 
+arguments, and pass it using `execl` again.
 
 ```
 int main(void) {

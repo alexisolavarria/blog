@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 6"
 date:   2017-12-07 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 Today we're going to be adding the second of our more complex functions to our
 shell, list. This command will be a simplistic version of the ls command. The code mostly relies upon using a few system calls that

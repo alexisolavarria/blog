@@ -4,6 +4,9 @@ title:  "Found Vs Made Photography"
 date:   2018-02-12 12:00:00 -0400
 categories: Writing
 tags: Photography
+reading_time: 20 Minutes
+card_image: /img/post_images/made_vs_found.jpg
+card_image_credit: Photo by Cameron Kirby on Unsplash
 ---
 
 There is a common misconception today that photography as an art form is a medium akin to painting or drawing, thus allowing the photographer to share their vision of the world with those who view the work. While it is true that viewing a photo does allow one to see how the world appears to the artist, there is no reason to believe that the artist is creating that world. Considering other mediums of art, using painting as an example, when the artist sets out to capture their subject exactly as how it is seen, the subject can often appear different in the final product. That's not to say that the artist set out to modify the subject, however it is often unavoidable. For example, when painting a flower, there are a few things that can be changed from reality without the artist noticing. The easiest of these for others to see would be the color of the flower, for even if the artist matches the color they see entirely accurately there is no guarantee that the color is true to how others perceive it. Again, this is not a mistake made by the artist, it is simply the reality of relying on the human eye to accurately detect color.

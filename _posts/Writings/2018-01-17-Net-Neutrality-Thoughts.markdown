@@ -4,13 +4,16 @@ title:  "Some Thoughts About Net Neutrality"
 date:   2018-01-17 12:00:00 -0500
 categories: Writing
 tags: Thoughts
+reading_time: 5 Minutes
+card_image: /img/post_images/thoughts.jpg
+card_image_credit: Photo by Ali Yahya on Unsplash
 ---
 
 Recently I was asked to answer the below questions as part of the Information
 Ethics class that I am taking, and I thought they would stand as a good
 representation of my views on Net Neutrality. Enjoy.
 
---- 
+---
 
 __Are you in favor of network neutrality going forward? Why or why not?__
 

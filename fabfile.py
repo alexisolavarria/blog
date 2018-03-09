@@ -19,6 +19,7 @@ def git():
     add()
     commit()
     upload()
+    upload_rd()
 
 def convert_images():
     local("scripts/minimize_thumbnails")

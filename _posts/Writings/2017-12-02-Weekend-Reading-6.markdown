@@ -4,6 +4,9 @@ title:  "Weekend Reading 7"
 date:   2017-12-02 12:00:00 -0500
 categories: Writing
 tags: Reading
+reading_time: <1 Minute
+card_image: /img/post_images/reading.jpg
+card_image_credit: Photo by Rendiansyah Nugroho on Unsplash
 ---
 Weekend reading part seven, [Tutorial, Write a shell in
 C](https://brennan.io/2015/01/16/write-a-shell-in-c/), was read before

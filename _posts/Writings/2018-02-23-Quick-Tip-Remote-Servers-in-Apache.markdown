@@ -4,6 +4,9 @@ title:  "Quick Tip - Remote Database Access in Apache"
 date:   2018-02-23 12:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: <1 Minute
+card_image: /img/post_images/quick_tip.jpg
+card_image_credit: Photo by James Pond on Unsplash
 ---
 
 While working on my current project I ran into an issue where I was trying to access a database on a remote server within the API that I'm building. While I could access the database from the mysql command line tool, I could not access it within my web application. Finally after lots of searching it appears that the issue was actually a security setting within selinux. To turn this bit of security off just type the below and you'll be on your way.

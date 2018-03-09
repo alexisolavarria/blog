@@ -4,6 +4,9 @@ title:  "VPN, A Necessity?"
 date:   2018-01-05 12:00:00 -0500
 categories: Writing
 tags: Thoughts
+reading_time: 5 Minutes
+card_image: /img/post_images/thoughts.jpg
+card_image_credit: Photo by Ali Yahya on Unsplash
 ---
 
 Is using a VPN a necessecity for all internet users in this day and age? While
@@ -20,7 +23,7 @@ the domain that hosts your VPN of choice. So while getting to Netflix may cost
 you $0.02 a Mb, made up purely for this example but not out of the realms of
 possibiity, if standard internet traffic only costs you $0.01 a Mb going through
 the VPN which will appear as standard traffic lowers the costs that you will be
-facing by half. 
+facing by half.
 
 Another big use of VPNs is to provide the same functionality of hiding your
 traffic from others that may be looking to snoop it on the same network. This is
@@ -38,4 +41,4 @@ While these aren't the only reasons that someone should use a VPN, they are
 among the most popular. I do encourage everyone that comes across this post to
 seriously evaluate for themselves whether they need a VPN. As to what company to
 use for your VPN, that is a matter that I will not step into, instead advising
-each person to evaluate the various options on their own. 
+each person to evaluate the various options on their own.

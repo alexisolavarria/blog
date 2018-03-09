@@ -3,7 +3,9 @@ layout: default_blog
 title:  "Downloading Isn't Stealing"
 date:   2018-01-22 12:00:00 -0500
 categories: Writing
-tags: Thoughts
+reading_time: 20 Minutes
+card_image: /img/post_images/thoughts.jpg
+card_image_credit: Photo by Ali Yahya on Unsplashtags: Thoughts
 ---
 
 __Warning__: This post is very long. Read at your own risk.  

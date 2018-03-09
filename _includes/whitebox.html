@@ -1,11 +1,17 @@
-<div class="blog_post">
-  <h2>Latest Photos</h2>
-  {% for post in site.categories.Thumbnails limit:3 %}
-    <div class="col-12 mobile_padding">
+<div class="row content">
+  <div class="page-header col-12">
+    <h2 class="text-center">Latest Photos</h2>
+  </div>
+  {% for post in site.categories.Thumbnails limit:6 %}
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
       <a href="{{ post.full_url }}">
-        <img class="gallery-hover shadow" alt="Recent Screenshot" src="{{ post.picture }}">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="{{ post.picture }}">
       </a>
     </div>
   {% endfor %}
-  <h5><a href="/photos.html">Browse all Photos</a></h5>
+  <div class="text-center col-12">
+    <a href="/photos.html">
+      <button class="btn btn-info">Browse All Photos</button>
+    </a>
+  </div>
 </div>

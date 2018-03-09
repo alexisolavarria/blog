@@ -4,6 +4,9 @@ title:  "Weekend Reading 4"
 date:   2017-11-05 12:00:00 -0500
 categories: Writing
 tags: Reading
+reading_time: <1 Minute
+card_image: /img/post_images/reading.jpg
+card_image_credit: Photo by Rendiansyah Nugroho on Unsplash
 ---
 
 Weekend reading part four, [When Is Transparency

@@ -2,8 +2,15 @@
 layout: default
 title: Photos
 ---
-{% for post in site.categories.Thumbnails %}
-  <a href="{{ post.full_url }}">
-    <img class="gallery-hover shadow" src="{{ post.picture }}">
-  </a>
-{% endfor %}
+<div class="row content">
+  <div class="page-header col-12">
+    <h2 class="text-center">Photo Gallery</h2>
+  </div>
+  {% for post in site.categories.Thumbnails %}
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
+      <a href="{{ post.full_url }}">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="{{ post.picture }}">
+      </a>
+    </div>
+  {% endfor %}
+</div>

@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 4"
 date:   2017-12-05 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 
 Now, we're going to focus on how we would add more complex functions to the

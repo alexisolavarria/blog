@@ -4,6 +4,9 @@ title:  "Constructing A DFA From A Regex"
 date:   2018-02-09 12:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/state_machine.jpg
+card_image_credit: Photo by Igor Ovsyannykov on Unsplash
 ---
 
 While creating [Prex](https://doug-skinner.com/projects/2018/02/09/Prex.html),

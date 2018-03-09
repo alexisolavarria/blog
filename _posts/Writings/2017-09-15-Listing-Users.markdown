@@ -4,6 +4,9 @@ title:  "# of Users Logged In"
 date:   2017-09-15 12:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: <1 Minute
+card_image: /img/post_images/quick_tip.jpg
+card_image_credit: Photo by James Pond on Unsplash
 ---
 
 While going through the Unix Systems Programming book, one of the preface

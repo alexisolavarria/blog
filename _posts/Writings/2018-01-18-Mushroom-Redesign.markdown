@@ -4,6 +4,9 @@ title:  "Mushroom Redesign"
 date:   2018-01-19 12:01:00 -0400
 categories: Writing
 tags: Design
+reading_time: 15 Minutes
+card_image: /img/post_images/mushroom_final_phone.png
+card_image_credit: Photo by Me
 ---
 
 While browsing reddit the other day I came upon a [link](https://www.reddit.com/r/learnpython/comments/7q8qka/i_made_a_rough_draft_of_a_flask_app_that_accepts/) to a newer Github repo that someone was working on. That repo was [Mushroom Map Maker](https://github.com/brettvanderwerff/Mushroom-Map-Maker) and now, mushrooms aren't normally my thing, however I always like seeing what others are working on so I thought I would take a look. And functionality was great, the search worked perfectly, and even properly gave errors if the input was missing. The aesthetics of the page however left a little to be desired so I thought I would download it and take a look at what I could do.

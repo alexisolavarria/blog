@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 2"
 date:   2017-12-03 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 
 This is the second section in a series of posts walking through the steps I took
@@ -45,7 +48,7 @@ int main(void) {
             } else {
                 do {
                     wait = waitpid(child, &child_status, WUNTRACED);
-                } while (!WIFEXITED(child_status) && !WIFSIGNALED(child_status)); 
+                } while (!WIFEXITED(child_status) && !WIFSIGNALED(child_status));
             }
         }
         free(buff);

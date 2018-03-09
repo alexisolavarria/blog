@@ -4,6 +4,9 @@ title:  "New Year"
 date:   2018-01-01 12:00:00 -0500
 categories: Writing
 tags: Thoughts
+reading_time: 2 Minutes
+card_image: /img/post_images/new_year.jpg
+card_image_credit: Photo by Brooke Lark on Unsplash
 ---
 
 Another year, another chance to make declarations about the goals that one hopes

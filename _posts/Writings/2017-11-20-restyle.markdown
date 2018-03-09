@@ -1,9 +1,0 @@
----
-layout: default_blog
-title:  "Restyle"
-date:   2017-11-20 12:00:00 -0500
-categories: Writing
-tags: Development
----
-
-I've just redone the design of my site to make it more simplistic and way less busy. It's less designed, but I think that it will help me focus more on the content than messing with the design repeatedly. I may be touching it a little more in the future, but it will stay mostly like this.

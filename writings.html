@@ -2,25 +2,64 @@
 layout: default
 title: Systematic Thoughts
 ---
-<span>Categories: </span>
-<button class="tag_button All" id="All">
-  All
-  <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
-</button>
-{% for tag in site.tags %}
-  {% assign t = tag | first %}
-  {% assign posts = tag | last %}
-  <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
-    {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
-  </button>
-{% endfor %}
-<hr />
-{% for post in site.categories.Writing %}
-  <div class="All_tag {{post.tags}}_tag post mobile_padding">
-    <div class="blog_post">
-      <h4><a href="{{post.url}}">{{ post.title }}</a></h4>
-      <p>{{ post.content }}</p>
-    </div>
-    <hr />
+<div class="row content">
+  <div class="page-header col-12">
+    <h2 class="text-center">All Posts</h2>
   </div>
-{% endfor %}
+  <div class="col-12 col-md-4 sidebar">
+    <h3 class="text-center">Categories</h3>
+    <ul class="list-unstyled">
+      <li>
+        <button class="tag_button btn All btn-primary" id="All">
+          All <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
+        </button>
+      </li>
+      {% for tag in site.tags %}
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        <li>
+          <button class="btn btn-outline-primary tag_button {{t}}" id="{{t}}">
+            {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
+          </button>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-12 col-md-8">
+    <div class="row">
+      {% for post in site.categories.Writing %}
+        <div class="All_tag {{post.tags}}_tag post">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <div class="row">
+                <div class="col-3">
+                  <img class="img-fluid" style="height:100%;" src="{{post.card_image}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{post.card_image_credit}}">
+                </div>
+                <div class="col-9 card-body">
+                  <h5 class="card-title text-left">{{ post.title }}<br><small>Posted: {{post.date | date: '%B %d, %Y' }}</small></h5>
+                  <div class="card-text container">
+                    {{ post.excerpt | remove: '<p>' | remove: '</p>' | truncatewords: 50 }}
+                  </div>
+                  <div class="card-footer">
+                    <span>Reading Time: {{post.reading_time}}</span>
+                    <a href="{{post.url}}">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                    <br>
+                    <div class="tags float-left">
+                      <span>Tags:
+                      {% for tag in post.tags %}
+                        {{tag}}
+                      {% endfor %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

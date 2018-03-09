@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 3"
 date:   2017-12-04 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 
 Next, we'll add a few built in functions to the shell. Our shell will support

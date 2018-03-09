@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 8"
 date:   2017-12-09 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 Today while testing I had noticed a slight issue with the code. While everything
 worked great in the directory where we started the simpleshell, the complicated

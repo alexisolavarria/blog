@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 1"
 date:   2017-12-02 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 
 This series of posts will walk through the basics of building a shell, based on
@@ -45,7 +48,7 @@ function as follows:
 
 ```
 int loop(void) {
-    
+
     while (1) {
         // Prompt the user for input with your shell
         printf("[my_shell]$ ");

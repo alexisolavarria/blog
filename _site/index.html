@@ -3,11 +3,16 @@
   <head>
   <meta charset="utf-8">
   <meta lang="en">
-  <link href="/static/css/custom.css" rel="stylesheet">
+
   <title>Doug Skinner</title>
   <link rel="shortcut icon" href="/img/favicon.ico" />
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="/static/css/custom.css" rel="stylesheet">
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="/static/js/custom.js"></script>
 
   <script>
@@ -22,94 +27,268 @@
 </head>
 
   <body>
-    <nav class="navigation">
-  <h2>
-    <a href="/index.html">Doug Skinner</a>
-  </h2>
-  <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/about.html">About</a>
-    </li>
-    <li>
-      <a href="/photos.html">Photos</a>
-    </li>
-    <li>
-      <a href="/projects.html">Projects</a>
-    </li>
-    <li>
-      <a href="/writings.html">Writings</a>
-    </li>
-  </ul>
-  <hr />
+    <div class="hero">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+            <h1 class="display-4 text-center">Doug Skinner</h1>
+            <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="/">DS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto text-center">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/photos.html">Photos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/writings.html">Writings</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-    <div class="">
-      
-  <div class="blog_post">
-    <h2>Latest Blog Post</h2>
-    <h4><a href="/writing/2018/02/26/Visual-Guide-AES.html">Visual Guide to AES</a></h4>
-    <hr />
-    <p><p>While studying for my first intro to cryptography exam I was looking for
+    <div class="container">
+      <div class="row content">
+  <div class="page-header col-12">
+    <h2 class="text-center">Recent Posts</h2>
+  </div>
+  
+    <div class="col-12 col-lg-6 mobile_padding">
+      <div class="card shadow">
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid" style="height:100%;" src="/img/post_images/starting_image.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Jon Tyson on Unsplash">
+          </div>
+          <div class="col-8 card-body">
+            <h5 class="card-title text-left">Starting A Service<br><small>Posted: March 08, 2018</small></h5>
+            <div class="card-text container">
+              Over the coming months I am going to be attempting to launch an online service. No hints as to what it is yet, but I thought it would be a good thought exercise to share with the internet any discoveries or problems that I encounter while going through this. Please...
+            </div>
+            <div class="card-footer">
+              <span class="float-left">Reading Time: <1 Minute</span>
+              <a href="/writing/2018/03/08/Starting-A-Service.html">
+                <button class="btn btn-info float-right">Read More</button>
+              </a>
+              <br>
+              <div class="tags float-left">
+                <span>Tags:
+                
+                  Development
+                
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12 col-lg-6 mobile_padding">
+      <div class="card shadow">
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid" style="height:100%;" src="/img/post_images/cryptography.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske on Unsplash">
+          </div>
+          <div class="col-8 card-body">
+            <h5 class="card-title text-left">Visual Guide to AES<br><small>Posted: February 26, 2018</small></h5>
+            <div class="card-text container">
+              While studying for my first intro to cryptography exam I was looking for
 resources to better explain how AES encryptin works, and came along this cute
 little drawing that does a remarkable job. Find it
-<a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html">here</a></p>
-</p>
-  </div>
+<a href="http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html">here</a>
 
-<h5><a href="/writings.html">Browse the Archives</a></h5>
-<hr />
-
-
-  <div class="blog_post">
-    <h2>Current Project</h2>
-    <h4><a href="/projects/2018/02/09/Prex.html">Prex</a></h4>
-    <img class="shadow" alt="Current Project Image" src="/img/projects/prex.png">
-    <h4><a href="https://gitlab.doug-skinner.com/root/prex">View repo</a></h4>
-    <p><p>The <strong>P</strong>ython <strong>R</strong>eguler <strong>Ex</strong>pression handler is a basic script written in
-Python (shocking I know) that reads in a regex string and the file to search.</p>
-
-<p>Rather than using the built in regex class/parser, Prex then creates a
-<a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton">DFA</a> from the
-input regex string, to allow the regex to be processed. After reading in the
-input file, separated line by line on newline characters (‘\n’), the script then
-feeds in each line to the internal DFA character by character. If the DFA
-reaches the end state, it then returns the starting index, ending index, and all
-characters that match the regex printing that info to stdout.</p>
-
-</p>
-  </div>
-
-<h5><a href="/projects.html">Browse all Projects</a></h5>
-<hr />
-
-<div class="blog_post">
-  <h2>Latest Photos</h2>
+            </div>
+            <div class="card-footer">
+              <span class="float-left">Reading Time: <1 Minute</span>
+              <a href="/writing/2018/02/26/Visual-Guide-AES.html">
+                <button class="btn btn-info float-right">Read More</button>
+              </a>
+              <br>
+              <div class="tags float-left">
+                <span>Tags:
+                
+                  Development
+                
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   
-    <div class="col-12 mobile_padding">
+    <div class="col-12 col-lg-6 mobile_padding">
+      <div class="card shadow">
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid" style="height:100%;" src="/img/post_images/quick_tip.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by James Pond on Unsplash">
+          </div>
+          <div class="col-8 card-body">
+            <h5 class="card-title text-left">Quick Tip - Remote Database Access in Apache<br><small>Posted: February 23, 2018</small></h5>
+            <div class="card-text container">
+              While working on my current project I ran into an issue where I was trying to access a database on a remote server within the API that I’m building. While I could access the database from the mysql command line tool, I could not access it within my web application....
+            </div>
+            <div class="card-footer">
+              <span class="float-left">Reading Time: <1 Minute</span>
+              <a href="/writing/2018/02/23/Quick-Tip-Remote-Servers-in-Apache.html">
+                <button class="btn btn-info float-right">Read More</button>
+              </a>
+              <br>
+              <div class="tags float-left">
+                <span>Tags:
+                
+                  Development
+                
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-12 col-lg-6 mobile_padding">
+      <div class="card shadow">
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid" style="height:100%;" src="/img/post_images/thoughts.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Ali Yahya on Unsplash">
+          </div>
+          <div class="col-8 card-body">
+            <h5 class="card-title text-left">Should You Learn Server Administration?<br><small>Posted: February 17, 2018</small></h5>
+            <div class="card-text container">
+              So, I’ve been asked by a few people both at work and school about who should learn server administration. While I am by no means an expert at administrating servers, I do keep a healthy homelab of between fifteen and twenty servers and I help maintain roughly the same amount...
+            </div>
+            <div class="card-footer">
+              <span class="float-left">Reading Time: 5 Minutes</span>
+              <a href="/writing/2018/02/17/Who-Should-Learn-Server-Administration.html">
+                <button class="btn btn-info float-right">Read More</button>
+              </a>
+              <br>
+              <div class="tags float-left">
+                <span>Tags:
+                
+                  Development
+                
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+<div class="text-center">
+  <a href="/writings.html">
+    <button class="btn btn-info">Browse the Archives</button>
+  </a>
+</div>
+
+<div class="row content">
+  <div class="page-header col-12">
+    <h2 class="text-center">Current Project</h2>
+  </div>
+  
+  <div class="col-12 col-lg-10 mx-auto">
+    <div class="card shadow">
+      <img class="card-img-top" alt="Current Project Image" src="/img/projects/prex.png">
+      <div class="card-body">
+        <h5 class="card-title">Prex<br><small><a href="https://gitlab.doug-skinner.com/root/prex">View repo</a></small></h5>
+        <div class="card-text container">
+          The <strong>P</strong>ython <strong>R</strong>eguler <strong>Ex</strong>pression handler is a basic script written in
+Python (shocking I know) that reads in a regex string and the file to search.
+
+
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="/projects.html">
+        <button class="btn btn-outline-info float-left">View All Projects</button>
+        </a>
+        <a href="/projects/2018/02/09/Prex.html">
+          <button class="btn btn-info float-right">Read More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="row content">
+  <div class="page-header col-12">
+    <h2 class="text-center">Latest Photos</h2>
+  </div>
+  
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
       <a href="/full/2017/01/01/IMG_8291.html">
-        <img class="gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8291.jpg">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8291.jpg">
       </a>
     </div>
   
-    <div class="col-12 mobile_padding">
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
       <a href="/full/2017/01/01/IMG_8061.html">
-        <img class="gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8061.jpg">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8061.jpg">
       </a>
     </div>
   
-    <div class="col-12 mobile_padding">
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
       <a href="/full/2017/01/01/IMG_8052.html">
-        <img class="gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8052.jpg">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8052.jpg">
       </a>
     </div>
   
-  <h5><a href="/photos.html">Browse all Photos</a></h5>
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
+      <a href="/full/2017/01/01/IMG_7974.html">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7974.jpg">
+      </a>
+    </div>
+  
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
+      <a href="/full/2017/01/01/IMG_7894.html">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7894.jpg">
+      </a>
+    </div>
+  
+    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
+      <a href="/full/2017/01/01/IMG_7800.html">
+        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7800.jpg">
+      </a>
+    </div>
+  
+  <div class="text-center col-12">
+    <a href="/photos.html">
+      <button class="btn btn-info">Browse All Photos</button>
+    </a>
+  </div>
 </div>
 
 
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
+            <p>© Doug Skinner. All rights reserved</p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

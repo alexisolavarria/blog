@@ -4,6 +4,9 @@ title:  "Building a Shell, Part 7"
 date:   2017-12-08 14:00:00 -0400
 categories: Writing
 tags: Development
+reading_time: 5 Minutes
+card_image: /img/post_images/shell.jpg
+card_image_credit: Photo by Clever Visuals on Unsplash
 ---
 Today we're going to be adding the third and final (for now) of our more complex functions to our
 shell, fileconverter. This command was specific to my class "Make a shell" assignment, but the

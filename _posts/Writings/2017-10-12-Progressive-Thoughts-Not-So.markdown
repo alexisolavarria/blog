@@ -4,11 +4,14 @@ title:  "Progressive Views Not So"
 date:   2017-10-12 12:00:00 -0500
 categories: Writing
 tags: Thoughts
+reading_time: 5 Minutes
+card_image: /img/post_images/thoughts.jpg
+card_image_credit: Photo by Ali Yahya on Unsplash
 ---
 
-Thomas Jefferson, the third president of the United States, 
+Thomas Jefferson, the third president of the United States,
 once wrote a
-[letter](http://press-pubs.uchicago.edu/founders/documents/a1_8_8s12.html) 
+[letter](http://press-pubs.uchicago.edu/founders/documents/a1_8_8s12.html)
 to his friend Isaac McPherson regarding the state
 of intellectual freedom within the United States at the time. Jefferson's views
 would be considered progressive today, yet invoke lots of thought when read with
@@ -29,7 +32,7 @@ through a legal document or otherwise, that they will never use the information
 contained within the idea and that they will never base a new idea off of the
 previous one, it is basically impossible to follow through with that promise.
 Once someone hears about and understands an idea then that idea will be with
-them forever. 
+them forever.
 
 That is one of the great parts of sharing ideas, that all future inventions are
 founded on the ideas that came before. A simple example of this is how many
@@ -61,7 +64,7 @@ intellectual property. Under the current laws, the punishment is the same
 whether you are copying Amazon's
 [one-click](https://en.wikipedia.org/wiki/1-Click) patent or a simple catchy
 tune from a commercial advertisement. It doesn't take much thought to
-acknowledge that these two should probably be treated differently. 
+acknowledge that these two should probably be treated differently.
 
 It's fascinating to me that thinking along these lines is today associated with
 dumb youngsters who are used to downloading everything online, when this line of
