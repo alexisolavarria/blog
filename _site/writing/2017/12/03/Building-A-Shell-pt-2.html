@@ -27,6 +27,18 @@
 </head>
 
   <body>
+    <div class="hero">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+        <h1 class="display-4 text-center">Doug Skinner</h1>
+        <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,10 +65,15 @@
   </div>
 </nav>
 
-    <div class="blog_post">
-      <h4><a href="">Building a Shell, Part 2</a></h4>
-      <hr />
-      <p><p>This is the second section in a series of posts walking through the steps I took
+    <div class="container">
+      <div class="row mobile_padding content">
+        <div class="col-12 mobile_padding">
+          <div class="card shadow">
+            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/shell.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Clever Visuals on Unsplash">
+            <div class="card-body">
+              <h5 class="card-title text-center">Building a Shell, Part 2<br><small class="text-info">Posted: December 03, 2017</small></h5>
+              <div class="card-text col-10 mx-auto">
+                <p>This is the second section in a series of posts walking through the steps I took
 to make a basic shell for a final project for a systems programming class. The
 only thing that we’ll be adding to the
 shell today is probably the most important aspect of the shell, the fact that
@@ -103,8 +120,23 @@ input in a parent process would look like so:</p>
     return 0;
 }
 </code></pre></div></div>
-</p>
-      <h5><a href="/writings.html">Archives</a></h5>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
+        <p>© Doug Skinner. All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>

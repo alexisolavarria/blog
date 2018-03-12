@@ -1,12 +1,24 @@
 <html>
   {% include header.html %}
   <body>
+    {% include hero_image.html %}
     {% include navbar.html %}
-    <div class="blog_post">
-      <h4><a href="{{post.url}}">{{ page.title }}</a></h4>
-      <hr />
-      <p>{{ page.content }}</p>
-      <h5><a href="/writings.html">Archives</a></h5>
+    <div class="container">
+      <div class="row mobile_padding content">
+        <div class="col-12 mobile_padding">
+          <div class="card shadow">
+            <img class="card-img-top" style="max-height:15em;" src="{{page.card_image}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{page.card_image_credit}}">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ page.title }}<br><small class="text-info">Posted: {{page.date | date: '%B %d, %Y' }}</small></h5>
+              <div class="card-text col-10 mx-auto">
+                {{ page.content }}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    {% include footer.html %}
   </body>
 </html>

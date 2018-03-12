@@ -27,6 +27,18 @@
 </head>
 
   <body>
+    <div class="hero">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+        <h1 class="display-4 text-center">Doug Skinner</h1>
+        <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +65,14 @@
   </div>
 </nav>
 
-    <div class="blog_post">
-      <h4><a href="/projects/2018/02/09/Prex.html">Prex</a></h4>
-      <img class="shadow" src="/img/projects/prex.png">
-      <h4><a href="https://gitlab.doug-skinner.com/root/prex">View repo</a></h4>
-      <p><p>The <strong>P</strong>ython <strong>R</strong>eguler <strong>Ex</strong>pression handler is a basic script written in
+    <div class="container content">
+      <div class="col-12 mobile_padding">
+        <div class="card shadow">
+          <img class="card-img-top" style="max-height:15em;" src="/img/projects/prex.png" alt="placeholder" data-toggle="tooltip" data-placement="top" title="">
+          <div class="card-body">
+            <h5 class="card-title text-left">Prex<br><small class="text-info">Posted: February 09, 2018</small></h5>
+            <div class="card-text container">
+              <p>The <strong>P</strong>ython <strong>R</strong>eguler <strong>Ex</strong>pression handler is a basic script written in
 Python (shocking I know) that reads in a regex string and the file to search.</p>
 
 <p>Rather than using the built in regex class/parser, Prex then creates a
@@ -68,8 +83,21 @@ feeds in each line to the internal DFA character by character. If the DFA
 reaches the end state, it then returns the starting index, ending index, and all
 characters that match the regex printing that info to stdout.</p>
 
-</p>
-      <h5><a href="/projects.html"> Archive </a></h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
+        <p>© Doug Skinner. All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>

@@ -27,6 +27,18 @@
 </head>
 
   <body>
+    <div class="hero">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+        <h1 class="display-4 text-center">Doug Skinner</h1>
+        <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,19 +65,35 @@
   </div>
 </nav>
 
-    <div class="blog_post">
-      <h4><a href="/projects/2016/06/01/capital-clean-ups.html">Capital Clean Ups</a></h4>
-      <img class="shadow" src="/img/projects/capital_clean_ups_screenshot.png">
-      <h4><a href="http://www.capitalcleanups.com">View Site</a></h4>
-      <p><p>The Capital Clean Ups website was created for a small business in my local area that focuses on removing junk from commercial and residential locations. It was primarily used to advertise that the company existed, and also to showcase the services offered. Overall, it was a very basic website and done more as a favor than as a learning experience.</p>
+    <div class="container content">
+      <div class="col-12 mobile_padding">
+        <div class="card shadow">
+          <img class="card-img-top" style="max-height:15em;" src="/img/projects/capital_clean_ups_screenshot.png" alt="placeholder" data-toggle="tooltip" data-placement="top" title="">
+          <div class="card-body">
+            <h5 class="card-title text-left">Capital Clean Ups<br><small class="text-info">Posted: June 01, 2016</small></h5>
+            <div class="card-text container">
+              <p>The Capital Clean Ups website was created for a small business in my local area that focuses on removing junk from commercial and residential locations. It was primarily used to advertise that the company existed, and also to showcase the services offered. Overall, it was a very basic website and done more as a favor than as a learning experience.</p>
 
 <p><del>This project was my second major entry into web development, and consisted of a Python Flask backend with a front-end mostly in JQuery. The database layer is MySQL. It was hosted on a web server that I ran, running Centos 7.</del></p>
 
 <p>Just kidding. This project has since been updated to use bootstrap 4 and is
 generated using Jekyll. No more database or flask for a 5 page static site.
 Still hosted by me on a Centos 7 server.</p>
-</p>
-      <h5><a href="/projects.html"> Archive </a></h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
+        <p>© Doug Skinner. All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
