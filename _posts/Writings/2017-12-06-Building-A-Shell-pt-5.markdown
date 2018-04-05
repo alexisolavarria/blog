@@ -14,7 +14,7 @@ hard and soft links. The file permissions will be 0640 for the files and 0750
 for the directories. The code mostly relies upon using a few system calls that
 makes this functionality easy to implement, and looks like this:
 
-```
+```c
 #include "error.h"
 #include <fcntl.h>
 #include <stdio.h>
@@ -78,7 +78,7 @@ that we gave yesterday, and just consists of adding another string comparison to
 see if if matches the `create` function. Then we just get the required
 arguments, and pass it using `execl` again.
 
-```
+```c
 int main(void) {
     int _continue = 0;
     char *buff = malloc(sizeof(char) * 512);

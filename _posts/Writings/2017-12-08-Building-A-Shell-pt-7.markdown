@@ -13,7 +13,7 @@ shell, fileconverter. This command was specific to my class "Make a shell" assig
 functionality can definitely be improved upon for other use cases as well. The file takes in a
 regular text file and converts it to a binary file, or vice versa, and looks like this:
 
-```
+```c
 #include "error.h"
 #include "helper.h"
 #include "input.h"
@@ -113,7 +113,7 @@ that we gave yesterday, and just consists of adding another string comparison to
 see if if matches the `fileconverter` function. Then we just get the required
 arguments, and pass it using `execl` again.
 
-```
+```c
 int main(void) {
     int _continue = 0;
     char *buff = malloc(sizeof(char) * 512);

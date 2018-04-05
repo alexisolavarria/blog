@@ -15,7 +15,7 @@ command. A simple fix to that just involves looking at the current directory
 when we start up, and pre-pending it to the command name. Adding that to our
 shell we get:
 
-```
+```c
 int main(void) {
     char *base_dir = malloc(sizeof(char) * 512);
     getcwd(base_dir, MAX_STR);

@@ -8,16 +8,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Doug Skinner's Blog 
+title: Doug Skinner's Blog
 email: me@doug-skinner.com
 description: > # this means to ignore newlines until "baseurl:"
     My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "htpps://www.doug-skinner.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username: doug-skinner 
+github_username: doug-skinner
 
 markdown: kramdown
+highlighter: rouge
 theme: minima
 gems:
   - jekyll-feed

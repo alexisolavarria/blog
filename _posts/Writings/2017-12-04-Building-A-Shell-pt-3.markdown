@@ -16,7 +16,7 @@ external commands in the next section of this series. The code for each of these
 commands is simple, and the quit command was already included last time. So, the
 code for printing the current directory:
 
-```
+```c
 int wd(void) {
     char *current_dir;
     allocateStr(&current_dir);
@@ -28,7 +28,7 @@ int wd(void) {
 
 And the code for changing the directory:
 
-```
+```c
 int chwd(char *new_path) {
     if (new_path == NULL) {
         printf("The proper usage of %s is %s.\n", "chwd", "chwd pathname");
@@ -41,7 +41,7 @@ int chwd(char *new_path) {
 
 The functions will then be added to the shell like so:
 
-```
+```c
 int main(void) {
     int _continue = 0;
     char *buff = malloc(sizeof(char) * 512);

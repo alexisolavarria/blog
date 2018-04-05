@@ -23,7 +23,7 @@ family](http://www.geeksforgeeks.org/exec-family-of-functions-in-c/) of
 functions. While that link goes into further detail about the various options,
 the one that we'll be focusing on is the following:
 
-```
+```c
 int execl(const char *path, const char *arg0, ... /*, (char *)0 */);
 
 // An example of this command
@@ -42,7 +42,7 @@ functions that we want. We'll dive into a few of those functions tomorrow, but
 for now I'll just add the echo command to our shell. I'll also add an error
 string if the entered command doesn't exist.
 
-```
+```c
 int main(void) {
     int _continue = 0;
     char *buff = malloc(sizeof(char) * 512);

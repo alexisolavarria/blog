@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-03-12T16:07:15-04:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
-</subtitle><entry><title type="html"></title><link href="htpps://www.doug-skinner.com/2018/03/12/2018-01-22-More-NN-Thoughts.html" rel="alternate" type="text/html" title="" /><published>2018-03-12T16:07:15-04:00</published><updated>2018-03-12T16:07:15-04:00</updated><id>htpps://www.doug-skinner.com/2018/03/12/2018-01-22-More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/2018/03/12/2018-01-22-More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-04-05T18:55:52-04:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html"></title><link href="htpps://www.doug-skinner.com/2018/04/05/2018-01-22-More-NN-Thoughts.html" rel="alternate" type="text/html" title="" /><published>2018-04-05T18:55:52-04:00</published><updated>2018-04-05T18:55:52-04:00</updated><id>htpps://www.doug-skinner.com/2018/04/05/2018-01-22-More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/2018/04/05/2018-01-22-More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
 Also as part of my class discussed previously, I had to write a term paper on
 any topic that my little heart desired, as long as it related to the class. The
 topic was copyright law in the online realm, and what follows is the paper. Enjoy.&lt;/p&gt;
@@ -85,7 +85,224 @@ topic was copyright law in the online realm, and what follows is the paper. Enjo
   &lt;li&gt;Wu, T. (2003). When Code Isn’t Law. Virginia Law Review, 89(4), 679-751.doi:10.2307/3202374&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 107 - Limitations on exclusive rights: Fair use. (n.d.). Retrieved January 18,   2018, from &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/107&quot;&gt;https://www.law.cornell.edu/uscode/text/17/107&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 506 - Criminal offenses. (n.d.). Retrieved January 18, 2018, from     &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/506&quot;&gt;https://www.law.cornell.edu/uscode/text/17/506&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Token Based Authentication</title><link href="htpps://www.doug-skinner.com/writing/2018/03/12/Token-Based-Authentication.html" rel="alternate" type="text/html" title="Token Based Authentication" /><published>2018-03-12T12:00:00-04:00</published><updated>2018-03-12T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/03/12/Token-Based-Authentication</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/03/12/Token-Based-Authentication.html">&lt;p&gt;For the service that I’m writing, one of the main things that I’m focusing on is the user experience. I want the user to have a good time that’s frustration free throughout using the app. One of those concerns that I’ve thought about is the login experience, and more importantly how to have someone remain logged in while still being secure.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Adding Custom Search To Your Site</title><link href="htpps://www.doug-skinner.com/writing/2018/04/05/Adding-Custom-Search.html" rel="alternate" type="text/html" title="Adding Custom Search To Your Site" /><published>2018-04-05T12:00:00-04:00</published><updated>2018-04-05T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/05/Adding-Custom-Search</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/05/Adding-Custom-Search.html">&lt;p&gt;So this week I decided to add a search form to my writings page, as I was getting pretty tired of scrolling through all of my posts to find certain things, and I thought that it would be interesting to share. To make the following work on your own site, it will be easiest if you are using the same technologies that I am Bootstrap, JQuery, and Jekyll. The instructions can be modified for other tech, but that’s something that you’ll have to figure out.&lt;/p&gt;
+
+&lt;p&gt;To start, we need to first add a search form. The code that does this, ripped straight from my site, is the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;form&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;row&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;col-9&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search-box&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;form-control&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Search Term Here&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;col-3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	    &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn btn-outline-success&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;button&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Search&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+	    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Notice that the button has a type of button, which means that it does not work to submit the form. In all honesty, the button is useless but makes the search bar look better in my opinion. Next we have the css to just add some padding to our search bar:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.search&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Very simple, but helps keep the search bar from touching either the edge of the browser on mobile or the top of the first post. The next bit is two parts inside your listing of all posts. The first is to add a class to each card, in my case &lt;code class=&quot;highlighter-rouge&quot;&gt;.text-to-search&lt;/code&gt;, and then having the following snippet somewhere in the card:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  {.{ post.content }} // Without the dot, but otherwise Jekyll eats it from my post
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That puts all of the text inside the card so that we can grab it to search in our javascript. Speaking of which, here that is:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#search-box&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'keyup'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text_to_search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'text-to-search'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text_to_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text_to_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text_to_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text_to_search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Basically this grabs all the divs with our class name and the text in the search box, shows all the posts with our &lt;code class=&quot;highlighter-rouge&quot;&gt;.post&lt;/code&gt; tag. Then, looping through our list of posts it checks the contents of the post for the text in our search box, and hides the post if it is not found.&lt;/p&gt;
+
+&lt;p&gt;And there you have it, a nice simple search to implement for a jekyll based site.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">So this week I decided to add a search form to my writings page, as I was getting pretty tired of scrolling through all of my posts to find certain things, and I thought that it would be interesting to share. To make the following work on your own site, it will be easiest if you are using the same technologies that I am Bootstrap, JQuery, and Jekyll. The instructions can be modified for other tech, but that’s something that you’ll have to figure out.</summary></entry><entry><title type="html">How To Implement Token Based Auth In Flask</title><link href="htpps://www.doug-skinner.com/writing/2018/03/28/How-To-Implement-Token-Auth-In-Flask.html" rel="alternate" type="text/html" title="How To Implement Token Based Auth In Flask" /><published>2018-03-28T12:00:00-04:00</published><updated>2018-03-28T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/03/28/How-To-Implement-Token-Auth-In-Flask</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/03/28/How-To-Implement-Token-Auth-In-Flask.html">&lt;p&gt;So the other day I talked about &lt;a href=&quot;/writing/2018/03/12/Token-Based-Authentication.html&quot;&gt;why&lt;/a&gt; I chose to used token based authentication for my new service. I thought it would be useful for others to see how I did this, in case you want to as well.&lt;/p&gt;
+
+&lt;p&gt;First, it’s necessary to define the database structure that I’ve implemented for the structure. Some things that are specific for my service have been omitted for brevity, but the tables below can be used as a starting point for any other service. Side note, the database that I use is MySQL, and that is what I recommend that most beginners use as it is stable and tested by much larger companies than yours will ever be. The tables are as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE DATABASE service;
+USE DATABASE service;
+
+CREATE TABLE IF NOT EXISTS logins (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  PRIMARY KEY(`id`),
+  UNIQUE KEY (`username`)
+);
+
+CREATE TABLE IF NOT EXISTS authentication_tokens (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL,
+  `token` varchar(64) NOT NULL,
+  `last_updated_at` TIMESTAMP DEFAULT NOW(),
+  PRIMARY KEY(`id`),
+  UNIQUE KEY (`user_id`)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, the above code can actually be copied into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.sql&lt;/code&gt; file, and moved into a MySQL installation by running &lt;code class=&quot;highlighter-rouge&quot;&gt;mysql -p &amp;lt; filename.sql&lt;/code&gt; To briefly describe the database structure, the logins table acts as the main table for the database and the authorized_tokens table only is used to store the tokens as you’ll see shortly. Before we get to the tokens though, I’ll briefly describe how a user gets to added to the logins table.&lt;/p&gt;
+
+&lt;p&gt;I won’t be covering any data validation as that would make the post about 100 times longer, but that can easily be added to this method. To avoid storing any plaintext passwords, the passwords are all salted and hashed before being stored, using &lt;a href=&quot;https://pypi.python.org/pypi/bcrypt/2.0.0&quot;&gt;bcypt&lt;/a&gt;. And the package that I use to connect to the MySQL database is MySQLdb. Here’s the user add method, and a simple database wrapper class:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class DB(object):
+    def __init__(self):
+        self.database = MySQLdb.connect(host=&quot;localhost&quot;, user=&quot;root&quot;, passwd=db_password, db=&quot;service&quot;, cursorclass = MySQLdb.cursors.DictCursor)
+        self.cursor = self.database.cursor()
+
+    def close(self):
+        self.database.close()
+
+    def read(self, query):
+        self.cursor.execute(query)
+        data = self.cursor.fetchall()
+        return data
+
+    def write(self, query):
+        try:
+            self.cursor.execute(query)
+            self.database.commit()
+            return True
+        except Exception as e:
+            print e
+            return False
+
+class User(object):
+
+    def __init__(self):
+        self.db_wrapper = DB()
+        
+    def add(self, username, unhashed_pass, unhashed_pass_conf):
+ 	hashed = bcrypt.hashpw(str(unhashed_pass), bcrypt.gensalt())
+ 	query = &quot;INSERT INTO logins (username, password) VALUES ('{}', '{}')&quot;.format(username, hashed)
+	rc = self.db_wrapper.write(query)
+	return rc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that we have a simple way to add a user, we need to be able to create a token for them. First, to create the token we need to validate that the user has logged in correctly. To do so, we’re going to create a validator class. First, I’ll give the class in full, then walk through the couple of methods. It’s a little long, but it’ll be worth it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Authentication(object):
+
+    def __init__(self):
+        self.db_wrapper = DB()
+
+    def close(self):
+        self.db_wrapper.close()
+
+    def generate_token(self, username):
+        current_time = time.time()
+        token = bcrypt.hashpw(str(username) + str(time.time()), bcrypt.gensalt())
+        return token
+
+    def is_authorized(self, username, token):
+        user_id = self.get_user_id(username)
+        stored_token = self.get_token(user_id)
+
+        if stored_token is None:
+            return False
+        if stored_token != token:
+            return False
+        if stored_token == token:
+            self.update_token(user_id)
+            return True
+        return False
+
+    def login(self, username, password):
+        user_id = self.get_user_id(username)
+        if user_id is None:
+            return False
+
+        stored_pass = self.get_hashed_pass(user_id)
+        if bcrypt.hashpw(str(password), stored_pass) == stored_pass:
+            token = self.get_token(user_id)
+            if token is None:
+                token = self.generate_token(username)
+                self.store_token(user_id, token)
+            return True, {'token':token}
+        else:
+            return False, None
+
+    def logout(self, username):
+        user_id = self.get_user_id(username)
+        if user_id is None:
+            return False
+        query = &quot;DELETE FROM authentication_tokens WHERE user_id = {}&quot;.format(user_id)
+        rc = self.db_wrapper.write(query)
+        return rc
+
+    def get_hashed_pass(self, user_id):
+        query = &quot;SELECT password FROM logins WHERE id = {}&quot;.format(user_id)
+        results = self.db_wrapper.read(query)
+        if results is None:
+            return None
+        return results[0]['password']
+
+    def get_token(self, user_id):
+        query = &quot;SELECT token FROM authentication_tokens WHERE user_id = {}&quot;.format(user_id)
+        results = self.db_wrapper.read(query)
+        if results is None:
+            return None
+        try:
+            return results[0]['token']
+        except:
+            return None
+
+    def get_user_id(self, username):
+        query = &quot;SELECT id FROM logins WHERE username = '{}'&quot;.format(username)
+        results = self.db_wrapper.read(query)
+        if results is None:
+            return None
+        return results[0]['id']
+
+    def store_token(self, user_id, token):
+        query = &quot;INSERT INTO authentication_tokens (user_id, token) VALUES ({}, '{}')&quot;.format(user_id, token)
+        rc = self.db_wrapper.write(query)
+        return rc
+
+    def update_token(self, user_id):
+        query = &quot;UPDATE authentication_tokens SET last_updated_at = NOW() WHERE user_id = {}&quot;.format(user_id)
+        rc = self.db_wrapper.write(query)
+        return rc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Okay, like I said it’s a lot, and there’s a bunch of helper methods that are used to modularize the code, but basically it consists of the is_authorized, login, and logout methods.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">So the other day I talked about why I chose to used token based authentication for my new service. I thought it would be useful for others to see how I did this, in case you want to as well.</summary></entry><entry><title type="html">Tried And True Technologies</title><link href="htpps://www.doug-skinner.com/writing/2018/03/26/Tried-And-True-Tech.html" rel="alternate" type="text/html" title="Tried And True Technologies" /><published>2018-03-26T12:00:00-04:00</published><updated>2018-03-26T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/03/26/Tried-And-True-Tech</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/03/26/Tried-And-True-Tech.html">&lt;p&gt;Among the many things I’ve learned through watching and listening to others in the software development industry, one major thing is the concept of using tried and true technologies. You may be asking yourself what that means. It means specifically using technologies that plenty of other companies use. &lt;a href=&quot;https://marco.org&quot;&gt;Marco Arment&lt;/a&gt; has said it well many times that you never want to be the biggest user of a technology. The two major reasons for this are related.&lt;/p&gt;
+
+&lt;p&gt;First, if you are the largest user of a technology you’re going to run into issues when trying to scale the software past a certain point. Along with that, if you’re the only company on that scale of use for a technology then it is most likely up to you to fix it. Instead of working on improving your product, suddenly you’re spending most of your time just ensuring that your newer technology stack doesn’t fall over.&lt;/p&gt;
+
+&lt;p&gt;Now, that doesn’t mean that you have to only write programs for COBAL mainframes, but if you go to start a new project that will most likely get successful and none of the technologies that you plan on using have been around for over a year at minimum, well… Good luck. This post may come along as old fashioned, but I really do believe that you want the big issues to be someone else’s problem.&lt;/p&gt;
+
+&lt;p&gt;Basically, most projects involve some type of frontend, some sort of backend with baked in business logic, and some sort of datastore. The frontend could be either a website, mobile app, or desktop software. Since I normally work with websites, I’ll focus on that. With websites, you normally want to use a a javascript framework that has been around for a while to avoid lots of issues that can crop up. You’ll also want to avoid using any newer CSS features to ensure cross-browser compatibility.&lt;/p&gt;
+
+&lt;p&gt;Getting to the backend, you probably want to ensure that the language and web framework you’re using has been used before. Common bases are Flask and Django in Python, Ruby on Rails, and Laravel in PHP. Again, nothing exciting, however you don’t always want exciting. I don’t know about you, but I would much rather have a stable technology than a buggy or changing technology.&lt;/p&gt;
+
+&lt;p&gt;Finally, on the datastore. In my opinion, if you are using anything other than MySQL you better have a reason that you can back up with facts not blog posts. MySQL has been around practically forever, and is mostly scalable. It has Master-Slave replication built in, which allows scaling up to a point rather easily. Honestly, I recommend starting with MySQL in such a setup. Once your company gets to the point where that is no longer viable, you can simply higher someone to solve the problem for you. So don’t make it a problem when there shouldn’t be one.&lt;/p&gt;</content><author><name></name></author><category term="Thoughts" /><summary type="html">Among the many things I’ve learned through watching and listening to others in the software development industry, one major thing is the concept of using tried and true technologies. You may be asking yourself what that means. It means specifically using technologies that plenty of other companies use. Marco Arment has said it well many times that you never want to be the biggest user of a technology. The two major reasons for this are related.</summary></entry><entry><title type="html">Token Based Authentication</title><link href="htpps://www.doug-skinner.com/writing/2018/03/12/Token-Based-Authentication.html" rel="alternate" type="text/html" title="Token Based Authentication" /><published>2018-03-12T12:00:00-04:00</published><updated>2018-03-12T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/03/12/Token-Based-Authentication</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/03/12/Token-Based-Authentication.html">&lt;p&gt;For the service that I’m writing, one of the main things that I’m focusing on is the user experience. I want the user to have a good time that’s frustration free throughout using the app. One of those concerns that I’ve thought about is the login experience, and more importantly how to have someone remain logged in while still being secure.&lt;/p&gt;
 
 &lt;p&gt;The way that I went is to implement a token based authentication system. The user will log in and then their browser will be handed a token. With that token, the user has access to do all of their tasks within the application. Originally the token expiration date was a hard limit set at 24 hours after token creation. However I quickly noticed that this could be in issue.&lt;/p&gt;
 
@@ -120,58 +337,4 @@ little drawing that does a remarkable job. Find it
 
 &lt;p&gt;This is not to say that lighting or changing the images in post is the only way to “make” and image. Regarding portrait photography again, there are many things the photographer can change before taking the picture that moves the image towards the made end of the spectrum including having the subject of the photograph go to certain locations, having them wear certain clothes or makeup, or even changing who the subject is. This can then go even further if the photographer chooses to, mostly through post processing. Using Photoshop or one of its many competitors for post processing is what truly allows the photographer to delve into the made photography spectrum, as using these programs allow skilled artists to manipulate the images in almost any way that they choose. This can be anything from changing colors to removing items in the frame to adding items to the frame, all of which allow the artist to show us their view of the world rather than just the world.&lt;/p&gt;
 
-&lt;p&gt;Both of found and made photography have their place within the world, and neither is initially better than the other. Without having both, the world of photography would be a much simpler and more boring world, and the art scene would be without some of the major game changers within the medium.&lt;/p&gt;</content><author><name></name></author><category term="Photography" /><summary type="html">There is a common misconception today that photography as an art form is a medium akin to painting or drawing, thus allowing the photographer to share their vision of the world with those who view the work. While it is true that viewing a photo does allow one to see how the world appears to the artist, there is no reason to believe that the artist is creating that world. Considering other mediums of art, using painting as an example, when the artist sets out to capture their subject exactly as how it is seen, the subject can often appear different in the final product. That’s not to say that the artist set out to modify the subject, however it is often unavoidable. For example, when painting a flower, there are a few things that can be changed from reality without the artist noticing. The easiest of these for others to see would be the color of the flower, for even if the artist matches the color they see entirely accurately there is no guarantee that the color is true to how others perceive it. Again, this is not a mistake made by the artist, it is simply the reality of relying on the human eye to accurately detect color.</summary></entry><entry><title type="html">Prex</title><link href="htpps://www.doug-skinner.com/projects/2018/02/09/Prex.html" rel="alternate" type="text/html" title="Prex" /><published>2018-02-09T12:00:00-05:00</published><updated>2018-02-09T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/02/09/Prex</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/02/09/Prex.html">&lt;p&gt;The &lt;strong&gt;P&lt;/strong&gt;ython &lt;strong&gt;R&lt;/strong&gt;eguler &lt;strong&gt;Ex&lt;/strong&gt;pression handler is a basic script written in
-Python (shocking I know) that reads in a regex string and the file to search.&lt;/p&gt;
-
-&lt;p&gt;Rather than using the built in regex class/parser, Prex then creates a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Deterministic_finite_automaton&quot;&gt;DFA&lt;/a&gt; from the
-input regex string, to allow the regex to be processed. After reading in the
-input file, separated line by line on newline characters (‘\n’), the script then
-feeds in each line to the internal DFA character by character. If the DFA
-reaches the end state, it then returns the starting index, ending index, and all
-characters that match the regex printing that info to stdout.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Python Reguler Expression handler is a basic script written in Python (shocking I know) that reads in a regex string and the file to search.</summary></entry><entry><title type="html">Constructing A DFA From A Regex</title><link href="htpps://www.doug-skinner.com/writing/2018/02/09/DFA-for-Regex.html" rel="alternate" type="text/html" title="Constructing A DFA From A Regex" /><published>2018-02-09T11:00:00-05:00</published><updated>2018-02-09T11:00:00-05:00</updated><id>htpps://www.doug-skinner.com/writing/2018/02/09/DFA-for-Regex</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/02/09/DFA-for-Regex.html">&lt;p&gt;While creating &lt;a href=&quot;https://doug-skinner.com/projects/2018/02/09/Prex.html&quot;&gt;Prex&lt;/a&gt;,
-one of the major challenges was trying to figure out the best way to represent a
-walkable path through the regular expression without just resorting to the built in regular
-expression class within Python. After some deliberation, and a failed attempt of
-trying to keep track of my position walking through the string iteself, I
-remembered from my Automata class that a regular expression has to be able to be
-represented within a
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Deterministic_finite_automaton&quot;&gt;Deterministic Finite Automaton&lt;/a&gt; or it’s
-not valid, so I decided to construct one of those. In order to do this, I would
-need three classes, one to represent each state of the DFA, one to represent the
-actual DFA, and then one to read in the file and the regex string to be
-processed. Since the actual code for the project can be found both on my personal GitLab
-and Github I won’t be showing the actual code here, just describing the thought
-process.&lt;/p&gt;
-
-&lt;p&gt;Creating the state representation was relatively simple. It has three
-internal variables, one to hold any possible loop variables, one to hold any
-possible transition variables, and then one to represent the next state. The
-reason for that last variable is to represent the possible states as a linked
-list of states, to easily keep track of the beginning and end of the list. In
-order to create the DFA from the regex, a blank state is created initially.
-Then, for each character a new state is created, the transition variable is set
-to the character, and then the previous state’s next state is set to the current
-state.&lt;/p&gt;
-
-&lt;p&gt;The only exception to this is if the character is +, *, [, or ]. If the
-character is a +, which means that the character can appear one or many times,
-then a new state is added with a loop variable that matches the previous states
-transition variable and the transition variable is set to ‘’. Aside, in this DFA
-a transition of ‘’ is treated as a null transition allowing it to be
-transitioned across at any time. If the character is a *, which means that the character can be there zero or
-any number of times, the previous characters transition variable is moved to the
-loop variable, and the transition variable is set to ‘’. This allows it to be
-looped infinitely or skipped entirely.&lt;/p&gt;
-
-&lt;p&gt;The last part of the construction is if the character is a [. If it is, then a
-flag is set indicating that we are currently within brackets. While that flag is
-set, all characters encountered are added to the transition variable of the
-current state. Once we encounter a ], we turn that flag off and continue. And
-thus, the DFA is made and we can start processing the passed in strings.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">While creating Prex, one of the major challenges was trying to figure out the best way to represent a walkable path through the regular expression without just resorting to the built in regular expression class within Python. After some deliberation, and a failed attempt of trying to keep track of my position walking through the string iteself, I remembered from my Automata class that a regular expression has to be able to be represented within a Deterministic Finite Automaton or it’s not valid, so I decided to construct one of those. In order to do this, I would need three classes, one to represent each state of the DFA, one to represent the actual DFA, and then one to read in the file and the regex string to be processed. Since the actual code for the project can be found both on my personal GitLab and Github I won’t be showing the actual code here, just describing the thought process.</summary></entry><entry><title type="html">Flask Template</title><link href="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html" rel="alternate" type="text/html" title="Flask Template" /><published>2018-01-23T12:00:00-05:00</published><updated>2018-01-23T12:00:00-05:00</updated><id>htpps://www.doug-skinner.com/projects/2018/01/23/flask-template</id><content type="html" xml:base="htpps://www.doug-skinner.com/projects/2018/01/23/flask-template.html">&lt;p&gt;&lt;strong&gt;This is still a work in progress&lt;/strong&gt;. This project aims to be a template for other web developers to base their
-projects off of. The template includes a couple of classes that handle creating
-users, logging in users, and eventually managing users. Each user upon logging
-in is presented with their own control panel for whatever service they are
-logging into.&lt;/p&gt;
-
-&lt;p&gt;As stated above, this project is a work in progress, and I will be posting updates below as they happen, and updating through blog posts.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is still a work in progress. This project aims to be a template for other web developers to base their projects off of. The template includes a couple of classes that handle creating users, logging in users, and eventually managing users. Each user upon logging in is presented with their own control panel for whatever service they are logging into.</summary></entry></feed>
+&lt;p&gt;Both of found and made photography have their place within the world, and neither is initially better than the other. Without having both, the world of photography would be a much simpler and more boring world, and the art scene would be without some of the major game changers within the medium.&lt;/p&gt;</content><author><name></name></author><category term="Photography" /><summary type="html">There is a common misconception today that photography as an art form is a medium akin to painting or drawing, thus allowing the photographer to share their vision of the world with those who view the work. While it is true that viewing a photo does allow one to see how the world appears to the artist, there is no reason to believe that the artist is creating that world. Considering other mediums of art, using painting as an example, when the artist sets out to capture their subject exactly as how it is seen, the subject can often appear different in the final product. That’s not to say that the artist set out to modify the subject, however it is often unavoidable. For example, when painting a flower, there are a few things that can be changed from reality without the artist noticing. The easiest of these for others to see would be the color of the flower, for even if the artist matches the color they see entirely accurately there is no guarantee that the color is true to how others perceive it. Again, this is not a mistake made by the artist, it is simply the reality of relying on the human eye to accurately detect color.</summary></entry></feed>

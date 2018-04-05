@@ -12,7 +12,7 @@ Today we're going to be adding the second of our more complex functions to our
 shell, list. This command will be a simplistic version of the ls command. The code mostly relies upon using a few system calls that
 makes this functionality easy to implement, and looks like this:
 
-```
+```c
 #include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -117,7 +117,7 @@ that we gave yesterday, and just consists of adding another string comparison to
 see if if matches the `list` function. Then we just get the required
 arguments, and pass it using `execl` again.
 
-```
+```c
 int main(void) {
     int _continue = 0;
     char *buff = malloc(sizeof(char) * 512);

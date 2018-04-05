@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="/static/css/custom.css" rel="stylesheet">
+  <link href="/assets/main.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -87,13 +88,13 @@ family</a> of
 functions. While that link goes into further detail about the various options,
 the one that we’ll be focusing on is the following:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int execl(const char *path, const char *arg0, ... /*, (char *)0 */);
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">execl</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">arg0</span><span class="p">,</span> <span class="p">...</span> <span class="cm">/*, (char *)0 */</span><span class="p">);</span>
 
-// An example of this command
-execl("path to command", "command name", "arg1", "arg2", ... , NULL);
+<span class="c1">// An example of this command</span>
+<span class="n">execl</span><span class="p">(</span><span class="s">"path to command"</span><span class="p">,</span> <span class="s">"command name"</span><span class="p">,</span> <span class="s">"arg1"</span><span class="p">,</span> <span class="s">"arg2"</span><span class="p">,</span> <span class="p">...</span> <span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
-// And an actual example
-execl("/bin/echo", "echo", "Hello World!", NULL);
+<span class="c1">// And an actual example</span>
+<span class="n">execl</span><span class="p">(</span><span class="s">"/bin/echo"</span><span class="p">,</span> <span class="s">"echo"</span><span class="p">,</span> <span class="s">"Hello World!"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>If we actually ran the code above, our shell would launch the echo command in
@@ -105,50 +106,50 @@ functions that we want. We’ll dive into a few of those functions tomorrow, but
 for now I’ll just add the echo command to our shell. I’ll also add an error
 string if the entered command doesn’t exist.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main(void) {
-    int _continue = 0;
-    char *buff = malloc(sizeof(char) * 512);
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">_continue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">buff</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="mi">512</span><span class="p">);</span>
 
-    do {
-        printf("[Command prompt]$ ");
-        buff = getLine(stdin); // uses the getLine from yesterdays post.
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"[Command prompt]$ "</span><span class="p">);</span>
+        <span class="n">buff</span> <span class="o">=</span> <span class="n">getLine</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span> <span class="c1">// uses the getLine from yesterdays post.</span>
 
-        char *token;
-        token = strtok(buff, " \n");
+        <span class="kt">char</span> <span class="o">*</span><span class="n">token</span><span class="p">;</span>
+        <span class="n">token</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span> <span class="s">" </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 
-        if (strcmp(token, "quit") == 0) {
-            _continue = -1;
-        } else if (strcmp(token, "wd") == 0) {
-			wd();
-		} else if (strcmp(token, "chwd") == 0) {
-			char *new_path;
-            new_path = strtok(NULL, " \n");
-            chwd(new_path);
-		} else {
-            pid_t child, wait;
-            int child_status;
+        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="s">"quit"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">_continue</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="s">"wd"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">wd</span><span class="p">();</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="s">"chwd"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="kt">char</span> <span class="o">*</span><span class="n">new_path</span><span class="p">;</span>
+            <span class="n">new_path</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">" </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">chwd</span><span class="p">(</span><span class="n">new_path</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">pid_t</span> <span class="n">child</span><span class="p">,</span> <span class="n">wait</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">child_status</span><span class="p">;</span>
 
-            child = fork();
+            <span class="n">child</span> <span class="o">=</span> <span class="n">fork</span><span class="p">();</span>
 
-            if (child == 0) {
-                if (strcmp(buff, "echo") == 0) {
-                    execl("/bin/echo", "echo", "Hello World!", NULL);
-                    return 1;
-                } else {
-                    printf("The command you entered does not exist.\n");
-                    return 1;
-                }
-            } else {
-                do {
-                    wait = waitpid(child, &amp;child_status, WUNTRACED);
-                } while (!WIFEXITED(child_status) &amp;&amp; !WIFSIGNALED(child_status));
-            }
-        }
-        free(buff);
-    } while (_continue &gt;= 0);
+            <span class="k">if</span> <span class="p">(</span><span class="n">child</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span> <span class="s">"echo"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">execl</span><span class="p">(</span><span class="s">"/bin/echo"</span><span class="p">,</span> <span class="s">"echo"</span><span class="p">,</span> <span class="s">"Hello World!"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">printf</span><span class="p">(</span><span class="s">"The command you entered does not exist.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">do</span> <span class="p">{</span>
+                    <span class="n">wait</span> <span class="o">=</span> <span class="n">waitpid</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">child_status</span><span class="p">,</span> <span class="n">WUNTRACED</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">WIFEXITED</span><span class="p">(</span><span class="n">child_status</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">WIFSIGNALED</span><span class="p">(</span><span class="n">child_status</span><span class="p">));</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">buff</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">_continue</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">);</span>
 
-    return 0;
-}
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
               </div>

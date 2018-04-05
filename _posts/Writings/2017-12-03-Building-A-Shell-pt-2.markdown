@@ -22,7 +22,7 @@ into in depth detail of processes, and that will occur a different day. For now,
 an example that runs the printing of the input in a child process, and gets the
 input in a parent process would look like so:
 
-```
+```c
 int main(void) {
     int _continue = 0;
     char *buff = malloc(sizeof(char) * 512);

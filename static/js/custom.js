@@ -13,4 +13,16 @@ $(document).ready(function() {
 		$("."+tag+"_tag").show();
 	});
 
+	$("#search-box").on('keyup', function(e) {
+		var content = $(this).val();
+		var text_to_search = document.getElementsByClassName('text-to-search');
+
+		$(text_to_search).each(function(index, val) {
+			$(text_to_search[index]).show();
+			if ($(text_to_search[index]).html().toLowerCase().indexOf(content.toLowerCase()) == -1) {
+				$(text_to_search[index]).hide();
+			}
+		})
+	});
+
 });
