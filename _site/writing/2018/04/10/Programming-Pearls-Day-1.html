@@ -1,0 +1,141 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Doug Skinner</title>
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="/static/css/custom.css" rel="stylesheet">
+  <link href="/assets/main.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="/static/js/custom.js"></script>
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97386400-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <div class="hero">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+        <h1 class="display-4 text-center">Doug Skinner</h1>
+        <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="/">DS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto text-center">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/photos.html">Photos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/writings.html">Writings</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="container">
+      <div class="row mobile_padding content">
+        <div class="col-12 mobile_padding">
+          <div class="card shadow">
+            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+            <div class="card-body">
+              <h5 class="card-title text-center">Programming Pearls, Day One<br><small class="text-info">Posted: April 10, 2018</small></h5>
+              <div class="card-text col-10 mx-auto">
+                <p>Today starts a journey, that if completed will take quite a long time. At the
+end of it, I hope to be a better programmer through hours of thinking, reading,
+and programming. The pathway of this journey is that of the book Programming
+Pearls, with one small caveat. I will be doing all of the code in Python, to
+help myself work towards becoming a better python programmer.</p>
+
+<p>Each day I will be doing one problem from the book. Some are easier than others,
+but even the easiest will still take at least half an hour. So, to get on to it,
+the text of the first problem is as follow:</p>
+
+<p><em>If memory were not scarce, how would you implement a sort in a language with
+libraries for representing and sorting sets?</em></p>
+
+<p>For a bit of context, the original problem was that of sorting roughly a million
+numbers in a space where memory was extremely limited, and execution time was
+critical. The author eventually reached the conclusion that representing the
+input numbers as a bitmap was the best way to do so, and these questions are
+extensions of that problem.</p>
+
+<p>So, here’s my solution to the problem, which works wonderfully:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">sort_tel_numbers</span><span class="p">():</span>
+    <span class="n">numbers_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'numbers.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">numbers_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">in_nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c"># each line only contains one seven digit number, per the column</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">in_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">in_nums</span><span class="p">)</span>
+
+    <span class="n">output_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'out_numbers.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+        <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'start time {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span>
+    <span class="n">sort_tel_numbers</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'end time {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span></code></pre></figure>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
+        <p>© Doug Skinner. All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

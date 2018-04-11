@@ -77,7 +77,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 34 </span>
+          All <span class="badge badge-pill"> 35 </span>
         </button>
       </li>
       
@@ -85,7 +85,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 19 </span>
+            Development <span class="badge badge-pill"> 20 </span>
           </button>
         </li>
       
@@ -137,6 +137,82 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day One<br><small class="text-info">Posted: April 10, 2018</small></h5>
+                <div class="card-text container">
+                  Today starts a journey, that if completed will take quite a long time. At the end of it, I hope to be a better programmer through hours of thinking, reading, and programming. The pathway of this journey is that of the book Programming Pearls, with one small caveat. I will...
+                </div>
+                <div hidden>
+                  <p>Today starts a journey, that if completed will take quite a long time. At the
+end of it, I hope to be a better programmer through hours of thinking, reading,
+and programming. The pathway of this journey is that of the book Programming
+Pearls, with one small caveat. I will be doing all of the code in Python, to
+help myself work towards becoming a better python programmer.</p>
+
+<p>Each day I will be doing one problem from the book. Some are easier than others,
+but even the easiest will still take at least half an hour. So, to get on to it,
+the text of the first problem is as follow:</p>
+
+<p><em>If memory were not scarce, how would you implement a sort in a language with
+libraries for representing and sorting sets?</em></p>
+
+<p>For a bit of context, the original problem was that of sorting roughly a million
+numbers in a space where memory was extremely limited, and execution time was
+critical. The author eventually reached the conclusion that representing the
+input numbers as a bitmap was the best way to do so, and these questions are
+extensions of that problem.</p>
+
+<p>So, here’s my solution to the problem, which works wonderfully:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">sort_tel_numbers</span><span class="p">():</span>
+    <span class="n">numbers_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'numbers.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">numbers_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">in_nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c"># each line only contains one seven digit number, per the column</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">in_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">in_nums</span><span class="p">)</span>
+
+    <span class="n">output_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'out_numbers.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+        <span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'start time {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span>
+    <span class="n">sort_tel_numbers</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'end time {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/10/Programming-Pearls-Day-1.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
