@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,15 +72,15 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/quick_tip.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by James Pond on Unsplash">
-            <div class="card-body">
-              <h5 class="card-title text-center"># of Users Logged In<br><small class="text-info">Posted: September 15, 2017</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>While going through the Unix Systems Programming book, one of the preface
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/quick_tip.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by James Pond on Unsplash">
+              <div class="card-body">
+                <h5 class="card-title text-center"># of Users Logged In<br><small class="text-info">Posted: September 15, 2017</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>While going through the Unix Systems Programming book, one of the preface
 questions asked to devise a one line command to list the number of users
 currently logged in to my system. Here’s how to do that.</p>
 
@@ -90,14 +96,14 @@ looks like this is exactly what we want. So we simply need to run a command like
 so: <code class="highlighter-rouge">users | wc -w</code> which counts the number of words that are output by the
 users command, where each word is the name of a logged in user. Problem solved.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -107,5 +113,6 @@ users command, where each word is the name of a logged in user. Problem solved.<
   </div>
 </div>
 
+    </div>
   </body>
 </html>

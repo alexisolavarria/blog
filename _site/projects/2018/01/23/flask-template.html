@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,14 +72,14 @@
   </div>
 </nav>
 
-    <div class="container content">
-      <div class="col-12 mobile_padding">
-        <div class="card shadow">
-          <img class="card-img-top" style="max-height:15em;" src="/img/projects/flask_template_v0_3.png" alt="placeholder" data-toggle="tooltip" data-placement="top" title="">
-          <div class="card-body">
-            <h5 class="card-title text-left">Flask Template<br><small class="text-info">Posted: January 23, 2018</small></h5>
-            <div class="card-text container">
-              <p><strong>This is still a work in progress</strong>. This project aims to be a template for other web developers to base their
+      <div class="container content">
+        <div class="col-12 mobile_padding">
+          <div class="card shadow">
+            <img class="card-img-top" style="max-height:15em;" src="/img/projects/flask_template_v0_3.png" alt="placeholder" data-toggle="tooltip" data-placement="top" title="">
+            <div class="card-body">
+              <h5 class="card-title text-left">Flask Template<br><small class="text-info">Posted: January 23, 2018</small></h5>
+              <div class="card-text container">
+                <p><strong>This is still a work in progress</strong>. This project aims to be a template for other web developers to base their
 projects off of. The template includes a couple of classes that handle creating
 users, logging in users, and eventually managing users. Each user upon logging
 in is presented with their own control panel for whatever service they are
@@ -81,12 +87,12 @@ logging into.</p>
 
 <p>As stated above, this project is a work in progress, and I will be posting updates below as they happen, and updating through blog posts.</p>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -96,5 +102,6 @@ logging into.</p>
   </div>
 </div>
 
+    </div>
   </body>
 </html>

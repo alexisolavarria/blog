@@ -29,7 +29,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -41,12 +42,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -67,8 +73,8 @@
   </div>
 </nav>
 
-    <div class="container">
-      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="container">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Welcome to Jekyll!</h1>
@@ -103,8 +109,8 @@
   <a class="u-url" href="/jekyll/update/2018/01/10/welcome-to-jekyll.html" hidden></a>
 </article>
 
-    </div>
-    <div class="footer">
+      </div>
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -114,5 +120,6 @@
   </div>
 </div>
 
+    </div>
   </body>
 </html>

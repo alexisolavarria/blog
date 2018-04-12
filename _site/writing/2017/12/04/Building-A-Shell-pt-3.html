@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,15 +72,15 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/shell.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Clever Visuals on Unsplash">
-            <div class="card-body">
-              <h5 class="card-title text-center">Building a Shell, Part 3<br><small class="text-info">Posted: December 04, 2017</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>Next, we’ll add a few built in functions to the shell. Our shell will support
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/shell.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Clever Visuals on Unsplash">
+              <div class="card-body">
+                <h5 class="card-title text-center">Building a Shell, Part 3<br><small class="text-info">Posted: December 04, 2017</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>Next, we’ll add a few built in functions to the shell. Our shell will support
 printing the current directory, changing the current directory, and quitting as
 built in commands. We’ll also be giving the shell the ability to run some
 external commands in the next section of this series. The code for each of these
@@ -148,14 +154,14 @@ code for printing the current directory:</p>
 <p>These functions give our shell the beginning of usefullness, and will be
 expanded upon tomorrow.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -165,5 +171,6 @@ expanded upon tomorrow.</p>
   </div>
 </div>
 
+    </div>
   </body>
 </html>

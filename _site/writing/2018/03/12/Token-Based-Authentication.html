@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,15 +72,15 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/token.jpeg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske from Pexels">
-            <div class="card-body">
-              <h5 class="card-title text-center">Token Based Authentication<br><small class="text-info">Posted: March 12, 2018</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>For the service that I’m writing, one of the main things that I’m focusing on is the user experience. I want the user to have a good time that’s frustration free throughout using the app. One of those concerns that I’ve thought about is the login experience, and more importantly how to have someone remain logged in while still being secure.</p>
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/token.jpeg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske from Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-center">Token Based Authentication<br><small class="text-info">Posted: March 12, 2018</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>For the service that I’m writing, one of the main things that I’m focusing on is the user experience. I want the user to have a good time that’s frustration free throughout using the app. One of those concerns that I’ve thought about is the login experience, and more importantly how to have someone remain logged in while still being secure.</p>
 
 <p>The way that I went is to implement a token based authentication system. The user will log in and then their browser will be handed a token. With that token, the user has access to do all of their tasks within the application. Originally the token expiration date was a hard limit set at 24 hours after token creation. However I quickly noticed that this could be in issue.</p>
 
@@ -82,14 +88,14 @@
 
 <p>While this does mean that the token could theoretically never expire, that risk is worth it to provide a better experience to the users. And if you run your own service, I think that you would agree.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -99,5 +105,6 @@
   </div>
 </div>
 
+    </div>
   </body>
 </html>

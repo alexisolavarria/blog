@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,15 +72,15 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/token.jpeg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske from Pexels">
-            <div class="card-body">
-              <h5 class="card-title text-center">How To Implement Token Based Auth In Flask<br><small class="text-info">Posted: March 28, 2018</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>So the other day I talked about <a href="/writing/2018/03/12/Token-Based-Authentication.html">why</a> I chose to used token based authentication for my new service. I thought it would be useful for others to see how I did this, in case you want to as well.</p>
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/token.jpeg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske from Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-center">How To Implement Token Based Auth In Flask<br><small class="text-info">Posted: March 28, 2018</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>So the other day I talked about <a href="/writing/2018/03/12/Token-Based-Authentication.html">why</a> I chose to used token based authentication for my new service. I thought it would be useful for others to see how I did this, in case you want to as well.</p>
 
 <p>First, it’s necessary to define the database structure that I’ve implemented for the structure. Some things that are specific for my service have been omitted for brevity, but the tables below can be used as a starting point for any other service. Side note, the database that I use is MySQL, and that is what I recommend that most beginners use as it is stable and tested by much larger companies than yours will ever be. The tables are as follows:</p>
 
@@ -225,14 +231,14 @@ class User(object):
 
 <p>Okay, like I said it’s a lot, and there’s a bunch of helper methods that are used to modularize the code, but basically it consists of the is_authorized, login, and logout methods.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -242,5 +248,6 @@ class User(object):
   </div>
 </div>
 
+    </div>
   </body>
 </html>

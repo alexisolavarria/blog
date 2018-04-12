@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,27 +72,27 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/quick_tip.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by James Pond on Unsplash">
-            <div class="card-body">
-              <h5 class="card-title text-center">Fixing Mysql Replication<br><small class="text-info">Posted: January 02, 2018</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>Quick one. If you have a master and slave MySQL setup, if the slaves are
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/quick_tip.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by James Pond on Unsplash">
+              <div class="card-body">
+                <h5 class="card-title text-center">Fixing Mysql Replication<br><small class="text-info">Posted: January 02, 2018</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>Quick one. If you have a master and slave MySQL setup, if the slaves are
 reporting replication failures BUT have a status that is simply waiting for the
 next command, simply restarting MySQl should fix the issue. Sometimes a simple
 restart is the answer.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -96,5 +102,6 @@ restart is the answer.</p>
   </div>
 </div>
 
+    </div>
   </body>
 </html>

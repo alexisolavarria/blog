@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,15 +72,15 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/simple.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Grovemade on Unsplash">
-            <div class="card-body">
-              <h5 class="card-title text-center">Tried And True Technologies<br><small class="text-info">Posted: March 26, 2018</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>Among the many things I’ve learned through watching and listening to others in the software development industry, one major thing is the concept of using tried and true technologies. You may be asking yourself what that means. It means specifically using technologies that plenty of other companies use. <a href="https://marco.org">Marco Arment</a> has said it well many times that you never want to be the biggest user of a technology. The two major reasons for this are related.</p>
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/simple.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Grovemade on Unsplash">
+              <div class="card-body">
+                <h5 class="card-title text-center">Tried And True Technologies<br><small class="text-info">Posted: March 26, 2018</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>Among the many things I’ve learned through watching and listening to others in the software development industry, one major thing is the concept of using tried and true technologies. You may be asking yourself what that means. It means specifically using technologies that plenty of other companies use. <a href="https://marco.org">Marco Arment</a> has said it well many times that you never want to be the biggest user of a technology. The two major reasons for this are related.</p>
 
 <p>First, if you are the largest user of a technology you’re going to run into issues when trying to scale the software past a certain point. Along with that, if you’re the only company on that scale of use for a technology then it is most likely up to you to fix it. Instead of working on improving your product, suddenly you’re spending most of your time just ensuring that your newer technology stack doesn’t fall over.</p>
 
@@ -86,14 +92,14 @@
 
 <p>Finally, on the datastore. In my opinion, if you are using anything other than MySQL you better have a reason that you can back up with facts not blog posts. MySQL has been around practically forever, and is mostly scalable. It has Master-Slave replication built in, which allows scaling up to a point rather easily. Honestly, I recommend starting with MySQL in such a setup. Once your company gets to the point where that is no longer viable, you can simply higher someone to solve the problem for you. So don’t make it a problem when there shouldn’t be one.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -103,5 +109,6 @@
   </div>
 </div>
 
+    </div>
   </body>
 </html>

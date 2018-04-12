@@ -1,21 +1,23 @@
 <html>
   {% include header.html %}
   <body>
-    {% include hero_image.html %}
-    {% include navbar.html %}
-    <div class="container content">
-      <div class="col-12 mobile_padding">
-        <div class="card shadow">
-          <img class="card-img-top" style="max-height:15em;" src="{{page.picture}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{page.card_image_credit}}">
-          <div class="card-body">
-            <h5 class="card-title text-left">{{ page.title }}<br><small class="text-info">Posted: {{page.date | date: '%B %d, %Y' }}</small></h5>
-            <div class="card-text container">
-              {{ page.content }}
+    <div id="wrapper">
+      {% include hero_image.html %}
+      {% include navbar.html %}
+      <div class="container content">
+        <div class="col-12 mobile_padding">
+          <div class="card shadow">
+            <img class="card-img-top" style="max-height:15em;" src="{{page.picture}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{page.card_image_credit}}">
+            <div class="card-body">
+              <h5 class="card-title text-left">{{ page.title }}<br><small class="text-info">Posted: {{page.date | date: '%B %d, %Y' }}</small></h5>
+              <div class="card-text container">
+                {{ page.content }}
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {% include footer.html %}
     </div>
-    {% include footer.html %}
   </body>
 </html>

@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,15 +72,15 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/cryptography.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske on Unsplash">
-            <div class="card-body">
-              <h5 class="card-title text-center">Adding Custom Search To Your Site<br><small class="text-info">Posted: April 05, 2018</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>So this week I decided to add a search form to my writings page, as I was getting pretty tired of scrolling through all of my posts to find certain things, and I thought that it would be interesting to share. To make the following work on your own site, it will be easiest if you are using the same technologies that I am Bootstrap, JQuery, and Jekyll. The instructions can be modified for other tech, but that’s something that you’ll have to figure out.</p>
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/cryptography.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Markus Spiske on Unsplash">
+              <div class="card-body">
+                <h5 class="card-title text-center">Adding Custom Search To Your Site<br><small class="text-info">Posted: April 05, 2018</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>So this week I decided to add a search form to my writings page, as I was getting pretty tired of scrolling through all of my posts to find certain things, and I thought that it would be interesting to share. To make the following work on your own site, it will be easiest if you are using the same technologies that I am Bootstrap, JQuery, and Jekyll. The instructions can be modified for other tech, but that’s something that you’ll have to figure out.</p>
 
 <p>To start, we need to first add a search form. The code that does this, ripped straight from my site, is the following:</p>
 
@@ -134,14 +140,14 @@
 
 <p>And there you have it, a nice simple search to implement for a jekyll based site.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -151,5 +157,6 @@
   </div>
 </div>
 
+    </div>
   </body>
 </html>

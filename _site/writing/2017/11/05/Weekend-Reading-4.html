@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,29 +72,29 @@
   </div>
 </nav>
 
-    <div class="container">
-      <div class="row mobile_padding content">
-        <div class="col-12 mobile_padding">
-          <div class="card shadow">
-            <img class="card-img-top" style="max-height:15em;" src="/img/post_images/reading.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Rendiansyah Nugroho on Unsplash">
-            <div class="card-body">
-              <h5 class="card-title text-center">Weekend Reading 4<br><small class="text-info">Posted: November 05, 2017</small></h5>
-              <div class="card-text col-10 mx-auto">
-                <p>Weekend reading part four, <a href="http://www.aaronsw.com/weblog/usefultransparency">When Is Transparency
+      <div class="container">
+        <div class="row mobile_padding content">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:15em;" src="/img/post_images/reading.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Rendiansyah Nugroho on Unsplash">
+              <div class="card-body">
+                <h5 class="card-title text-center">Weekend Reading 4<br><small class="text-info">Posted: November 05, 2017</small></h5>
+                <div class="card-text col-10 mx-auto">
+                  <p>Weekend reading part four, <a href="http://www.aaronsw.com/weblog/usefultransparency">When Is Transparency
 Useful</a>
 , takes a different turn from the past few readings. It’s an essay by the late
 Aaron Swartz that explores why transparency in the government is a nice goal to
 have, but also explains why it may not do what those who push for it believe
 that it will.</p>
 
-              </div>
+                </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -98,5 +104,6 @@ that it will.</p>
   </div>
 </div>
 
+    </div>
   </body>
 </html>

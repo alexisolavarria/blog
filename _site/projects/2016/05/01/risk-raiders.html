@@ -28,7 +28,8 @@
 </head>
 
   <body>
-    <div class="hero">
+    <div id="wrapper">
+      <div class="hero">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -40,12 +41,17 @@
   </div>
 </div>
 
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">DS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto text-center">
+      <li class="nav-item">
+        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
@@ -66,14 +72,14 @@
   </div>
 </nav>
 
-    <div class="container content">
-      <div class="col-12 mobile_padding">
-        <div class="card shadow">
-          <img class="card-img-top" style="max-height:15em;" src="/img/projects/risk_raiders_screenshot.png" alt="placeholder" data-toggle="tooltip" data-placement="top" title="">
-          <div class="card-body">
-            <h5 class="card-title text-left">Risk Raiders<br><small class="text-info">Posted: May 01, 2016</small></h5>
-            <div class="card-text container">
-              <p>The Risk Raiders website was developed during an internship with Ernst &amp; Young my sophomore year, in order to allow financial firms to more easily control their Third Party Risk Management. Third Party Risk Management is one of the most crucial aspects of the relationship between a financial institution and the various third party vendors that they work with.</p>
+      <div class="container content">
+        <div class="col-12 mobile_padding">
+          <div class="card shadow">
+            <img class="card-img-top" style="max-height:15em;" src="/img/projects/risk_raiders_screenshot.png" alt="placeholder" data-toggle="tooltip" data-placement="top" title="">
+            <div class="card-body">
+              <h5 class="card-title text-left">Risk Raiders<br><small class="text-info">Posted: May 01, 2016</small></h5>
+              <div class="card-text container">
+                <p>The Risk Raiders website was developed during an internship with Ernst &amp; Young my sophomore year, in order to allow financial firms to more easily control their Third Party Risk Management. Third Party Risk Management is one of the most crucial aspects of the relationship between a financial institution and the various third party vendors that they work with.</p>
 
 <p>This is because allowing a third party access to a financial institutions business critical information, servers, and software requires the financial institution to trust the third party entirely. This trust stems from the financial institution following a standardized cycle for forming a new third party relationship. This cycle follows the creation and eventual ending of the relationship between the two parties, and consists of five phases. The phases, in the order that they occur are planning, due diligence, contract negotiation, monitoring, and finally termination.</p>
 
@@ -83,12 +89,12 @@
 
 <p>This project was my first major entry into web development, and consisted of a Python Flask backend with a front-end utilizing in JQuery. The database layer is MySQL. It was hosted on a web server that I ran, running Centos 7.</p>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-10 col-md-8 col-lg-6 mx-auto text-center">
@@ -98,5 +104,6 @@
   </div>
 </div>
 
+    </div>
   </body>
 </html>

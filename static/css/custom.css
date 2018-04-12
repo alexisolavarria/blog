@@ -1,3 +1,28 @@
+/* Dark mode */
+
+.dark {
+  background-color: #3C425C;
+  color: #efefef;
+}
+
+.dark.card {
+  background-color: #2E3241;
+}
+
+.dark.card-title {
+  color: #aaaaaa;
+  background-color: inherit;
+}
+
+.dark.card-text {
+  color: #999999;
+  background-color: inherit;
+}
+
+.bg-dark {
+  background-color: #2E3241 !important;
+}
+
 a {
   color: #3F729B;
   text-decoration: none;
@@ -22,10 +47,6 @@ code {
 
 .card-title {
   color: #555;
-}
-
-.card-title small {
-
 }
 
 .card-text {
