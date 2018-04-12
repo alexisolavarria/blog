@@ -8,7 +8,7 @@ reading_time: 5 Minutes
 card_image: /img/post_images/pearls.jpg
 card_image_credit: Photo by Tim Mossholder on Pexels
 ---
-Contuinuing my journey, here's the problem for the day: _How would you implement bit vectors using bitwise logical operations?_
+Continuing my journey, here's the problem for the day: _How would you implement bit vectors using bitwise logical operations?_
 
 
 So, here's my solution to the problem, which works wonderfully:
