@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 38 </span>
+          All <span class="badge badge-pill"> 39 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 23 </span>
+            Development <span class="badge badge-pill"> 24 </span>
           </button>
         </li>
       
@@ -143,6 +143,65 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Four<br><small class="text-info">Posted: April 13, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day four, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day four, the text of the problem is:</p>
+
+<p><strong>If you take Problem 3 seriously, you will face the problem of generating k
+integers less than n without duplicates. The simplest approach uses the first c
+positive integers. This extreme data set won’t alter the run time of the bitmap
+method by much, but it might skew the run time of a system sort. How could you
+generate a file of k unique random integers between 0 and n-1 in random order?
+Strive for a short program that is also efficient.</strong></p>
+
+<p>My solution is below, and it generates the 1,000,000 numbers in roughly a second:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">generate_random_nums</span><span class="p">():</span>
+    <span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">_max</span> <span class="o">=</span> <span class="mi">1000000</span>
+    <span class="n">nums</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">_max</span><span class="o">*</span><span class="mi">10</span><span class="p">),</span> <span class="n">_max</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">nums</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'start: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span>
+    <span class="n">generate_random_nums</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'end: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/13/Programming-Pearls-Day-4.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
