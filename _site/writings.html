@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 40 </span>
+          All <span class="badge badge-pill"> 41 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 25 </span>
+            Development <span class="badge badge-pill"> 26 </span>
           </button>
         </li>
       
@@ -143,6 +143,101 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Six<br><small class="text-info">Posted: April 15, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day six, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day six, the text of the problem is:</p>
+
+<p><strong>What would you recommend to the programmer if, instead of saying that each
+integer could appear at most once, he told you that each integer could appear at
+most ten times? How would your solution change as a function of the amount of
+available storage?</strong></p>
+
+<p>So, working with numbers that can show up multiple times, the easiest solution
+is a hash table. To store the working numbers in under a Mb, the algorithm will
+turn into a 20 pass algo, working in increments of fifty thousand, and with each
+element of the original working bit array being converted into a 10 bit array
+itself.</p>
+
+<p>My solution is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">generate_empty_array</span><span class="p">():</span>
+    <span class="n">working</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50000</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">working</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">working</span>
+
+<span class="k">def</span> <span class="nf">read_in_specific</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">working</span><span class="p">):</span>
+    <span class="n">fp_in</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'numbers.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fp_in</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">start</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">stop</span><span class="p">:</span>
+            <span class="n">working</span><span class="p">[</span><span class="n">x</span> <span class="o">-</span> <span class="n">start</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">x_str</span> <span class="o">=</span> <span class="n">fp_in</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x_str</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x_str</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_str</span><span class="p">)</span>
+    
+    <span class="n">fp_in</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">working</span>
+
+<span class="k">def</span> <span class="nf">write_out</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">working</span><span class="p">,</span> <span class="n">fp_out</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">working</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">working</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+            <span class="n">fp_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">offset</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">space_constrain_with_mult</span><span class="p">():</span>
+    <span class="n">fp_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'out_numbers.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+    <span class="n">pass_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">150000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">250000</span><span class="p">,</span> <span class="mi">300000</span><span class="p">,</span> <span class="mi">350000</span><span class="p">,</span> <span class="mi">400000</span><span class="p">,</span> <span class="mi">450000</span><span class="p">,</span> <span class="mi">500000</span><span class="p">,</span> <span class="mi">550000</span><span class="p">,</span> <span class="mi">600000</span><span class="p">,</span> <span class="mi">650000</span><span class="p">,</span> <span class="mi">700000</span><span class="p">,</span> <span class="mi">750000</span><span class="p">,</span> <span class="mi">800000</span><span class="p">,</span> <span class="mi">850000</span><span class="p">,</span> <span class="mi">900000</span><span class="p">,</span> <span class="mi">950000</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pass_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">working</span> <span class="o">=</span> <span class="n">generate_empty_array</span><span class="p">()</span>
+        <span class="n">working</span> <span class="o">=</span> <span class="n">read_in_specific</span><span class="p">(</span><span class="n">pass_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">pass_list</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">working</span><span class="p">)</span>
+        <span class="n">write_out</span><span class="p">(</span><span class="n">pass_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">working</span><span class="p">,</span> <span class="n">fp_out</span><span class="p">)</span>
+
+    <span class="n">fp_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'start: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span>
+    <span class="n">space_constrain_with_mult</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'end: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/15/Programming-Pearls-Day-6.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
