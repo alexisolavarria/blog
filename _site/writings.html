@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 39 </span>
+          All <span class="badge badge-pill"> 40 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 24 </span>
+            Development <span class="badge badge-pill"> 25 </span>
           </button>
         </li>
       
@@ -143,6 +143,110 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Five<br><small class="text-info">Posted: April 14, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day five, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day five, the text of the problem is:</p>
+
+<p><strong>The programmer said that he had about a megabyte of free storage, but the code
+we sketched uses 1.25 megabytes. He was able to scrounge the extra space without
+much trouble. If the megabyte had been a hard and fast boundary, what would you
+have recommended? What is the run time of your algorithm?</strong></p>
+
+<p>Since the book was originally designed for C programming, and written in the 90s
+where space constraints were more realistic, this was a challenge back then.
+Nowadays, my python implementations almost certainly take up more memory than
+that just due to the language overhead. However, if I wanted to make it space
+constrained, the easiest to do that is a two pass algorithm</p>
+
+<p>My solution is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">space_constrain</span><span class="p">():</span>
+    <span class="n">fp_in</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'numbers.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">fp_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'out_numbers.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="c">#set working array</span>
+    <span class="n">working</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">500000</span><span class="p">):</span>
+        <span class="n">working</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c">#First we read in only the numbers 0-500,000</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fp_in</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">500000</span><span class="p">:</span>
+            <span class="n">working</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">x_str</span> <span class="o">=</span> <span class="n">fp_in</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x_str</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x_str</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_str</span><span class="p">)</span>
+
+    <span class="c"># numbers 0 - 500,000 have now been sorted, write to output file</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">working</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">fp_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="c"># reset the working array</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">working</span><span class="p">)):</span>
+        <span class="n">working</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c"># Next we read in only the numbers &gt; 500,000</span>
+    <span class="n">fp_in</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fp_in</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">500000</span><span class="p">:</span>
+            <span class="n">working</span><span class="p">[</span><span class="n">x</span> <span class="o">-</span> <span class="mi">500000</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">x_str</span> <span class="o">=</span> <span class="n">fp_in</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">x_str</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x_str</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_str</span><span class="p">)</span>
+
+    <span class="c"># numbers &gt; 500,000 have now been sorted, write to output file</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">working</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">fp_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">500000</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fp_in</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">fp_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'start: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span>
+    <span class="n">space_constrain</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'end: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">())</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/14/Programming-Pearls-Day-5.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
