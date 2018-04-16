@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-04-15T14:39:42-04:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
-</subtitle><entry><title type="html"></title><link href="htpps://www.doug-skinner.com/2018/04/15/2018-01-22-More-NN-Thoughts.html" rel="alternate" type="text/html" title="" /><published>2018-04-15T14:39:42-04:00</published><updated>2018-04-15T14:39:42-04:00</updated><id>htpps://www.doug-skinner.com/2018/04/15/2018-01-22-More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/2018/04/15/2018-01-22-More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-04-16T16:43:41-04:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html"></title><link href="htpps://www.doug-skinner.com/2018/04/16/2018-01-22-More-NN-Thoughts.html" rel="alternate" type="text/html" title="" /><published>2018-04-16T16:43:41-04:00</published><updated>2018-04-16T16:43:41-04:00</updated><id>htpps://www.doug-skinner.com/2018/04/16/2018-01-22-More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/2018/04/16/2018-01-22-More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
 Also as part of my class discussed previously, I had to write a term paper on
 any topic that my little heart desired, as long as it related to the class. The
 topic was copyright law in the online realm, and what follows is the paper. Enjoy.&lt;/p&gt;
@@ -85,7 +85,71 @@ topic was copyright law in the online realm, and what follows is the paper. Enjo
   &lt;li&gt;Wu, T. (2003). When Code Isn’t Law. Virginia Law Review, 89(4), 679-751.doi:10.2307/3202374&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 107 - Limitations on exclusive rights: Fair use. (n.d.). Retrieved January 18,   2018, from &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/107&quot;&gt;https://www.law.cornell.edu/uscode/text/17/107&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 506 - Criminal offenses. (n.d.). Retrieved January 18, 2018, from     &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/506&quot;&gt;https://www.law.cornell.edu/uscode/text/17/506&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Programming Pearls, Day Six</title><link href="htpps://www.doug-skinner.com/writing/2018/04/15/Programming-Pearls-Day-6.html" rel="alternate" type="text/html" title="Programming Pearls, Day Six" /><published>2018-04-15T12:00:00-04:00</published><updated>2018-04-15T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/15/Programming-Pearls-Day-6</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/15/Programming-Pearls-Day-6.html">&lt;p&gt;Okay, continuing on to day six, the text of the problem is:&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Programming Pearls, Day Seven</title><link href="htpps://www.doug-skinner.com/writing/2018/04/16/Programming-Pearls-Day-7.html" rel="alternate" type="text/html" title="Programming Pearls, Day Seven" /><published>2018-04-16T12:00:00-04:00</published><updated>2018-04-16T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/16/Programming-Pearls-Day-7</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/16/Programming-Pearls-Day-7.html">&lt;p&gt;Okay, continuing on to day seven, the text of the problem is:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The program as sketched has several flaws. The first is that it assumes that
+no integer appears twice in the input. What happens if one does show up more
+than once? How could the program be modified to call an error function in that
+case? What happens when an input integer is less than zero or greater than or
+equal to n? What if an input is not numeric? What should a program do under
+those circumstances? What other sanity checks could the program incorporate?
+Describe small data sets that test the program, including its proper handling of
+these and other ill-behaved cases.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So, in these cases the best possible option for the continuation of the program
+is for it to log, in this case to standard output, that an improper input was
+given and what the input was. As this is simply one piece in a large and complex
+structure, outright failing would be devestating to the business processes that
+follow the sort.&lt;/p&gt;
+
+&lt;p&gt;My solution is below:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;error_string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Found an invalid input'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bitmap_sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'numbers.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{} (Conversion error) {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{} (Less than zero) {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{} (Greater than 1000000) {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{} (Duplicate number) {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'out_numbers.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Start Bitmap: {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bitmap_sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'End Bitmap: {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Total Bitmap: {}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Okay, continuing on to day seven, the text of the problem is:</summary></entry><entry><title type="html">Programming Pearls, Day Six</title><link href="htpps://www.doug-skinner.com/writing/2018/04/15/Programming-Pearls-Day-6.html" rel="alternate" type="text/html" title="Programming Pearls, Day Six" /><published>2018-04-15T12:00:00-04:00</published><updated>2018-04-15T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/15/Programming-Pearls-Day-6</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/15/Programming-Pearls-Day-6.html">&lt;p&gt;Okay, continuing on to day six, the text of the problem is:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What would you recommend to the programmer if, instead of saying that each
 integer could appear at most once, he told you that each integer could appear at
@@ -447,153 +511,4 @@ extensions of that problem.&lt;/p&gt;
 
 &lt;p&gt;Basically this grabs all the divs with our class name and the text in the search box, shows all the posts with our &lt;code class=&quot;highlighter-rouge&quot;&gt;.post&lt;/code&gt; tag. Then, looping through our list of posts it checks the contents of the post for the text in our search box, and hides the post if it is not found.&lt;/p&gt;
 
-&lt;p&gt;And there you have it, a nice simple search to implement for a jekyll based site.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">So this week I decided to add a search form to my writings page, as I was getting pretty tired of scrolling through all of my posts to find certain things, and I thought that it would be interesting to share. To make the following work on your own site, it will be easiest if you are using the same technologies that I am Bootstrap, JQuery, and Jekyll. The instructions can be modified for other tech, but that’s something that you’ll have to figure out.</summary></entry><entry><title type="html">How To Implement Token Based Auth In Flask</title><link href="htpps://www.doug-skinner.com/writing/2018/03/28/How-To-Implement-Token-Auth-In-Flask.html" rel="alternate" type="text/html" title="How To Implement Token Based Auth In Flask" /><published>2018-03-28T12:00:00-04:00</published><updated>2018-03-28T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/03/28/How-To-Implement-Token-Auth-In-Flask</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/03/28/How-To-Implement-Token-Auth-In-Flask.html">&lt;p&gt;So the other day I talked about &lt;a href=&quot;/writing/2018/03/12/Token-Based-Authentication.html&quot;&gt;why&lt;/a&gt; I chose to used token based authentication for my new service. I thought it would be useful for others to see how I did this, in case you want to as well.&lt;/p&gt;
-
-&lt;p&gt;First, it’s necessary to define the database structure that I’ve implemented for the structure. Some things that are specific for my service have been omitted for brevity, but the tables below can be used as a starting point for any other service. Side note, the database that I use is MySQL, and that is what I recommend that most beginners use as it is stable and tested by much larger companies than yours will ever be. The tables are as follows:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE DATABASE service;
-USE DATABASE service;
-
-CREATE TABLE IF NOT EXISTS logins (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  PRIMARY KEY(`id`),
-  UNIQUE KEY (`username`)
-);
-
-CREATE TABLE IF NOT EXISTS authentication_tokens (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `user_id` int(10) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `last_updated_at` TIMESTAMP DEFAULT NOW(),
-  PRIMARY KEY(`id`),
-  UNIQUE KEY (`user_id`)
-);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, the above code can actually be copied into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.sql&lt;/code&gt; file, and moved into a MySQL installation by running &lt;code class=&quot;highlighter-rouge&quot;&gt;mysql -p &amp;lt; filename.sql&lt;/code&gt; To briefly describe the database structure, the logins table acts as the main table for the database and the authorized_tokens table only is used to store the tokens as you’ll see shortly. Before we get to the tokens though, I’ll briefly describe how a user gets to added to the logins table.&lt;/p&gt;
-
-&lt;p&gt;I won’t be covering any data validation as that would make the post about 100 times longer, but that can easily be added to this method. To avoid storing any plaintext passwords, the passwords are all salted and hashed before being stored, using &lt;a href=&quot;https://pypi.python.org/pypi/bcrypt/2.0.0&quot;&gt;bcypt&lt;/a&gt;. And the package that I use to connect to the MySQL database is MySQLdb. Here’s the user add method, and a simple database wrapper class:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class DB(object):
-    def __init__(self):
-        self.database = MySQLdb.connect(host=&quot;localhost&quot;, user=&quot;root&quot;, passwd=db_password, db=&quot;service&quot;, cursorclass = MySQLdb.cursors.DictCursor)
-        self.cursor = self.database.cursor()
-
-    def close(self):
-        self.database.close()
-
-    def read(self, query):
-        self.cursor.execute(query)
-        data = self.cursor.fetchall()
-        return data
-
-    def write(self, query):
-        try:
-            self.cursor.execute(query)
-            self.database.commit()
-            return True
-        except Exception as e:
-            print e
-            return False
-
-class User(object):
-
-    def __init__(self):
-        self.db_wrapper = DB()
-        
-    def add(self, username, unhashed_pass, unhashed_pass_conf):
- 	hashed = bcrypt.hashpw(str(unhashed_pass), bcrypt.gensalt())
- 	query = &quot;INSERT INTO logins (username, password) VALUES ('{}', '{}')&quot;.format(username, hashed)
-	rc = self.db_wrapper.write(query)
-	return rc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now that we have a simple way to add a user, we need to be able to create a token for them. First, to create the token we need to validate that the user has logged in correctly. To do so, we’re going to create a validator class. First, I’ll give the class in full, then walk through the couple of methods. It’s a little long, but it’ll be worth it.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Authentication(object):
-
-    def __init__(self):
-        self.db_wrapper = DB()
-
-    def close(self):
-        self.db_wrapper.close()
-
-    def generate_token(self, username):
-        current_time = time.time()
-        token = bcrypt.hashpw(str(username) + str(time.time()), bcrypt.gensalt())
-        return token
-
-    def is_authorized(self, username, token):
-        user_id = self.get_user_id(username)
-        stored_token = self.get_token(user_id)
-
-        if stored_token is None:
-            return False
-        if stored_token != token:
-            return False
-        if stored_token == token:
-            self.update_token(user_id)
-            return True
-        return False
-
-    def login(self, username, password):
-        user_id = self.get_user_id(username)
-        if user_id is None:
-            return False
-
-        stored_pass = self.get_hashed_pass(user_id)
-        if bcrypt.hashpw(str(password), stored_pass) == stored_pass:
-            token = self.get_token(user_id)
-            if token is None:
-                token = self.generate_token(username)
-                self.store_token(user_id, token)
-            return True, {'token':token}
-        else:
-            return False, None
-
-    def logout(self, username):
-        user_id = self.get_user_id(username)
-        if user_id is None:
-            return False
-        query = &quot;DELETE FROM authentication_tokens WHERE user_id = {}&quot;.format(user_id)
-        rc = self.db_wrapper.write(query)
-        return rc
-
-    def get_hashed_pass(self, user_id):
-        query = &quot;SELECT password FROM logins WHERE id = {}&quot;.format(user_id)
-        results = self.db_wrapper.read(query)
-        if results is None:
-            return None
-        return results[0]['password']
-
-    def get_token(self, user_id):
-        query = &quot;SELECT token FROM authentication_tokens WHERE user_id = {}&quot;.format(user_id)
-        results = self.db_wrapper.read(query)
-        if results is None:
-            return None
-        try:
-            return results[0]['token']
-        except:
-            return None
-
-    def get_user_id(self, username):
-        query = &quot;SELECT id FROM logins WHERE username = '{}'&quot;.format(username)
-        results = self.db_wrapper.read(query)
-        if results is None:
-            return None
-        return results[0]['id']
-
-    def store_token(self, user_id, token):
-        query = &quot;INSERT INTO authentication_tokens (user_id, token) VALUES ({}, '{}')&quot;.format(user_id, token)
-        rc = self.db_wrapper.write(query)
-        return rc
-
-    def update_token(self, user_id):
-        query = &quot;UPDATE authentication_tokens SET last_updated_at = NOW() WHERE user_id = {}&quot;.format(user_id)
-        rc = self.db_wrapper.write(query)
-        return rc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Okay, like I said it’s a lot, and there’s a bunch of helper methods that are used to modularize the code, but basically it consists of the is_authorized, login, and logout methods.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">So the other day I talked about why I chose to used token based authentication for my new service. I thought it would be useful for others to see how I did this, in case you want to as well.</summary></entry></feed>
+&lt;p&gt;And there you have it, a nice simple search to implement for a jekyll based site.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">So this week I decided to add a search form to my writings page, as I was getting pretty tired of scrolling through all of my posts to find certain things, and I thought that it would be interesting to share. To make the following work on your own site, it will be easiest if you are using the same technologies that I am Bootstrap, JQuery, and Jekyll. The instructions can be modified for other tech, but that’s something that you’ll have to figure out.</summary></entry></feed>

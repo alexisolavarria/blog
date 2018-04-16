@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 41 </span>
+          All <span class="badge badge-pill"> 42 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 26 </span>
+            Development <span class="badge badge-pill"> 27 </span>
           </button>
         </li>
       
@@ -143,6 +143,105 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Seven<br><small class="text-info">Posted: April 16, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day seven, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day seven, the text of the problem is:</p>
+
+<p><strong>The program as sketched has several flaws. The first is that it assumes that
+no integer appears twice in the input. What happens if one does show up more
+than once? How could the program be modified to call an error function in that
+case? What happens when an input integer is less than zero or greater than or
+equal to n? What if an input is not numeric? What should a program do under
+those circumstances? What other sanity checks could the program incorporate?
+Describe small data sets that test the program, including its proper handling of
+these and other ill-behaved cases.</strong></p>
+
+<p>So, in these cases the best possible option for the continuation of the program
+is for it to log, in this case to standard output, that an improper input was
+given and what the input was. As this is simply one piece in a large and complex
+structure, outright failing would be devestating to the business processes that
+follow the sort.</p>
+
+<p>My solution is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">error_string</span> <span class="o">=</span> <span class="s">'Found an invalid input'</span>
+
+<span class="k">def</span> <span class="nf">bitmap_sort</span><span class="p">():</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'numbers.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+    <span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">):</span>
+        <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">'{} (Conversion error) {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_string</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">'{} (Less than zero) {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_string</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">1000000</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">'{} (Greater than 1000000) {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_string</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">'{} (Duplicate number) {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_string</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+        <span class="n">nums</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'out_numbers.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">numbers</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'Start Bitmap: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">bitmap_sort</span><span class="p">()</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'End Bitmap: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">'Total Bitmap: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/16/Programming-Pearls-Day-7.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
