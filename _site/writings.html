@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 42 </span>
+          All <span class="badge badge-pill"> 43 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 27 </span>
+            Development <span class="badge badge-pill"> 28 </span>
           </button>
         </li>
       
@@ -143,6 +143,90 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Eight<br><small class="text-info">Posted: April 17, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day eight, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day eight, the text of the problem is:</p>
+
+<p><strong>When the programmer faced the problem, all toll-free phone numbers in the
+United States had the 800 area code. Toll-free codes now include 800, 877 and
+888, and the list is growing. How would you sort all of the toll-free numbers
+using only a megabyte? How can you store a set of toll-free numbers to allow
+very rapid lookup to determine whether a given toll-free number is available or
+already taken?</strong></p>
+
+<p>So, the easiest way that I can think of to do this is to use a hash table where
+the last seven didits of the phone number are used as the key for the table.
+But, instead of simply storing a 1 or 0 based on whether the number exists, a
+secondary hash, easy to do in python, where the key for the second hash table is
+the area code of the number.</p>
+
+<p>My solution is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">bitmap_sort</span><span class="p">():</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'numbers.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+    <span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="p">{</span><span class="s">'800'</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'877'</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'888'</span> <span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+        <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">num</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+        <span class="n">nums</span><span class="p">[</span><span class="n">number</span><span class="p">][</span><span class="n">area</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'out_numbers.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">numbers</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'Start Bitmap: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">bitmap_sort</span><span class="p">()</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">clock</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">'End Bitmap: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s">'Total Bitmap: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/17/Programming-Pearls-Day-8.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
