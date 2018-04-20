@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-04-18T18:43:39-04:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
-</subtitle><entry><title type="html"></title><link href="htpps://www.doug-skinner.com/2018/04/18/2018-01-22-More-NN-Thoughts.html" rel="alternate" type="text/html" title="" /><published>2018-04-18T18:43:39-04:00</published><updated>2018-04-18T18:43:39-04:00</updated><id>htpps://www.doug-skinner.com/2018/04/18/2018-01-22-More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/2018/04/18/2018-01-22-More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="htpps://www.doug-skinner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="htpps://www.doug-skinner.com/" rel="alternate" type="text/html" /><updated>2018-04-20T14:00:33-04:00</updated><id>htpps://www.doug-skinner.com/</id><title type="html">Doug Skinner’s Blog</title><subtitle>My own thoughts and opinions on software engineering topics, wider technology, people, and what ever else comes up.
+</subtitle><entry><title type="html"></title><link href="htpps://www.doug-skinner.com/2018/04/20/2018-01-22-More-NN-Thoughts.html" rel="alternate" type="text/html" title="" /><published>2018-04-20T14:00:33-04:00</published><updated>2018-04-20T14:00:33-04:00</updated><id>htpps://www.doug-skinner.com/2018/04/20/2018-01-22-More-NN-Thoughts</id><content type="html" xml:base="htpps://www.doug-skinner.com/2018/04/20/2018-01-22-More-NN-Thoughts.html">&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: This post is very long. Read at your own risk.&lt;br /&gt;
 Also as part of my class discussed previously, I had to write a term paper on
 any topic that my little heart desired, as long as it related to the class. The
 topic was copyright law in the online realm, and what follows is the paper. Enjoy.&lt;/p&gt;
@@ -85,7 +85,36 @@ topic was copyright law in the online realm, and what follows is the paper. Enjo
   &lt;li&gt;Wu, T. (2003). When Code Isn’t Law. Virginia Law Review, 89(4), 679-751.doi:10.2307/3202374&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 107 - Limitations on exclusive rights: Fair use. (n.d.). Retrieved January 18,   2018, from &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/107&quot;&gt;https://www.law.cornell.edu/uscode/text/17/107&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;17 U.S. Code § 506 - Criminal offenses. (n.d.). Retrieved January 18, 2018, from     &lt;a href=&quot;https://www.law.cornell.edu/uscode/text/17/506&quot;&gt;https://www.law.cornell.edu/uscode/text/17/506&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Programming Pearls, Day Nine</title><link href="htpps://www.doug-skinner.com/writing/2018/04/17/Programming-Pearls-Day-9.html" rel="alternate" type="text/html" title="Programming Pearls, Day Nine" /><published>2018-04-17T12:00:00-04:00</published><updated>2018-04-17T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/17/Programming-Pearls-Day-9</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/17/Programming-Pearls-Day-9.html">&lt;p&gt;Okay, continuing on to day nine, the text of the problem is:&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author></entry><entry><title type="html">Programming Pearls, Day Ten</title><link href="htpps://www.doug-skinner.com/writing/2018/04/19/Programming-Pearls-Day-10.html" rel="alternate" type="text/html" title="Programming Pearls, Day Ten" /><published>2018-04-19T12:00:00-04:00</published><updated>2018-04-19T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/19/Programming-Pearls-Day-10</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/19/Programming-Pearls-Day-10.html">&lt;p&gt;Okay, continuing on to day ten, woo double digits, the text of the problem is:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Before the days of low-cost overnight deliveries, a store allowed customers to
+order items over the telephone, which they picked up a few days later. The
+store’s database used the customer’s telephone number as the primary key for
+retrieval (customers know their phone numbers and the keys are close to unique).
+How would you organize the store’s database to allow orders to be inserted and
+retrieved efficiently?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;My solution is below:&lt;/p&gt;
+
+&lt;p&gt;This problem seems to be motivating you to design a database, which really
+doesn’t require any python code at all, but it does make a nice thought
+experiment. So, I would organize the data into customer, order, and product
+tables. The customer table would have the phone number as the primary key, and
+could store other customer information as desired.&lt;/p&gt;
+
+&lt;p&gt;The order table would have an
+order id, a secondary key called customerId that matches to a phone number that
+exists in the customer table, another secondary key called itemId that matches
+with an id in the items table, and then a field called quantity that would allow
+the person to order more than one item.&lt;/p&gt;
+
+&lt;p&gt;Finally, the item table would have an id for each item, a string that matches
+the item’s name, a number that matches the quantity of items that remain in
+inventory, and finally a float column that contains the price of the item.&lt;/p&gt;
+
+&lt;p&gt;This way a customer can place as many orders as they want, that can be easily
+retrieved, where each order consists of some quantity of one item. Multiple
+orders in a day are possible, so a customer can order more than item.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Okay, continuing on to day ten, woo double digits, the text of the problem is:</summary></entry><entry><title type="html">Programming Pearls, Day Nine</title><link href="htpps://www.doug-skinner.com/writing/2018/04/17/Programming-Pearls-Day-9.html" rel="alternate" type="text/html" title="Programming Pearls, Day Nine" /><published>2018-04-17T12:00:00-04:00</published><updated>2018-04-17T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/17/Programming-Pearls-Day-9</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/17/Programming-Pearls-Day-9.html">&lt;p&gt;Okay, continuing on to day nine, the text of the problem is:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;One problem with trading more space to use less time is that initializing the
 space can itself take a great deal of
@@ -487,18 +516,4 @@ little too harsh on the eyes. So, I spent a couple minutes implementing dark
 mode, and turning it on by default upon page load. To switch back to the lighter
 style, simply toggle the button in the navbar. Right now, you will also have to
 toggle the light mode switch on every page, as I haven’t implemented the cookies
-required to make it permanent. Maybe next week.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Early this morning I was browsing my own site, and felt that the white was a little too harsh on the eyes. So, I spent a couple minutes implementing dark mode, and turning it on by default upon page load. To switch back to the lighter style, simply toggle the button in the navbar. Right now, you will also have to toggle the light mode switch on every page, as I haven’t implemented the cookies required to make it permanent. Maybe next week.</summary></entry><entry><title type="html">Programming Pearls, Day Two</title><link href="htpps://www.doug-skinner.com/writing/2018/04/11/Programming-Pearls-Day-2.html" rel="alternate" type="text/html" title="Programming Pearls, Day Two" /><published>2018-04-11T12:00:00-04:00</published><updated>2018-04-11T12:00:00-04:00</updated><id>htpps://www.doug-skinner.com/writing/2018/04/11/Programming-Pearls-Day-2</id><content type="html" xml:base="htpps://www.doug-skinner.com/writing/2018/04/11/Programming-Pearls-Day-2.html">&lt;p&gt;Continuing my journey, here’s the problem for the day: &lt;em&gt;How would you implement bit vectors using bitwise logical operations?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;So, here’s my solution to the problem, which works wonderfully:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bitwise_shift_left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bitwise_shift_right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bitwise_and&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bitwise_or&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Continuing my journey, here’s the problem for the day: How would you implement bit vectors using bitwise logical operations?</summary></entry></feed>
+required to make it permanent. Maybe next week.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><summary type="html">Early this morning I was browsing my own site, and felt that the white was a little too harsh on the eyes. So, I spent a couple minutes implementing dark mode, and turning it on by default upon page load. To switch back to the lighter style, simply toggle the button in the navbar. Right now, you will also have to toggle the light mode switch on every page, as I haven’t implemented the cookies required to make it permanent. Maybe next week.</summary></entry></feed>

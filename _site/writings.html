@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 44 </span>
+          All <span class="badge badge-pill"> 45 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 29 </span>
+            Development <span class="badge badge-pill"> 30 </span>
           </button>
         </li>
       
@@ -143,6 +143,69 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Ten<br><small class="text-info">Posted: April 19, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day ten, woo double digits, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day ten, woo double digits, the text of the problem is:</p>
+
+<p><strong>Before the days of low-cost overnight deliveries, a store allowed customers to
+order items over the telephone, which they picked up a few days later. The
+store’s database used the customer’s telephone number as the primary key for
+retrieval (customers know their phone numbers and the keys are close to unique).
+How would you organize the store’s database to allow orders to be inserted and
+retrieved efficiently?</strong></p>
+
+<p>My solution is below:</p>
+
+<p>This problem seems to be motivating you to design a database, which really
+doesn’t require any python code at all, but it does make a nice thought
+experiment. So, I would organize the data into customer, order, and product
+tables. The customer table would have the phone number as the primary key, and
+could store other customer information as desired.</p>
+
+<p>The order table would have an
+order id, a secondary key called customerId that matches to a phone number that
+exists in the customer table, another secondary key called itemId that matches
+with an id in the items table, and then a field called quantity that would allow
+the person to order more than one item.</p>
+
+<p>Finally, the item table would have an id for each item, a string that matches
+the item’s name, a number that matches the quantity of items that remain in
+inventory, and finally a float column that contains the price of the item.</p>
+
+<p>This way a customer can place as many orders as they want, that can be easily
+retrieved, where each order consists of some quantity of one item. Multiple
+orders in a day are possible, so a customer can order more than item.</p>
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/19/Programming-Pearls-Day-10.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
