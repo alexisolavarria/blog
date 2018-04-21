@@ -7,7 +7,7 @@
     <div class="card shadow">
       <img class="card-img-top" alt="Current Project Image" src="{{ post.picture }}">
       <div class="card-body">
-        <h5 class="card-title">{{ post.title }}<br><small><a href="{{post.public_url}}">{{ post.public_message }}</a></small></h5>
+        <h5 class="card-title">{{ post.title }}<br><small><a  class="text-info" href="{{post.public_url}}">{{ post.public_message }}</a></small></h5>
         <div class="card-text container">
           {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
         </div>

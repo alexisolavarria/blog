@@ -4,19 +4,6 @@ $(document).ready(function() {
   	$('[data-toggle="tooltip"]').tooltip()
 	});
 
-	$(function () {
-		$('#wrapper').addClass('dark');
-
-		$("#mode_toggle").html('Dark Mode');
-		$("#mode_toggle").attr('data-mode', 'dark');
-		$("#mode_toggle").removeClass('btn-light').addClass('btn-dark');
-
-		$('nav').removeClass('bg-light').removeClass('navbar-light').addClass('bg-dark').addClass('navbar-dark');
-
-		$('.card').addClass('dark');
-		$('.card-title').addClass('dark');
-		$('.card-text').addClass('dark');
-	});
 
 	$("#mode_toggle").on("click", function(e) {
 		var mode = $(this).attr('data-mode');
