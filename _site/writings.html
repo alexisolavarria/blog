@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 49 </span>
+          All <span class="badge badge-pill"> 50 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 34 </span>
+            Development <span class="badge badge-pill"> 35 </span>
           </button>
         </li>
       
@@ -143,6 +143,75 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Fourteen<br><small class="text-info">Posted: April 23, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day thirteen, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day thirteen, the text of the problem is:</p>
+
+<p><strong>Given a sequential file containing 4,300,000,000 integers, how can you find
+one that appears at least twice?</strong></p>
+
+<p>My solution, a simple binary search, is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/local/bin/python</span>
+
+<span class="k">def</span> <span class="nf">find_larger_half</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">low</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">avg</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">high</span><span class="o">+</span><span class="n">low</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nums</span><span class="p">[(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">avg</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">nums</span><span class="p">[(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">nums</span><span class="p">[:(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">()</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+    <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="k">while</span> <span class="nb">type</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">nums</span> <span class="o">=</span> <span class="n">find_larger_half</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">nums</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/23/Programming-Pearls-Day-14.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
