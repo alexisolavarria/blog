@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 48 </span>
+          All <span class="badge badge-pill"> 49 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 33 </span>
+            Development <span class="badge badge-pill"> 34 </span>
           </button>
         </li>
       
@@ -143,6 +143,57 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Thirteen<br><small class="text-info">Posted: April 22, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day thirteen, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day thirteen, the text of the problem is:</p>
+
+<p><strong>Consider the problem of finding all anagrams of a given input word. How would you solve this problem given only the input workd and the dictionary? What if you could spend some time and space to process the dictionary before answering any queries?</strong></p>
+
+<p>My solution is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/local/bin/python</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">()</span>
+<span class="n">sorted_word</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="n">dictionary_lines</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'lowercase_dictionary.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">dictionary_lines</span><span class="p">:</span>
+    <span class="n">sorted_line</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">line</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="s">''</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">sorted_word</span> <span class="o">==</span> <span class="n">sorted_line</span><span class="p">:</span>
+        <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">))</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/22/Programming-Pearls-Day-13.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
