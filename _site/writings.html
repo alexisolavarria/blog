@@ -83,7 +83,7 @@
     <ul class="list-unstyled">
       <li>
         <button class="tag_button btn All btn-primary" id="All">
-          All <span class="badge badge-pill"> 50 </span>
+          All <span class="badge badge-pill"> 51 </span>
         </button>
       </li>
       
@@ -91,7 +91,7 @@
         
         <li>
           <button class="btn btn-outline-primary tag_button Development" id="Development">
-            Development <span class="badge badge-pill"> 35 </span>
+            Development <span class="badge badge-pill"> 36 </span>
           </button>
         </li>
       
@@ -143,6 +143,95 @@
       </form>
     </div>
     <div class="row">
+      
+        <div class="All_tag Development_tag post text-to-search">
+          <div class="col-12 mobile_padding">
+            <div class="card shadow">
+              <img class="card-img-top" style="max-height:20em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
+              <div class="card-body">
+                <h5 class="card-title text-left">Programming Pearls, Day Fifteen<br><small class="text-info">Posted: April 24, 2018</small></h5>
+                <div class="card-text container">
+                  Okay, continuing on to day fifteen, the text of the problem is:
+
+
+                </div>
+                <div hidden>
+                  <p>Okay, continuing on to day fifteen, the text of the problem is:</p>
+
+<p><strong>We skimmed two vector rotation algorithms that require subtle code;
+implement each as a program. How does the greatest common divisor of
+i and n appear in each program?</strong></p>
+
+<p>My solution is below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#The first algorithm, simplified with python syntax</span>
+<span class="c">#!/usr/local/bin/python</span>
+
+<span class="c">#in_word = raw_input()</span>
+<span class="n">in_word</span> <span class="o">=</span> <span class="s">'abcdefgh'</span>
+<span class="n">word</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">in_word</span><span class="p">:</span>
+    <span class="n">word</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">3</span> <span class="c"># for example purposes</span>
+<span class="n">step</span> <span class="o">=</span> <span class="n">i</span>
+
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">word</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="k">print</span> <span class="n">word</span>
+
+<span class="c"># For the second algorithm</span>
+<span class="c">#!/usr/local/bin/python</span>
+
+<span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+    <span class="c"># base case</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">index</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">word</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
+    <span class="n">bl</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">br</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+            <span class="n">br</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bl</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">br</span> <span class="o">+</span> <span class="n">swap</span><span class="p">(</span><span class="n">bl</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span>
+
+<span class="n">in_word</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">()</span>
+<span class="n">word</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">in_word</span><span class="p">:</span>
+    <span class="n">word</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">swap</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></code></pre></figure>
+
+
+                </div>
+                <div class="card-footer">
+                  <span>Reading Time: 5 Minutes</span>
+                    <a href="/writing/2018/04/24/Progamming-Pearls-Day-15.html">
+                    <button class="btn btn-info float-right">Read More</button>
+                  </a>
+                  <br>
+                  <div class="tags float-left">
+                    <span>Tags:
+                    
+                      Development
+                    
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
         <div class="All_tag Development_tag post text-to-search">
           <div class="col-12 mobile_padding">
