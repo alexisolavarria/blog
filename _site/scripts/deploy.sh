@@ -1,7 +1,5 @@
 #!/bin/bash
 
-./scripts/minimize_thumbnails
-./scripts/create_thumbnail_posts
 bundle exec jekyll build .
 git add .
 git commit -am "Automated commit"
