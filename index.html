@@ -20,7 +20,7 @@ title: Homepage
       <ul class="list-unstyled">
         <li>
           <button class="tag_button btn All btn-info" id="All">
-            All <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
+            All <span class="badge badge-pill"> {{ site.posts | size }} </span>
           </button>
         </li>
         {% for tag in site.tags %}
