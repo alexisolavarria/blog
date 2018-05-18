@@ -1,0 +1,6 @@
+---
+layout: default
+categories: Thumbnails
+tags: Photos
+picture: img/photos/thumbnails/IMG_8603.jpg
+---

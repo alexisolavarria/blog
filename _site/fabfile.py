@@ -24,7 +24,6 @@ def convert_images():
 
 def create_photo_posts():
     local("scripts/create_thumbnail_posts")
-    local("scripts/create_full_posts")
 
 def build():
     local("bundle exec jekyll build .")
