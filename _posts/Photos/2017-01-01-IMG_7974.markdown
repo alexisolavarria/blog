@@ -1,5 +1,0 @@
----
-layout: default_large
-categories: Full
-picture: img/photos/full_size/IMG_7974.jpg
----

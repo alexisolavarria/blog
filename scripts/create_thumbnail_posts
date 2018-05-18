@@ -7,13 +7,13 @@ FILES=img/photos/thumbnails/*.jpg
 
 for i in $FILES
     do
+        date=$(sudo mdls $i | grep 'kMDItemInterestingDate_Ranking' | awk '{print $3}' | tr -d '\n')
         temp=${i##*/}
         temp_2=${temp%.jpg}
         echo "---
 layout: default
 categories: Thumbnails
-large_url: /photos/2017/01/01/$temp_2.html
-full_url: /full/2017/01/01/$temp_2.html
+tags: Photos
 picture: $i
----" > _posts/Thumbnails/2017-01-01-$temp_2.markdown
+---" > _posts/Thumbnails/$date-$temp_2.markdown
     done

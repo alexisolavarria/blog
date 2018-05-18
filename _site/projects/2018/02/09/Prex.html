@@ -29,46 +29,38 @@
 
   <body>
     <div id="wrapper">
-      <div class="hero">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
-        <h1 class="display-4 text-center">Doug Skinner</h1>
-        <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
-      </div>
+      <nav class="navbar navbar-expand-md navbar-info">
+  <div class="container" style="border-bottom:1px solid #17a2b8;">
+    <a class="navbar-brand" href="/">Doug Skinner</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--ul class="navbar-nav mr-auto text-center">
+        <li class="nav-item">
+          <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+        </li>
+      </ul-->
+      <ul class="navbar-nav ml-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About Me</a>
+        </li>
+        <!--
+        <li class="nav-item">
+          <a class="nav-link" href="/photos.html">Photos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/writings.html">Writings</a>
+        </li>
+        -->
+      </ul>
     </div>
-  </div>
-</div>
-
-      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="/">DS</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto text-center">
-      <li class="nav-item">
-        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto text-center">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about.html">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/photos.html">Photos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/projects.html">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/writings.html">Writings</a>
-      </li>
-    </ul>
   </div>
 </nav>
 
@@ -89,7 +81,6 @@ input file, separated line by line on newline characters (‘\n’), the script 
 feeds in each line to the internal DFA character by character. If the DFA
 reaches the end state, it then returns the starting index, ending index, and all
 characters that match the regex printing that info to stdout.</p>
-
 
               </div>
             </div>

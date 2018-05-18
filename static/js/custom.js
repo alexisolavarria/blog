@@ -36,12 +36,12 @@ $(document).ready(function() {
 	});
 
 	$(".tag_button").on("click", function(e) {
-		$(".tag_button").removeClass('btn-primary').removeClass('btn-outline-primary').addClass('btn-outline-primary');
-		$(".post").hide();
+		$(".tag_button").removeClass('btn-info').removeClass('btn-outline-info').addClass('btn-outline-info');
+		$(".post").hide().removeClass("mobile_padding");
 
     var tag = $(this).attr("id");
-		$("."+tag).addClass('btn-primary').removeClass('btn-outline-primary');
-		$("."+tag+"_tag").show();
+		$("."+tag).addClass('btn-info').removeClass('btn-outline-info');
+		$("."+tag+"_tag").show().addClass("mobile_padding");
 	});
 
 	$("#search-box").on('keyup', function(e) {

@@ -1,6 +1,4 @@
-from fabric.api import *
-
-env.hosts = ['']
+from fabric import *
 
 def add():
     local("git add .")
@@ -26,7 +24,6 @@ def convert_images():
 
 def create_photo_posts():
     local("scripts/create_thumbnail_posts")
-    local("scripts/create_large_posts")
     local("scripts/create_full_posts")
 
 def build():

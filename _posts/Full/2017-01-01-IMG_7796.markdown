@@ -1,5 +1,0 @@
----
-layout: default_full
-categories: Full
-picture: img/photos/full_size/IMG_7796.jpg
----

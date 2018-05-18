@@ -1,0 +1,14 @@
+---
+layout: default_blog
+title:  "Starting Anew"
+date:   2018-05-18 12:00:00 -0400
+categories: Writing
+tags: Thoughts
+reading_time: <1 Minute
+card_image: /img/post_images/quick_tip.jpg
+card_image_credit: Photo by James Pond on Unsplash
+---
+
+While going over what I need to do in life after leaving college, I realized that I wasn't happy with the content of my website.
+So I changed it. The new design is simplistic, and features the posts at the forefront. I'll be utilizing it more now,
+and some of the old posts might resurface. But it'll be interesting to see how it goes.

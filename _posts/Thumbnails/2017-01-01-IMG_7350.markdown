@@ -1,7 +1,0 @@
----
-layout: default
-categories: Thumbnails
-large_url: /photos/2017/01/01/IMG_7350.html
-full_url: /full/2017/01/01/IMG_7350.html
-picture: img/photos/thumbnails/IMG_7350.jpg
----

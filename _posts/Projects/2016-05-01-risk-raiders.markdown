@@ -3,6 +3,7 @@ layout: default_project
 title:  "Risk Raiders"
 date:   2016-05-01 13:39:36 -0500
 categories: Projects
+tags: Projects
 picture: /img/projects/risk_raiders_screenshot.png
 ---
 

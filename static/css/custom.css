@@ -33,6 +33,10 @@ a:hover {
   text-decoration: none;
 }
 
+.navbar-info a {
+  color: #17a2b8 !important;
+}
+
 .footer {
   margin-top: 2em;
 }
@@ -70,8 +74,7 @@ code {
 }
 
 .sidebar li {
-  padding-bottom:1em;
-  padding-left: 2em;
+  padding-bottom:0.75em;
 }
 
 .search {
@@ -131,7 +134,7 @@ code {
 
 .hero {
   position: relative;
-  background: url("/img/photos/thumbnails/IMG_7796.jpg") no-repeat center center;
+  background: url("/img/photos/full_size/IMG_6746.jpg") no-repeat center center;
   background-size: cover;
   display: block;
   padding-top: 12em;

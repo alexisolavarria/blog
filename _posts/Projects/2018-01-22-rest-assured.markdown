@@ -3,6 +3,7 @@ layout: default_project
 title:  "Rest Assured"
 date:   2018-01-22 12:00:00 -0500
 categories: Projects
+tags: Projects
 picture: /img/projects/rest_assured.png
 public_url: https://www.restassuredhillc.com
 public_message: View Site
@@ -20,7 +21,7 @@ chose to keep the site almost entirely native bootstrap, using a darker theme to
 align with the original site. The site consists of three main pages: a basic
 landing page utilizing rows and columns to layout content, an about page that
 contains a manifesto from the company owner, and a page that contains reviews of
-the company. 
+the company.
 
 The page was created using the Jekyll static site generating framework, is
 hosted on a Centos 7 server being served by the Apache webserver, and is located

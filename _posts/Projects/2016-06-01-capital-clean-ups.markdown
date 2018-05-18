@@ -3,6 +3,7 @@ layout: default_project
 title:  "Capital Clean Ups"
 date:   2016-06-01 13:39:36 -0500
 categories: Projects
+tags: Projects
 picture: /img/projects/capital_clean_ups_screenshot.png
 public_url: http://www.capitalcleanups.com
 public_message: View Site

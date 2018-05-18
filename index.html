@@ -2,6 +2,98 @@
 layout: default
 title: Homepage
 ---
-{% include newest_blogs.html %}
-{% include current_project.html %}
-{% include whitebox.html %}
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div class="search">
+      <form>
+        <div class="row">
+          <div class="col-8 offset-1">
+            <input id="search-box" type="text" class="form-control" placeholder="Search Term Here">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="sidebar">
+      <ul class="list-unstyled">
+        <li>
+          <button class="tag_button btn All btn-info" id="All">
+            All <span class="badge badge-pill"> {{ site.categories.Writing | size }} </span>
+          </button>
+        </li>
+        {% for tag in site.tags %}
+          {% assign t = tag | first %}
+          {% assign posts = tag | last %}
+          <li>
+            <button class="btn btn-outline-info tag_button {{t}}" id="{{t}}">
+              {{ t }} <span class="badge badge-pill"> {{ posts | size }} </span>
+            </button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col-12 col-lg-8">
+    <div class="row">
+      {% for post in site.posts %}
+        <div class="col-12">
+          <div class=" All_tag {{post.tags}}_tag post text-to-search mobile_padding">
+            {% if post.categories contains "Writing" %}
+              <div class="card shadow">
+                <img class="card-img-top" style="max-height:20em;" src="{{post.card_image}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{post.card_image_credit}}">
+                <div class="card-body">
+                  <h5 class="card-title text-left">{{ post.title }}<br><small class="text-info">Posted: {{post.date | date: '%B %d, %Y' }}</small></h5>
+                  <div class="card-text container">
+                    {{ post.excerpt | remove: '<p>' | remove: '</p>' | truncatewords: 50 }}
+                  </div>
+                  <div hidden>
+                    {{ post.content }}
+                  </div>
+                  <div class="card-footer">
+                    <span>Reading Time: {{post.reading_time}}</span>
+                      <a href="{{post.url}}">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                    <br>
+                    <div class="tags float-left">
+                      <span>Tags:
+                      {% for tag in post.tags %}
+                        {{tag}}
+                      {% endfor %}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% elsif post.categories contains "Projects" %}
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="{{ post.picture }}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}<br><small><a href="{{post.public_url}}">{{ post.public_message }}</a></small></h5>
+                    <div class="card-text container">
+                      {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="{{post.url}}">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% elsif post.categories contains "Thumbnails" %}
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="{{ post.picture }}">
+            </div>
+            {% else %}
+
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

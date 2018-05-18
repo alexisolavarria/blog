@@ -30,186 +30,140 @@
 
   <body>
     <div id="wrapper">
-      <div class="hero">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
-        <h1 class="display-4 text-center">Doug Skinner</h1>
-        <h1 class="display-5 text-center">Programmer, Photographer, Writer</h1>
-      </div>
+      <nav class="navbar navbar-expand-md navbar-info">
+  <div class="container" style="border-bottom:1px solid #17a2b8;">
+    <a class="navbar-brand" href="/">Doug Skinner</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--ul class="navbar-nav mr-auto text-center">
+        <li class="nav-item">
+          <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
+        </li>
+      </ul-->
+      <ul class="navbar-nav ml-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About Me</a>
+        </li>
+        <!--
+        <li class="nav-item">
+          <a class="nav-link" href="/photos.html">Photos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/writings.html">Writings</a>
+        </li>
+        -->
+      </ul>
     </div>
-  </div>
-</div>
-
-      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="/">DS</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto text-center">
-      <li class="nav-item">
-        <button id="mode_toggle" class="btn btn-light" data-mode="light">Light Mode</button>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto text-center">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about.html">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/photos.html">Photos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/projects.html">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/writings.html">Writings</a>
-      </li>
-    </ul>
   </div>
 </nav>
 
-      <div class="container">
-        <div class="row content">
-  <div class="page-header col-12">
-    <h2 class="text-center">Recent Posts</h2>
+      <div class="container mt-5">
+        <div class="row">
+  <div class="col-12 col-lg-4">
+    <div class="search">
+      <form>
+        <div class="row">
+          <div class="col-8 offset-1">
+            <input id="search-box" type="text" class="form-control" placeholder="Search Term Here">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="sidebar">
+      <ul class="list-unstyled">
+        <li>
+          <button class="tag_button btn All btn-info" id="All">
+            All <span class="badge badge-pill"> 1 </span>
+          </button>
+        </li>
+        
+          
+          
+          <li>
+            <button class="btn btn-outline-info tag_button Projects" id="Projects">
+              Projects <span class="badge badge-pill"> 6 </span>
+            </button>
+          </li>
+        
+          
+          
+          <li>
+            <button class="btn btn-outline-info tag_button Photos" id="Photos">
+              Photos <span class="badge badge-pill"> 27 </span>
+            </button>
+          </li>
+        
+          
+          
+          <li>
+            <button class="btn btn-outline-info tag_button Thoughts" id="Thoughts">
+              Thoughts <span class="badge badge-pill"> 1 </span>
+            </button>
+          </li>
+        
+      </ul>
+    </div>
   </div>
-  
-    <div class="col-12 col-lg-6 mobile_padding">
-      <div class="card shadow">
-        <img class="card-img-top" style="max-height:15em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
-        <div class="card-body">
-          <h5 class="card-title text-left">Programming Pearls, Day Seventeen<br><small class="text-info">Posted: April 26, 2018</small></h5>
-          <div class="card-text container">
-            Okay, continuing on to day seventeen, the text of the problem is:
+  <div class="col-12 col-lg-8">
+    <div class="row">
+      
+        <div class="col-12">
+          <div class=" All_tag Thoughts_tag post text-to-search mobile_padding">
+            
+              <div class="card shadow">
+                <img class="card-img-top" style="max-height:20em;" src="/img/post_images/quick_tip.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by James Pond on Unsplash">
+                <div class="card-body">
+                  <h5 class="card-title text-left">Starting Anew<br><small class="text-info">Posted: May 18, 2018</small></h5>
+                  <div class="card-text container">
+                    While going over what I need to do in life after leaving college, I realized that I wasn’t happy with the content of my website. So I changed it. The new design is simplistic, and features the posts at the forefront. I’ll be utilizing it more now, and some of...
+                  </div>
+                  <div hidden>
+                    <p>While going over what I need to do in life after leaving college, I realized that I wasn’t happy with the content of my website.
+So I changed it. The new design is simplistic, and features the posts at the forefront. I’ll be utilizing it more now,
+and some of the old posts might resurface. But it’ll be interesting to see how it goes.</p>
 
-
-          </div>
-          <div class="card-footer">
-            <span class="float-left">Reading Time: 5 Minutes</span>
-            <a href="/writing/2018/04/26/Programming-Pearls-Day-17.html">
-              <button class="btn btn-info float-right">Read More</button>
-            </a>
-            <br>
-            <div class="tags float-left">
-              <span>Tags:
-                
-                Development
-              
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-12 col-lg-6 mobile_padding">
-      <div class="card shadow">
-        <img class="card-img-top" style="max-height:15em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
-        <div class="card-body">
-          <h5 class="card-title text-left">Programming Pearls, Day Sixteen<br><small class="text-info">Posted: April 25, 2018</small></h5>
-          <div class="card-text container">
-            Okay, continuing on to day fifteen, the text of the problem is:
-
-
-          </div>
-          <div class="card-footer">
-            <span class="float-left">Reading Time: 5 Minutes</span>
-            <a href="/writing/2018/04/25/Programming-Pearls-Day-16.html">
-              <button class="btn btn-info float-right">Read More</button>
-            </a>
-            <br>
-            <div class="tags float-left">
-              <span>Tags:
-                
-                Development
-              
-              </span>
-            </div>
+                  </div>
+                  <div class="card-footer">
+                    <span>Reading Time: <1 Minute</span>
+                      <a href="/writing/2018/05/18/Redesign.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                    <br>
+                    <div class="tags float-left">
+                      <span>Tags:
+                      
+                        Thoughts
+                      
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
           </div>
         </div>
-      </div>
-    </div>
-  
-    <div class="col-12 col-lg-6 mobile_padding">
-      <div class="card shadow">
-        <img class="card-img-top" style="max-height:15em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
-        <div class="card-body">
-          <h5 class="card-title text-left">Programming Pearls, Day Fifteen<br><small class="text-info">Posted: April 24, 2018</small></h5>
-          <div class="card-text container">
-            Okay, continuing on to day fifteen, the text of the problem is:
-
-
-          </div>
-          <div class="card-footer">
-            <span class="float-left">Reading Time: 5 Minutes</span>
-            <a href="/writing/2018/04/24/Progamming-Pearls-Day-15.html">
-              <button class="btn btn-info float-right">Read More</button>
-            </a>
-            <br>
-            <div class="tags float-left">
-              <span>Tags:
-                
-                Development
-              
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-12 col-lg-6 mobile_padding">
-      <div class="card shadow">
-        <img class="card-img-top" style="max-height:15em;" src="/img/post_images/pearls.jpg" alt="placeholder" data-toggle="tooltip" data-placement="top" title="Photo by Tim Mossholder on Pexels">
-        <div class="card-body">
-          <h5 class="card-title text-left">Programming Pearls, Day Fourteen<br><small class="text-info">Posted: April 23, 2018</small></h5>
-          <div class="card-text container">
-            Okay, continuing on to day thirteen, the text of the problem is:
-
-
-          </div>
-          <div class="card-footer">
-            <span class="float-left">Reading Time: 5 Minutes</span>
-            <a href="/writing/2018/04/23/Programming-Pearls-Day-14.html">
-              <button class="btn btn-info float-right">Read More</button>
-            </a>
-            <br>
-            <div class="tags float-left">
-              <span>Tags:
-                
-                Development
-              
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-</div>
-<div class="text-center">
-  <a href="/writings.html">
-    <button class="btn btn-info">Browse the Archives</button>
-  </a>
-</div>
-
-<div class="row content">
-  <div class="page-header col-12">
-    <h2 class="text-center">Current Project</h2>
-  </div>
-  
-  <div class="col-12 col-lg-10 mx-auto">
-    <div class="card shadow">
-      <img class="card-img-top" alt="Current Project Image" src="/img/projects/converter.png">
-      <div class="card-body">
-        <h5 class="card-title">Converter<br><small><a  class="text-info" href="https://github.com/doug-skinner/converter/tree/master">View repo</a></small></h5>
-        <div class="card-text container">
-          Converter is a simple web wrapper around the youtube-dl command line tool that
+      
+        <div class="col-12">
+          <div class=" All_tag Projects_tag post text-to-search mobile_padding">
+            
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="/img/projects/converter.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Converter<br><small><a href="https://github.com/doug-skinner/converter/tree/master">View repo</a></small></h5>
+                    <div class="card-text container">
+                      Converter is a simple web wrapper around the youtube-dl command line tool that
 allows one to download a youtube video into either an mp3 or mp4 file. While I’m
 sure anyone browsing Github can easily run the youtube-dl script yourself, this
 is built for you to offer a solution for friends or family members. There are
@@ -218,69 +172,426 @@ ads and links to not so great sites, so you can host this one on your personal
 network to allow them to go to a trusted resource.
 
 
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="/projects/2018/04/21/Converter.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
         </div>
-      </div>
-      <div class="card-footer">
-        <a href="/projects.html">
-        <button class="btn btn-outline-info float-left">View All Projects</button>
-        </a>
-        <a href="/projects/2018/04/21/Converter.html">
-          <button class="btn btn-info float-right">Read More</button>
-        </a>
-      </div>
-    </div>
-  </div>
-  
-</div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8475.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8361.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Projects_tag post text-to-search mobile_padding">
+            
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="/img/projects/prex.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Prex<br><small><a href="https://gitlab.doug-skinner.com/root/prex">View repo</a></small></h5>
+                    <div class="card-text container">
+                      The <strong>P</strong>ython <strong>R</strong>eguler <strong>Ex</strong>pression handler is a basic script written in
+Python (shocking I know) that reads in a regex string and the file to search.
 
-<div class="row content">
-  <div class="page-header col-12">
-    <h2 class="text-center">Latest Photos</h2>
-  </div>
-  
-    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
-      <a href="/full/2017/01/01/IMG_8291.html">
-        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8291.jpg">
-      </a>
+
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="/projects/2018/02/09/Prex.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Projects_tag post text-to-search mobile_padding">
+            
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="/img/projects/flask_template_v0_3.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Flask Template<br><small><a href=""></a></small></h5>
+                    <div class="card-text container">
+                      <strong>This is still a work in progress</strong>. This project aims to be a template for other web developers to base their
+projects off of. The template includes a couple of classes that handle creating
+users, logging in users, and eventually managing users. Each user upon logging
+in is presented with their own control panel for whatever service they are
+logging into.
+
+
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="/projects/2018/01/23/flask-template.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Projects_tag post text-to-search mobile_padding">
+            
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="/img/projects/rest_assured.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Rest Assured<br><small><a href="https://www.restassuredhillc.com">View Site</a></small></h5>
+                    <div class="card-text container">
+                      The website for Rest Assured Home Inspections LLC was redesigned to make it more
+attractive for users, allowing it’s content to be more easily understood, and
+flow better among various screen sizes. The previous website had the content,
+however it was laid out in lack luster way, and was optimized for desktop while
+being almost unusable on mobile.
+
+
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="/projects/2018/01/22/rest-assured.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8291.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8061.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8052.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7974.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7894.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7800.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7796.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7754.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7661.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7634.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7612.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7522.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7470.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7350.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7347.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7223.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7160.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6948.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6946.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6744.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6665.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6594.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6592.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6591.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Photos_tag post text-to-search mobile_padding">
+            
+            <div class="col-12 mobile_padding">
+              <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_6581.jpg">
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Projects_tag post text-to-search mobile_padding">
+            
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="/img/projects/capital_clean_ups_screenshot.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Capital Clean Ups<br><small><a href="http://www.capitalcleanups.com">View Site</a></small></h5>
+                    <div class="card-text container">
+                      The Capital Clean Ups website was created for a small business in my local area that focuses on removing junk from commercial and residential locations. It was primarily used to advertise that the company existed, and also to showcase the services offered. Overall, it was a very basic website and done more as a favor than as a learning experience.
+
+
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="/projects/2016/06/01/capital-clean-ups.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+        <div class="col-12">
+          <div class=" All_tag Projects_tag post text-to-search mobile_padding">
+            
+              <div class="mx-auto mobile_padding">
+                <div class="card shadow">
+                  <img class="card-img-top" alt="Current Project Image" src="/img/projects/risk_raiders_screenshot.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Risk Raiders<br><small><a href=""></a></small></h5>
+                    <div class="card-text container">
+                      The Risk Raiders website was developed during an internship with Ernst &amp; Young my sophomore year, in order to allow financial firms to more easily control their Third Party Risk Management. Third Party Risk Management is one of the most crucial aspects of the relationship between a financial institution and the various third party vendors that they work with.
+
+
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="/projects/2016/05/01/risk-raiders.html">
+                      <button class="btn btn-info float-right">Read More</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
     </div>
-  
-    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
-      <a href="/full/2017/01/01/IMG_8061.html">
-        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8061.jpg">
-      </a>
-    </div>
-  
-    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
-      <a href="/full/2017/01/01/IMG_8052.html">
-        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_8052.jpg">
-      </a>
-    </div>
-  
-    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
-      <a href="/full/2017/01/01/IMG_7974.html">
-        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7974.jpg">
-      </a>
-    </div>
-  
-    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
-      <a href="/full/2017/01/01/IMG_7894.html">
-        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7894.jpg">
-      </a>
-    </div>
-  
-    <div class="col-12 col-md-6 col-lg-4 mobile_padding">
-      <a href="/full/2017/01/01/IMG_7800.html">
-        <img class="img-fluid img-thumbnail gallery-hover shadow" alt="Recent Screenshot" src="img/photos/thumbnails/IMG_7800.jpg">
-      </a>
-    </div>
-  
-  <div class="text-center col-12">
-    <a href="/photos.html">
-      <button class="btn btn-info">Browse All Photos</button>
-    </a>
   </div>
 </div>
-
 
       </div>
       <div class="footer">

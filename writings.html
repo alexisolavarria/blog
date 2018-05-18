@@ -40,8 +40,8 @@ title: Systematic Thoughts
     </div>
     <div class="row">
       {% for post in site.categories.Writing %}
-        <div class="All_tag {{post.tags}}_tag post text-to-search">
-          <div class="col-12 mobile_padding">
+        <div class="All_tag {% for tag in post.tags %}{{tag}}_tag {% endfor %} post text-to-search mobile_padding">
+          <div class="col-12">
             <div class="card shadow">
               <img class="card-img-top" style="max-height:20em;" src="{{post.card_image}}" alt="placeholder" data-toggle="tooltip" data-placement="top" title="{{post.card_image_credit}}">
               <div class="card-body">
